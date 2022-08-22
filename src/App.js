@@ -1,10 +1,10 @@
-import React from 'react'
-import Cards from './components/Cards'
-import Header from './components/Header'
-import Order from './components/Order'
-import Promokod from './components/Promokod'
-import Individual from './components/Individual'
-import Footer from './components/Footer'
+import React from "react";
+import Cards from "./components/Cards";
+import Header from "./components/Header";
+import Order from "./components/Order";
+import Promokod from "./components/Promokod";
+import Individual from "./components/Individual";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Individual />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
