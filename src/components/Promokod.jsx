@@ -12,7 +12,7 @@ const Promokod = () => {
             </div>
             <div className="container">
                 <div className="row justify-content-end">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <div className="info">
                             <h2>ПРОМОКОД <span>FOREVER</span></h2>
                             <p>Воспользуйтесь промокодом FOREVER, получите 10% скидку</p>

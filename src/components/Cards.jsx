@@ -18,7 +18,7 @@ const Cards = () => {
           breakpoints={{
             "@0.00": {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 30,
             },
             "@0.75": {
               slidesPerView: 2,
