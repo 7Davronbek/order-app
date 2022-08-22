@@ -9,7 +9,7 @@ const Footer = () => {
             <img src="img/footer.png" alt="" />
           </a>
         </div>
-        {/* <a target='blank' href="https://muhammadumar.uz/">Сделано с любовью ♥</a> */}
+        <a className='d-flex align-items-center justify-content-center' style={{color: '#fff'}}>Сделано с любовью ♥</a>
       </div>
     </div>
   )
