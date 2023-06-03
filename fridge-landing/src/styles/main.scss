@@ -313,8 +313,47 @@ body {
     }
   }
 
+  .OurWay {
+    padding-top: 150px;
+
+    .leftCol {
+      background: #fff;
+      padding: 10px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 49px;
+      color: #00aeef;
+      margin-bottom: 121px;
+      width: 55%;
+      position: relative;
+      width: 168px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        width: 331px;
+        height: 227px;
+        top: -50%;
+        left: -50%;
+        border: 7px solid #00AEEF;
+        z-index: -1;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 29px;
+      color: #313131;
+    }
+  }
+
   .Team {
-    padding: 230px 0 60px;
+    padding: 110px 0 60px;
 
     h1 {
       font-weight: 600;
@@ -353,7 +392,7 @@ body {
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
-        color: #00AEEF;
+        color: #00aeef;
       }
 
       h5 {
