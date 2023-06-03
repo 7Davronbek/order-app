@@ -123,6 +123,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #c0c0c07d;
     border-radius: 50%;
 
     .scales {
@@ -285,6 +287,81 @@ body {
       line-height: 49px;
       color: #313131;
       margin-top: 70px;
+    }
+  }
+
+  .HaveQuestion {
+    background: #00aeef;
+    padding: 62px 0 54px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .myBtn {
+      margin: 0 auto;
+      display: flex;
+      margin-top: 35px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      color: #00aeef;
+    }
+  }
+
+  .Team {
+    padding: 230px 0 60px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 87px;
+      color: #00aeef;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .cards {
+      h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #00aeef;
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #ffc107;
+        margin-left: 5px;
+      }
+
+      p {
+        margin-bottom: 4px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #313131;
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 29px;
+        color: #00AEEF;
+      }
+
+      h5 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #313131;
+      }
     }
   }
 }

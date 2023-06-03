@@ -1,4 +1,4 @@
-import { HaveQuestion, Navbar, OurServices, Phone } from "./components";
+import { HaveQuestion, Navbar, OurServices, Phone, Team } from "./components";
 
 const App = () => {
   // let tg = {
@@ -19,6 +19,7 @@ const App = () => {
       <Navbar />
       <OurServices />
       <HaveQuestion />
+      <Team />
 
       <Phone />
 
