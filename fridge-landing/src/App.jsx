@@ -1,4 +1,4 @@
-import { Navbar, Phone } from "./components";
+import { HaveQuestion, Navbar, OurServices, Phone } from "./components";
 
 const App = () => {
   // let tg = {
@@ -17,6 +17,8 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <OurServices />
+      <HaveQuestion />
 
       <Phone />
 

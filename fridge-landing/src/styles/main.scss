@@ -6,6 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #fefefe;
 
   h1,
   h2,
@@ -39,6 +40,27 @@ body {
     padding: 0 !important;
   }
 
+  .myBtn {
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    color: #ffffff;
+    background: #00aeef;
+    padding: 15px 39px;
+    border-radius: 0;
+    text-transform: none;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &.white {
+      background-color: white;
+      color: #00aeef;
+    }
+  }
+
   .cursor {
     cursor: pointer;
   }
@@ -57,6 +79,8 @@ body {
     left: 0;
     z-index: 9999;
     box-shadow: 0 0 10px #aaaefb8c;
+    background: #fefefeb0;
+    backdrop-filter: blur(4px);
 
     a {
       font-size: 21px;
@@ -191,6 +215,76 @@ body {
         padding: 85%;
         opacity: 0;
       }
+    }
+  }
+
+  .OurServices {
+    padding: 100px 0 70px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 87px;
+      color: #00aeef;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 49px;
+      color: #313131;
+      margin-bottom: 42px;
+    }
+
+    .cards {
+      h3 {
+        margin: 19px 0;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 49px;
+        color: #00aeef;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160.02%;
+        color: #313131;
+        padding-left: 15px;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #313131;
+          left: 0px;
+          top: 19px;
+          position: absolute;
+        }
+      }
+
+      .myBtn {
+        display: flex;
+        margin: 0 auto;
+        margin-top: 43px;
+      }
+
+      &.second {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 49px;
+      color: #313131;
+      margin-top: 70px;
     }
   }
 }
