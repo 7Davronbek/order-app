@@ -339,7 +339,7 @@ body {
         height: 227px;
         top: -50%;
         left: -50%;
-        border: 7px solid #00AEEF;
+        border: 7px solid #00aeef;
         z-index: -1;
       }
     }
@@ -402,5 +402,57 @@ body {
         color: #313131;
       }
     }
+  }
+
+  .Benefits {
+    background: url(../assets/bbg.png) no-repeat center;
+    background-attachment: fixed;
+    height: 447px;
+    background-size: cover;
+
+    h1 {
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+      padding: 95px 0 65px;
+      width: 60%;
+      margin: auto;
+    }
+
+    .cards {
+      background: #f7fcff;
+      padding: 22px 15px 30px;
+      box-shadow: 0 8px 10px #c0c0c063;
+
+      .img {
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 103.18%;
+        text-align: center;
+        color: #000000;
+        margin: 0 auto;
+        margin-top: 19px;
+        width: 90%;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        margin-top: 19px;
+      }
+    }
+  }
+
+  .benefitsLine {
+    padding-bottom: 160px;
   }
 }
