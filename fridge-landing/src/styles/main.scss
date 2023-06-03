@@ -455,4 +455,37 @@ body {
   .benefitsLine {
     padding-bottom: 160px;
   }
+
+  .Contacts {
+    padding: 82px 0 94px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 87px;
+      color: #00aeef;
+      margin-bottom: 33px;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 33px;
+      color: #00aeef;
+    }
+
+    a,
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 33px;
+      color: #313131;
+      display: block;
+    }
+
+    iframe {
+      height: 576px;
+      margin-top: 55px;
+    }
+  }
 }

@@ -5,3 +5,4 @@ export { default as HaveQuestion } from "./HaveQuestion";
 export { default as Team } from "./Team";
 export { default as OurWay } from "./OurWay";
 export { default as Benefits } from "./Benefits";
+export { default as Contacts } from "./Contacts";

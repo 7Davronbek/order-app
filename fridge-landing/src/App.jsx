@@ -1,5 +1,6 @@
 import {
   Benefits,
+  Contacts,
   HaveQuestion,
   Navbar,
   OurServices,
@@ -30,6 +31,7 @@ const App = () => {
       <OurWay />
       <Team />
       <Benefits />
+      <Contacts />
 
       <Phone />
 
