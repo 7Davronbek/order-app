@@ -493,6 +493,33 @@ body {
     }
   }
 
+  .myModal {
+
+    .h1 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    input {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    button {
+      font-size: 22px;
+      margin-top: 23px;
+  
+    }
+
+    .box {
+      border: 3px solid #dbdbdb;
+      width: 50%;
+      padding: 40px 70px;
+      border-radius: 7px;
+    }
+  }
+
   .Benefits {
     background: url(../assets/bbg.png) no-repeat center;
     background-attachment: fixed;
@@ -575,6 +602,22 @@ body {
     iframe {
       height: 576px;
       margin-top: 55px;
+    }
+  }
+
+  .successAlert {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    z-index: 99999;
+    position: fixed;
+    top: 50%;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 }
