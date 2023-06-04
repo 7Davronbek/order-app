@@ -403,7 +403,7 @@ body {
         border: 7px solid #00aeef;
         z-index: -1;
 
-        @media(max-width: 992px ){
+        @media (max-width: 992px) {
           width: 148px;
           height: 56px;
           left: -13px;
@@ -425,7 +425,7 @@ body {
       line-height: 29px;
       color: #313131;
 
-      @media(max-width: 992px) {
+      @media (max-width: 992px) {
         font-size: 13px;
         line-height: 18px;
         margin-bottom: 23px;
@@ -454,7 +454,7 @@ body {
       margin-bottom: 40px;
       text-align: center;
 
-      @media(max-width: 992px) {
+      @media (max-width: 992px) {
         font-size: 24px;
         line-height: 33px;
         margin-bottom: 15px;
@@ -468,7 +468,7 @@ body {
         line-height: 33px;
         color: #00aeef;
 
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
           font-size: 20px;
           line-height: 27px;
         }
@@ -481,7 +481,7 @@ body {
         color: #ffc107;
         margin-left: 5px;
 
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
           font-size: 22.1965px;
           line-height: 30px;
         }
@@ -494,7 +494,7 @@ body {
         line-height: 25px;
         color: #313131;
 
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
           font-size: 14px;
           line-height: 19px;
         }
@@ -506,7 +506,7 @@ body {
         line-height: 29px;
         color: #00aeef;
 
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
           font-size: 17px;
           line-height: 23px;
         }
@@ -518,7 +518,7 @@ body {
         line-height: 25px;
         color: #313131;
 
-        @media(max-width: 992px) {
+        @media (max-width: 992px) {
           font-size: 14px;
           line-height: 19px;
         }
@@ -544,7 +544,7 @@ body {
       }
     }
 
-    @media(max-width: 992px) {
+    @media (max-width: 992px) {
       padding: 33px 0 20px;
     }
   }
@@ -565,10 +565,21 @@ body {
         color: #ffffff;
         margin-bottom: 11px;
         text-align: center;
+
+        @media (max-width: 992px) {
+          font-size: 24px;
+          line-height: 33px;
+        }
       }
 
       .starWrap {
         text-align: center;
+
+        img {
+          @media (max-width: 992px) {
+            width: 40%;
+          }
+        }
       }
 
       h2 {
@@ -578,6 +589,22 @@ body {
         line-height: 100%;
         text-align: center;
         color: #ffffff;
+
+        @media (max-width: 992px) {
+          font-size: 13px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .feedback {
+      img {
+        @media (max-width: 992px) {
+          width: 80% !important;
+          display: flex;
+          margin: auto;
+          margin-top: 20px;
+        }
       }
     }
 
@@ -616,6 +643,17 @@ body {
       line-height: 60px;
       color: #ffffff;
       text-align: center;
+
+      @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 33px;
+        margin: 5px 0 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin-top: 28px;
+      padding-bottom: 60px;
     }
   }
 
@@ -669,6 +707,13 @@ body {
       padding: 95px 0 65px;
       width: 60%;
       margin: auto;
+
+      @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 100.68%;
+        width: 100%;
+        padding: 42px 0;
+      }
     }
 
     .cards {
@@ -689,6 +734,11 @@ body {
         margin: 0 auto;
         margin-top: 19px;
         width: 90%;
+
+        @media (max-width: 992px) {
+          font-size: 24px;
+          line-height: 103.18%;
+        }
       }
 
       h3 {
@@ -698,12 +748,30 @@ body {
         text-align: center;
         color: #000000;
         margin-top: 19px;
+
+        @media (max-width: 992px) {
+          font-size: 13px;
+          line-height: 18px;
+        }
       }
+
+      @media (max-width: 992px) {
+        margin-bottom: 25px;
+        padding-bottom: 45px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      height: auto;
     }
   }
 
   .benefitsLine {
     padding-bottom: 160px;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   .Contacts {
@@ -715,6 +783,12 @@ body {
       line-height: 87px;
       color: #00aeef;
       margin-bottom: 33px;
+
+      @media(max-width: 992px) {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 17px;
+      }
     }
 
     h2 {
@@ -722,6 +796,12 @@ body {
       font-size: 24px;
       line-height: 33px;
       color: #00aeef;
+
+      @media(max-width: 992px ){
+        font-size: 17px;
+        line-height: 23px;
+        margin-top: 15px;
+      }
     }
 
     a,
@@ -731,11 +811,25 @@ body {
       line-height: 33px;
       color: #313131;
       display: block;
+
+      @media(max-width: 992px) {
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
 
     iframe {
       height: 576px;
       margin-top: 55px;
+
+      @media(max-width: 992px) {
+        margin-top: 33px;
+        height: 300px;
+      }
+    }
+
+    @media(max-width: 992px) {
+      padding: 43px 0 40px;
     }
   }
 
