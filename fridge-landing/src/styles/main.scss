@@ -59,6 +59,12 @@ body {
       background-color: white;
       color: #00aeef;
     }
+
+    @media (max-width: 992px) {
+      padding: 10px 30px 11px !important;
+      font-size: 14px !important;
+      line-height: 19px !important;
+    }
   }
 
   .cursor {
@@ -228,6 +234,12 @@ body {
       font-size: 64px;
       line-height: 87px;
       color: #00aeef;
+
+      @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 5px;
+      }
     }
 
     h2 {
@@ -236,6 +248,12 @@ body {
       line-height: 49px;
       color: #313131;
       margin-bottom: 42px;
+
+      @media (max-width: 992px) {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 21px;
+      }
     }
 
     .cards {
@@ -245,6 +263,13 @@ body {
         font-size: 36px;
         line-height: 49px;
         color: #00aeef;
+
+        @media (max-width: 992px) {
+          font-size: 17px;
+          line-height: 23px;
+          margin: 11px 0;
+          padding-left: 20px;
+        }
       }
 
       p {
@@ -264,6 +289,19 @@ body {
           left: 0px;
           top: 19px;
           position: absolute;
+
+          @media (max-width: 992px) {
+            width: 3px;
+            height: 3px;
+            left: 14px;
+            top: 10px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          font-size: 13px;
+          line-height: 160.02%;
+          padding-left: 25px;
         }
       }
 
@@ -279,6 +317,10 @@ body {
         flex-direction: column;
         justify-content: space-between;
       }
+
+      @media (max-width: 992px) {
+        margin: 30px auto 40px !important;
+      }
     }
 
     h4 {
@@ -287,6 +329,16 @@ body {
       line-height: 49px;
       color: #313131;
       margin-top: 70px;
+
+      @media (max-width: 992px) {
+        font-size: 17px;
+        line-height: 23px;
+        margin-top: 55px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      padding: 30px 0 29px;
     }
   }
 
@@ -300,6 +352,11 @@ body {
       line-height: 33px;
       text-align: center;
       color: #ffffff;
+
+      @media (max-width: 992px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     .myBtn {
@@ -310,6 +367,10 @@ body {
       font-size: 28px;
       line-height: 38px;
       color: #00aeef;
+    }
+
+    @media (max-width: 992px) {
+      padding: 53px 0 46px;
     }
   }
 
@@ -341,6 +402,20 @@ body {
         left: -50%;
         border: 7px solid #00aeef;
         z-index: -1;
+
+        @media(max-width: 992px ){
+          width: 148px;
+          height: 56px;
+          left: -13px;
+          top: -18px;
+          border-width: 2px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        font-size: 24px;
+        line-height: 76.68%;
+        margin-bottom: 34px;
       }
     }
 
@@ -349,6 +424,22 @@ body {
       font-size: 21px;
       line-height: 29px;
       color: #313131;
+
+      @media(max-width: 992px) {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 23px;
+      }
+    }
+
+    .myRow {
+      @media (max-width: 992px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (max-width: 992px) {
+      padding-top: 34px;
     }
   }
 
@@ -362,6 +453,12 @@ body {
       color: #00aeef;
       margin-bottom: 40px;
       text-align: center;
+
+      @media(max-width: 992px) {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 15px;
+      }
     }
 
     .cards {
@@ -370,6 +467,11 @@ body {
         font-size: 24px;
         line-height: 33px;
         color: #00aeef;
+
+        @media(max-width: 992px) {
+          font-size: 20px;
+          line-height: 27px;
+        }
       }
 
       h3 {
@@ -378,6 +480,11 @@ body {
         line-height: 33px;
         color: #ffc107;
         margin-left: 5px;
+
+        @media(max-width: 992px) {
+          font-size: 22.1965px;
+          line-height: 30px;
+        }
       }
 
       p {
@@ -386,6 +493,11 @@ body {
         font-size: 18px;
         line-height: 25px;
         color: #313131;
+
+        @media(max-width: 992px) {
+          font-size: 14px;
+          line-height: 19px;
+        }
       }
 
       h4 {
@@ -393,6 +505,11 @@ body {
         font-size: 21px;
         line-height: 29px;
         color: #00aeef;
+
+        @media(max-width: 992px) {
+          font-size: 17px;
+          line-height: 23px;
+        }
       }
 
       h5 {
@@ -400,6 +517,11 @@ body {
         font-size: 18px;
         line-height: 25px;
         color: #313131;
+
+        @media(max-width: 992px) {
+          font-size: 14px;
+          line-height: 19px;
+        }
       }
     }
 
@@ -420,6 +542,10 @@ body {
         height: 8px;
         border-radius: 6px;
       }
+    }
+
+    @media(max-width: 992px) {
+      padding: 33px 0 20px;
     }
   }
 
@@ -494,7 +620,6 @@ body {
   }
 
   .myModal {
-
     .h1 {
       font-size: 30px;
       text-align: center;
@@ -509,7 +634,6 @@ body {
     button {
       font-size: 22px;
       margin-top: 23px;
-  
     }
 
     .box {
@@ -517,6 +641,16 @@ body {
       width: 50%;
       padding: 40px 70px;
       border-radius: 7px;
+
+      @media (max-width: 992px) {
+        width: 95%;
+        padding: 30px 20px;
+      }
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
     }
   }
 
@@ -608,7 +742,7 @@ body {
   .successAlert {
     opacity: 0;
     transform: translateX(-100%);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     visibility: hidden;
     z-index: 99999;
     position: fixed;
@@ -618,6 +752,10 @@ body {
       opacity: 1;
       visibility: visible;
       transform: translateX(0);
+    }
+
+    @media (max-width: 992px) {
+      top: 10%;
     }
   }
 }

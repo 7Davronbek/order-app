@@ -3,7 +3,7 @@ import {
   Contacts,
   Feedback,
   HaveQuestion,
-  Navbar,
+  // Navbar,
   OurServices,
   OurWay,
   Phone,
@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <OurServices />
       <HaveQuestion />
       <OurWay />

@@ -4,7 +4,7 @@ const OurWay = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">
-            <div className="row">
+            <div className="row myRow">
               <div className="col-lg-5 leftCol">
                 <img
                   loading="lazy"
