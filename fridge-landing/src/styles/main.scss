@@ -353,7 +353,7 @@ body {
   }
 
   .Team {
-    padding: 110px 0 60px;
+    padding: 110px 0 20px;
 
     h1 {
       font-weight: 600;
@@ -400,6 +400,25 @@ body {
         font-size: 18px;
         line-height: 25px;
         color: #313131;
+      }
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 70px;
+
+      .swiper-pagination  {
+        bottom: 20px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #00aeef;
+      transition: all .4s ease-in-out;
+
+      &.swiper-pagination-bullet-active {
+        width: 15px;
+        height: 8px;
+        border-radius: 6px;
       }
     }
   }

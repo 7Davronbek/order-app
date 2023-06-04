@@ -1,6 +1,6 @@
 const Benefits = () => {
   return (<>
-    <div className="Benefits">
+    <div id="benefit" className="Benefits">
       <div className="container">
         <div className="row">
           <div className="col-12">

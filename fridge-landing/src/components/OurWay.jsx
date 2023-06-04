@@ -1,6 +1,6 @@
 const OurWay = () => {
   return (
-    <div className="OurWay">
+    <div id="about" className="OurWay">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">

@@ -34,9 +34,6 @@ const App = () => {
       <Contacts />
 
       <Phone />
-
-      <div className="vh-100"></div>
-      <div className="vh-100"></div>
     </>
   );
 };

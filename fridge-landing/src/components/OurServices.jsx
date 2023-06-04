@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 
 const OurServices = () => {
   return (
-    <div className="OurServices">
+    <div id="service" className="OurServices">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
