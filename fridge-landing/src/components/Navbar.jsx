@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="row">
             <div className="col-lg-2 col-4">
               <a href="#">
-                <img className="w-100" src="/images/logo.svg" alt="" />
+                <img loading="lazy" className="w-100" src="/images/logo.svg" alt="" />
               </a>
             </div>
             <div className="col-lg-9 myCol">

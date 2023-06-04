@@ -406,20 +406,90 @@ body {
     .swiper-wrapper {
       padding-bottom: 70px;
 
-      .swiper-pagination  {
+      .swiper-pagination {
         bottom: 20px;
       }
     }
 
     .swiper-pagination-bullet {
       background-color: #00aeef;
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
 
       &.swiper-pagination-bullet-active {
         width: 15px;
         height: 8px;
         border-radius: 6px;
       }
+    }
+  }
+
+  .Feedback {
+    background-color: #00aeef;
+    padding: 81px 0 200px;
+    margin-top: 100px;
+
+    .myRow {
+      align-items: center;
+      flex-direction: row-reverse;
+
+      h1 {
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 87px;
+        color: #ffffff;
+        margin-bottom: 11px;
+        text-align: center;
+      }
+
+      .starWrap {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+
+    .swiper {
+      padding: 20px;
+      padding-top: 55px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      top: 25px;
+
+      &::after {
+        font-size: 24px;
+      }
+    }
+
+    .swiper-button-prev {
+      right: 40px;
+      left: inherit;
+    }
+
+    .cards {
+      background: #ffffff;
+      box-shadow: -4px 4px 17px rgba(0, 32, 61, 0.4);
+      border-radius: 15px;
+      padding: 20px 20px 40px;
+    }
+
+    h3 {
+      margin-top: 80px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 60px;
+      color: #ffffff;
+      text-align: center;
     }
   }
 

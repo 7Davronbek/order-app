@@ -13,7 +13,12 @@ const OurServices = () => {
         <div className="row  justify-content-center">
           <div className="col-lg-5">
             <div className="cards">
-              <img src="/images/service1.png" className="w-100" alt="" />
+              <img
+                loading="lazy"
+                src="/images/service1.png"
+                className="w-100"
+                alt=""
+              />
               <h3>Ремонт бытовой техники</h3>
               <p>Стиральные машины</p>
               <p>Холодильники</p>
@@ -23,18 +28,27 @@ const OurServices = () => {
               <p>Пылесосы</p>
               <p>Микроволновки</p>
               <p>Телевизоры</p>
-              <Button className="myBtn" variant="contained">Заказать услугу</Button>
+              <Button className="myBtn" variant="contained">
+                Заказать услугу
+              </Button>
             </div>
           </div>
           <div className="col-lg-5">
             <div className="cards second">
               <div>
-                <img src="/images/service2.png" className="w-100" alt="" />
+                <img
+                  loading="lazy"
+                  src="/images/service2.png"
+                  className="w-100"
+                  alt=""
+                />
                 <h3>Установка</h3>
                 <p>Стиральные машины</p>
                 <p>Услуги сантехники</p>
               </div>
-              <Button className="myBtn" variant="contained">Заказать услугу</Button>
+              <Button className="myBtn" variant="contained">
+                Заказать услугу
+              </Button>
             </div>
           </div>
         </div>

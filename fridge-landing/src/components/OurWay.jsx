@@ -6,7 +6,12 @@ const OurWay = () => {
           <div className="col-lg-10 mx-auto">
             <div className="row">
               <div className="col-lg-5 leftCol">
-                <img src="/images/way.png" alt="" className="w-100" />
+                <img
+                  loading="lazy"
+                  src="/images/way.png"
+                  alt=""
+                  className="w-100"
+                />
               </div>
               <div className="col-lg-7">
                 <h1>Наш путь</h1>

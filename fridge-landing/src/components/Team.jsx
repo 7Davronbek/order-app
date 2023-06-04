@@ -25,7 +25,6 @@ const Team = () => {
               pagination={{
                 clickable: true,
               }}
-              
               breakpoints={{
                 0: {
                   slidesPerView: 1.2,
@@ -45,12 +44,17 @@ const Team = () => {
             >
               <SwiperSlide>
                 <div className="cards">
-                  <img src="/images/team.png" alt="" className="w-100" />
+                  <img
+                    loading="lazy"
+                    src="/images/team.png"
+                    alt=""
+                    className="w-100"
+                  />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
                     <h2>Кулешов Виктор</h2>
                     <div className="d-flex align-items-center">
                       <span>
-                        <img src="/images/star.svg" alt="" />
+                        <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
                       <h3>4.8</h3>
                     </div>
@@ -62,12 +66,17 @@ const Team = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
-                  <img src="/images/team.png" alt="" className="w-100" />
+                  <img
+                    loading="lazy"
+                    src="/images/team.png"
+                    alt=""
+                    className="w-100"
+                  />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
                     <h2>Кулешов Виктор</h2>
                     <div className="d-flex align-items-center">
                       <span>
-                        <img src="/images/star.svg" alt="" />
+                        <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
                       <h3>4.8</h3>
                     </div>
@@ -79,12 +88,17 @@ const Team = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
-                  <img src="/images/team.png" alt="" className="w-100" />
+                  <img
+                    loading="lazy"
+                    src="/images/team.png"
+                    alt=""
+                    className="w-100"
+                  />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
                     <h2>Кулешов Виктор</h2>
                     <div className="d-flex align-items-center">
                       <span>
-                        <img src="/images/star.svg" alt="" />
+                        <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
                       <h3>4.8</h3>
                     </div>
@@ -96,12 +110,17 @@ const Team = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
-                  <img src="/images/team.png" alt="" className="w-100" />
+                  <img
+                    loading="lazy"
+                    src="/images/team.png"
+                    alt=""
+                    className="w-100"
+                  />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
                     <h2>Кулешов Виктор</h2>
                     <div className="d-flex align-items-center">
                       <span>
-                        <img src="/images/star.svg" alt="" />
+                        <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
                       <h3>4.8</h3>
                     </div>
@@ -113,12 +132,17 @@ const Team = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
-                  <img src="/images/team.png" alt="" className="w-100" />
+                  <img
+                    loading="lazy"
+                    src="/images/team.png"
+                    alt=""
+                    className="w-100"
+                  />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
                     <h2>Кулешов Виктор</h2>
                     <div className="d-flex align-items-center">
                       <span>
-                        <img src="/images/star.svg" alt="" />
+                        <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
                       <h3>4.8</h3>
                     </div>
