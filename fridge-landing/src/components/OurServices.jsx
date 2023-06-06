@@ -61,47 +61,19 @@ const OurServices = () => {
             </div>
           </div>
           <div className="row  justify-content-center">
-            <div className="col-lg-5">
-              <div className="cards">
-                <img
-                  loading="lazy"
-                  src="/images/service1.png"
-                  className="w-100"
-                  alt=""
-                />
-                <h3>Ремонт бытовой техники</h3>
-                <p>Стиральные машины</p>
-                <p>Холодильники</p>
-                <p>Морозильники</p>
-                <p>Витрины</p>
-                <p>Духовки</p>
-                <p>Пылесосы</p>
-                <p>Микроволновки</p>
-                <p>Телевизоры</p>
+            <div className="col-lg-8">
+              <div className="cards text-center">
+                <div className="img ">
+                  {" "}
+                  <img loading="lazy" src="/images/fridge.webp" alt="" />
+                </div>
+                
+                <h3>Ремонт холодильников</h3>
+                <p>Ремонт морозильных камер</p>
+                <p>Ремонт холодильных витрин</p>
+                <p>Ремонт мотора</p>
                 <Button
                   onClick={(e) => handleOpen("Ремонт бытовой техники")}
-                  className="myBtn"
-                  variant="contained"
-                >
-                  Заказать услугу
-                </Button>
-              </div>
-            </div>
-            <div className="col-lg-5">
-              <div className="cards second">
-                <div>
-                  <img
-                    loading="lazy"
-                    src="/images/service2.png"
-                    className="w-100"
-                    alt=""
-                  />
-                  <h3>Установка</h3>
-                  <p>Стиральные машины</p>
-                  <p>Услуги сантехники</p>
-                </div>
-                <Button
-                  onClick={(e) => handleOpen("Установка бытовой техники")}
                   className="myBtn"
                   variant="contained"
                 >
@@ -163,7 +135,9 @@ const OurServices = () => {
       </Modal>
 
       <Alert
-        className={`successAlert d-flex align-items-center ${active ? "active" : ""}`}
+        className={`successAlert d-flex align-items-center ${
+          active ? "active" : ""
+        }`}
         variant="filled"
         severity="success"
       >

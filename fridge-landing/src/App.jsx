@@ -3,6 +3,7 @@ import {
   Contacts,
   Feedback,
   HaveQuestion,
+  Header,
   Navbar,
   OurServices,
   OurWay,
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <Header />
       <OurServices />
       <HaveQuestion />
       <OurWay />

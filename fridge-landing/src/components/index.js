@@ -7,3 +7,4 @@ export { default as OurWay } from "./OurWay";
 export { default as Benefits } from "./Benefits";
 export { default as Contacts } from "./Contacts";
 export { default as Feedback } from "./Feedback";
+export { default as Header } from "./Header";

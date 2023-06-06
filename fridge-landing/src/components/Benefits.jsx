@@ -10,7 +10,7 @@ const Benefits = () => {
           </div>
           <div className="row">
             <div className="col-lg-11 mx-auto">
-              <div className="row align-items-center justify-content-center">
+              <div className="row justify-content-center">
                 <div className="col-lg-4">
                   <div className="cards">
                     <div className="img">

@@ -11,7 +11,7 @@ const HaveQuestion = () => {
               оператор проконсультирует вас по всем услугам нашей компании!
             </h1>
 
-            <a href="tel: +998 90 123 45 67">
+            <a href="tel:+998 98 128 99 95">
               <Button className="myBtn white" variant="contained">
                 Задать вопрос
               </Button>

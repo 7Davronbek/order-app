@@ -16,8 +16,7 @@ const Contacts = () => {
               </div>
               <div className="col-lg-3">
                 <h2>Номера</h2>
-                <a href="tel:+998 90 123 45 67">+998 90 123 45 67</a>
-                <a href="tel:+998 90 123 45 67">+998 90 123 45 67</a>
+                <a href="tel:+998 98 128 99 95">+998 98 128 99 95</a>
               </div>
               <div className="col-lg-3">
                 <h2>Адресс</h2>

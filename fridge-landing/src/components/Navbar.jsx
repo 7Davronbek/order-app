@@ -9,7 +9,12 @@ const Navbar = () => {
           <div className="row">
             <div className="col-lg-2 col-4">
               <a href="#">
-                <img loading="lazy" className="w-100" src="/images/logo.svg" alt="" />
+                <img
+                  loading="lazy"
+                  className="w-100"
+                  src="/images/logo.png"
+                  alt=""
+                />
               </a>
             </div>
             <div className="col-lg-9 myCol">
@@ -19,8 +24,8 @@ const Navbar = () => {
               <a href="#team">Команда</a>
               <a href="#contact">Контакты</a>
               <a href="#feedback">Отзывы</a>
-              <a className="phone" href="tel:+998 90 123 45 67">
-                +998 90 123 45 67
+              <a className="phone" href="tel:+998 98 128 99 95">
+                +998 98 128 99 95
               </a>
               <FormControl>
                 {/* <InputLabel variant="standard" htmlFor="uncontrolled-native">
