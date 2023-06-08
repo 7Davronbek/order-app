@@ -41,19 +41,16 @@ const Navbar = () => {
                 {getText("navbar1")}
               </a>
               <a onClick={() => setBurger(false)} href="#service">
-                Услуги
+              {getText("navbar2")}
               </a>
               <a onClick={() => setBurger(false)} href="#about">
-                О нас
+              {getText("navbar3")}
               </a>
               <a onClick={() => setBurger(false)} href="#team">
-                Команда
+              {getText("navbar4")}
               </a>
               <a onClick={() => setBurger(false)} href="#contact">
-                Контакты
-              </a>
-              <a onClick={() => setBurger(false)} href="#feedback">
-                Отзывы
+              {getText("navbar5")}
               </a>
               <a
                 onClick={() => setBurger(false)}

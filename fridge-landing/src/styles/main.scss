@@ -1102,4 +1102,18 @@ body {
       top: 10%;
     }
   }
+
+  .Spinner {
+    position: fixed;
+    z-index: 222222;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffffeb;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

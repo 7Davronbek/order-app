@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Benefits,
   Contacts,
@@ -8,12 +9,22 @@ import {
   OurServices,
   OurWay,
   Phone,
+  Spinner,
   Team,
 } from "./components";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, []);
   return (
     <>
+      {isLoading && <Spinner />}
+
       <Navbar />
       <Header />
       <OurServices />
