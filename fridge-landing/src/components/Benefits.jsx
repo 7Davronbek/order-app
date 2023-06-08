@@ -11,7 +11,7 @@ const Benefits = () => {
           <div className="row">
             <div className="col-lg-11 mx-auto">
               <div className="row justify-content-center">
-                <div className="col-lg-4">
+                <div className="col-lg-4 mb-3 mb-lg-0">
                   <div className="cards">
                     <div className="img">
                       <img loading="lazy" src="/images/b1.png" alt="" />
@@ -23,7 +23,7 @@ const Benefits = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 mb-3 mb-lg-0">
                   <div className="cards">
                     <div className="img">
                       <img loading="lazy" src="/images/b2.png" alt="" />
@@ -36,7 +36,7 @@ const Benefits = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 mb-3 mb-lg-0">
                   <div className="cards">
                     <div className="img">
                       <img loading="lazy" src="/images/b3.png" alt="" />

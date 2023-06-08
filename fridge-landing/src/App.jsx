@@ -12,7 +12,6 @@ import {
 } from "./components";
 
 const App = () => {
-
   return (
     <>
       <Navbar />

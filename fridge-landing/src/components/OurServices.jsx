@@ -67,8 +67,9 @@ const OurServices = () => {
                   {" "}
                   <img loading="lazy" src="/images/fridge.webp" alt="" />
                 </div>
-                
-                <h3>Ремонт холодильников</h3>
+
+                <h3>Ремонт бытовой техники</h3>
+                <p>Ремонт стиральных машин</p>
                 <p>Ремонт морозильных камер</p>
                 <p>Ремонт холодильных витрин</p>
                 <p>Ремонт мотора</p>
@@ -88,6 +89,8 @@ const OurServices = () => {
             </div>
           </div>
         </div>
+        <div className="blurRight"></div>
+        <div className="blurLeft"></div>
       </div>
 
       <Modal
