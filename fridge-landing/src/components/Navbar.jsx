@@ -1,9 +1,16 @@
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import { useState } from "react";
+import { LANGUAGE } from "../constants";
+import { getLanguage, getText } from '../locales'
 
 const Navbar = () => {
   const [burger, setBurger] = useState(false);
+
+  const changeLanguage = (e) => {
+    localStorage.setItem(LANGUAGE, e.target.value);
+    document.location.reload(true);
+  };
   return (
     <>
       <div className="Navbar">
@@ -30,13 +37,29 @@ const Navbar = () => {
               <div className="burger3"></div>
             </div>
             <div className={`col-lg-9 myCol ${burger ? "active" : ""}`}>
-              <a onClick={() => setBurger(false)} href="#">Главная</a>
-              <a onClick={() => setBurger(false)} href="#service">Услуги</a>
-              <a onClick={() => setBurger(false)} href="#about">О нас</a>
-              <a onClick={() => setBurger(false)}href="#team">Команда</a>
-              <a onClick={() => setBurger(false)} href="#contact">Контакты</a>
-              <a onClick={() => setBurger(false)} href="#feedback">Отзывы</a>
-              <a onClick={() => setBurger(false)} className="phone" href="tel:+998 98 128 99 95">
+              <a onClick={() => setBurger(false)} href="#">
+                {getText("navbar1")}
+              </a>
+              <a onClick={() => setBurger(false)} href="#service">
+                Услуги
+              </a>
+              <a onClick={() => setBurger(false)} href="#about">
+                О нас
+              </a>
+              <a onClick={() => setBurger(false)} href="#team">
+                Команда
+              </a>
+              <a onClick={() => setBurger(false)} href="#contact">
+                Контакты
+              </a>
+              <a onClick={() => setBurger(false)} href="#feedback">
+                Отзывы
+              </a>
+              <a
+                onClick={() => setBurger(false)}
+                className="phone"
+                href="tel:+998 98 128 99 95"
+              >
                 +998 98 128 99 95
               </a>
               <FormControl>
@@ -44,14 +67,14 @@ const Navbar = () => {
                   <LanguageIcon />
                 </InputLabel> */}
                 <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
+                  onChange={changeLanguage}
                 >
-                  <option value={10}>Uz</option>
-                  <option value={20}>Ру</option>
+                  <option selected={getLanguage() === "ru"} value={"ru"}>
+                    Ру
+                  </option>
+                  <option selected={getLanguage() === "uz"} value={"uz"}>
+                    Uz
+                  </option>
                 </NativeSelect>
               </FormControl>
             </div>
