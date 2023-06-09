@@ -18,6 +18,7 @@ export const uz = {
   services7: "Motor ta'mirlash",
   services8: "Kafolat 6 oydan 4 yilgacha",
   services9: "Buyurtma berish",
+  services10: "Muzlatkichlarni ta'mirlash",
 
   q1: "Sizning o'z texnikangizni topa olmadingizmi? Hoziroq qo'ng'iroq qiling yoki so'rov qoldiring va operatorimiz sizga kompaniyamizning barcha xizmatlari bo'yicha maslahat beradi!",
   q2: "Savol berish",

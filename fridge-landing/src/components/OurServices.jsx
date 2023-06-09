@@ -70,6 +70,7 @@ const OurServices = () => {
                 </div>
 
                 <h3>{getText("services3")}</h3>
+                <p>{getText("services10")}</p>
                 <p>{getText("services4")}</p>
                 <p>{getText("services5")}</p>
                 <p>{getText("services6")}</p>
