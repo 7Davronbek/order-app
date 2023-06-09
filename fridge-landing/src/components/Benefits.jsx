@@ -1,3 +1,5 @@
+import { getText } from "../locales";
+
 const Benefits = () => {
   return (
     <>
@@ -5,7 +7,7 @@ const Benefits = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1>Мы отличаемся тремя преимуществами</h1>
+              <h1>{getText("b1")}</h1>
             </div>
           </div>
           <div className="row">
@@ -16,11 +18,8 @@ const Benefits = () => {
                     <div className="img">
                       <img loading="lazy" src="/images/b1.png" alt="" />
                     </div>
-                    <h2>Гарантия низкой цены</h2>
-                    <h3>
-                      Наш прайс составлен на основе средних рыночных цен, потому
-                      что мы закупаем запчасти напрямую у производителей.
-                    </h3>
+                    <h2>{getText("b2")}</h2>
+                    <h3>{getText("b3")}</h3>
                   </div>
                 </div>
                 <div className="col-lg-4 mb-3 mb-lg-0">
@@ -28,12 +27,8 @@ const Benefits = () => {
                     <div className="img">
                       <img loading="lazy" src="/images/b2.png" alt="" />
                     </div>
-                    <h2>Ремонт за 1 день или за наш счёт</h2>
-                    <h3>
-                      Даже если после диагностики вы решите отложить ремонт или
-                      вовсе от него отказаться, в любом случае, услуга будет
-                      оказана бесплатно!
-                    </h3>
+                    <h2>{getText("b4")}</h2>
+                    <h3>{getText("b5")}</h3>
                   </div>
                 </div>
                 <div className="col-lg-4 mb-3 mb-lg-0">
@@ -41,12 +36,8 @@ const Benefits = () => {
                     <div className="img">
                       <img loading="lazy" src="/images/b3.png" alt="" />
                     </div>
-                    <h2>Ремонт за 1 день или за наш счёт</h2>
-                    <h3>
-                      Даже если после диагностики вы решите отложить ремонт или
-                      вовсе от него отказаться, в любом случае, услуга будет
-                      оказана бесплатно!
-                    </h3>
+                    <h2>{getText("b6")}</h2>
+                    <h3>{getText("b7")}</h3>
                   </div>
                 </div>
               </div>

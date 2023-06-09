@@ -883,6 +883,14 @@ body {
       box-shadow: -4px 4px 17px rgba(0, 32, 61, 0.4);
       border-radius: 15px;
       padding: 20px 20px 40px;
+      height: 100%;
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
     }
 
     h3 {

@@ -7,6 +7,7 @@ import axios from "axios";
 import TextField from "@mui/material/TextField";
 import { Alert, Typography } from "@mui/material";
 import { CHAT_ID, TOKEN } from "../constants";
+import { getText } from "../locales";
 
 const OurServices = () => {
   const [open, setOpen] = useState(false);
@@ -56,8 +57,8 @@ const OurServices = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h1>Наши услуги</h1>
-              <h2>Работаем со всеми видами техники</h2>
+              <h1>{getText("services1")}</h1>
+              <h2>{getText("services2")}</h2>
             </div>
           </div>
           <div className="row  justify-content-center">
@@ -68,24 +69,24 @@ const OurServices = () => {
                   <img loading="lazy" src="/images/fridge.webp" alt="" />
                 </div>
 
-                <h3>Ремонт бытовой техники</h3>
-                <p>Ремонт стиральных машин</p>
-                <p>Ремонт морозильных камер</p>
-                <p>Ремонт холодильных витрин</p>
-                <p>Ремонт мотора</p>
+                <h3>{getText("services3")}</h3>
+                <p>{getText("services4")}</p>
+                <p>{getText("services5")}</p>
+                <p>{getText("services6")}</p>
+                <p>{getText("services7")}</p>
                 <Button
                   onClick={(e) => handleOpen("Ремонт бытовой техники")}
                   className="myBtn"
                   variant="contained"
                 >
-                  Заказать услугу
+                  {getText("services9")}
                 </Button>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12 text-center">
-              <h4>Гарантия от 6 месяцев до 4 лет</h4>
+              <h4>{getText("services8")}</h4>
             </div>
           </div>
         </div>
@@ -107,7 +108,7 @@ const OurServices = () => {
               id="modal-modal-description"
               sx={{ mt: 2 }}
             >
-              Оставить заявку
+              {getText("f1")}
             </Typography>
             <TextField
               required
@@ -116,7 +117,7 @@ const OurServices = () => {
               onChange={(e) => setName(e.target.value)}
               id="standard-basic"
               fullWidth
-              label="Enter name"
+              label={getText("f2")}
               variant="standard"
             />
             <TextField
@@ -125,13 +126,13 @@ const OurServices = () => {
               onChange={(e) => setPhone(e.target.value)}
               id="standard-basic"
               fullWidth
-              label="Enter phone number"
+              label={getText("f3")}
               variant="standard"
               placeholder="+998"
               type="number"
             />
             <Button type="submit" className="myBtn" variant="contained">
-              Отправить
+              {getText("f4")}
             </Button>
           </Box>
         </form>
@@ -144,7 +145,7 @@ const OurServices = () => {
         variant="filled"
         severity="success"
       >
-        <h5>Tez orada aloqaga chiqamiz.</h5>
+        <h5>{getText("f5")}</h5>
       </Alert>
     </>
   );

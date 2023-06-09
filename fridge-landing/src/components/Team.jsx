@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import { getText } from "../locales";
 
 const Team = () => {
   return (
@@ -13,7 +14,7 @@ const Team = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1>Все специалисты компании</h1>
+            <h1>{getText("team1")}</h1>
           </div>
         </div>
 
@@ -35,7 +36,7 @@ const Team = () => {
                   spaceBetween: 25,
                 },
                 992: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 30,
                 },
               }}
@@ -46,34 +47,34 @@ const Team = () => {
                 <div className="cards">
                   <img
                     loading="lazy"
-                    src="/images/team.png"
+                    src="/images/worker.png"
                     alt=""
                     className="w-100"
                   />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
-                    <h2>Кулешов Виктор</h2>
+                    <h2>{getText("t2")}</h2>
                     <div className="d-flex align-items-center">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
-                      <h3>4.8</h3>
+                      <h3>5.0</h3>
                     </div>
                   </div>
-                  <p>Мастер по ремонту бытовой техники </p>
-                  <h4>Опыт работы</h4>
-                  <h5>17 лет</h5>
+                  <p>{getText("t3")} </p>
+                  <h4>{getText("experience")}</h4>
+                  <h5>36 {getText("year")}</h5>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
                   <img
                     loading="lazy"
-                    src="/images/team.png"
+                    src="/images/worker.png"
                     alt=""
                     className="w-100"
                   />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
-                    <h2>Кулешов Виктор</h2>
+                    <h2>{getText("t4")}</h2>
                     <div className="d-flex align-items-center">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
@@ -81,75 +82,31 @@ const Team = () => {
                       <h3>4.8</h3>
                     </div>
                   </div>
-                  <p>Мастер по ремонту бытовой техники </p>
-                  <h4>Опыт работы</h4>
-                  <h5>17 лет</h5>
+                  <p>{getText("t5")} </p>
+                  <h4>{getText("experience")}</h4>
+                  <h5>8 {getText("year")}</h5>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
                   <img
                     loading="lazy"
-                    src="/images/team.png"
+                    src="/images/worker.png"
                     alt=""
                     className="w-100"
                   />
                   <div className="d-flex align-items-center mt-2 justify-content-between">
-                    <h2>Кулешов Виктор</h2>
+                    <h2>{getText("t6")}</h2>
                     <div className="d-flex align-items-center">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
                       </span>
-                      <h3>4.8</h3>
+                      <h3>4.6</h3>
                     </div>
                   </div>
-                  <p>Мастер по ремонту бытовой техники </p>
-                  <h4>Опыт работы</h4>
-                  <h5>17 лет</h5>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="cards">
-                  <img
-                    loading="lazy"
-                    src="/images/team.png"
-                    alt=""
-                    className="w-100"
-                  />
-                  <div className="d-flex align-items-center mt-2 justify-content-between">
-                    <h2>Кулешов Виктор</h2>
-                    <div className="d-flex align-items-center">
-                      <span>
-                        <img loading="lazy" src="/images/star.svg" alt="" />
-                      </span>
-                      <h3>4.8</h3>
-                    </div>
-                  </div>
-                  <p>Мастер по ремонту бытовой техники </p>
-                  <h4>Опыт работы</h4>
-                  <h5>17 лет</h5>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="cards">
-                  <img
-                    loading="lazy"
-                    src="/images/team.png"
-                    alt=""
-                    className="w-100"
-                  />
-                  <div className="d-flex align-items-center mt-2 justify-content-between">
-                    <h2>Кулешов Виктор</h2>
-                    <div className="d-flex align-items-center">
-                      <span>
-                        <img loading="lazy" src="/images/star.svg" alt="" />
-                      </span>
-                      <h3>4.8</h3>
-                    </div>
-                  </div>
-                  <p>Мастер по ремонту бытовой техники </p>
-                  <h4>Опыт работы</h4>
-                  <h5>17 лет</h5>
+                  <p>{getText("t7")} </p>
+                  <h4>{getText("experience")}</h4>
+                  <h5>7 {getText("year")}</h5>
                 </div>
               </SwiperSlide>
             </Swiper>

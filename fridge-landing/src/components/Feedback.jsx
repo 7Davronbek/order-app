@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation, Autoplay } from "swiper";
+import { getText } from "../locales";
 
 const Feedback = () => {
   return (
@@ -12,11 +13,11 @@ const Feedback = () => {
       <div className="container">
         <div className="row myRow justify-content-center">
           <div className="col-lg-4">
-            <h1>Рейтинг 4.8</h1>
+            <h1>{getText("r1")} 4.8</h1>
             <div className="starWrap">
               <img loading="lazy" src="/images/stargr.png" alt="" />
             </div>
-            <h2>На основании 11 отзыва и 11 оценок</h2>
+            <h2>{getText("r2")}</h2>
           </div>
           <div className="col-lg-1"></div>
           <div className="col-lg-4">
@@ -33,7 +34,7 @@ const Feedback = () => {
 
         <div className="row">
           <div className="col-12 mt-5">
-            <h3>Отзывы клиентов</h3>{" "}
+            <h3>{getText("r3")}</h3>{" "}
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
@@ -62,7 +63,7 @@ const Feedback = () => {
               <SwiperSlide>
                 <div className="cards">
                   <div className="top">
-                    <h4>AZIZA</h4>
+                    <h4>{getText("r4")}</h4>
                     <div className="star">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
@@ -82,15 +83,14 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p>
-                    Проблему решили быстро и не отказали в приезде на дом. все
-                    за час сделали, холодильник не тещит, не шумит. Спасибо
+                    {getText("r5")}
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
                   <div className="top">
-                    <h4>AZIZA</h4>
+                    <h4>{getText("r6")}</h4>
                     <div className="star">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
@@ -110,15 +110,14 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p>
-                    Проблему решили быстро и не отказали в приезде на дом. все
-                    за час сделали, холодильник не тещит, не шумит. Спасибо
+                    {getText("r7")}
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
                   <div className="top">
-                    <h4>AZIZA</h4>
+                    <h4>{getText("r8")}</h4>
                     <div className="star">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
@@ -138,15 +137,14 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p>
-                    Проблему решили быстро и не отказали в приезде на дом. все
-                    за час сделали, холодильник не тещит, не шумит. Спасибо
+                    {getText("r9")}
                   </p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="cards">
                   <div className="top">
-                    <h4>AZIZA</h4>
+                    <h4>{getText("r10")}</h4>
                     <div className="star">
                       <span>
                         <img loading="lazy" src="/images/star.svg" alt="" />
@@ -166,8 +164,34 @@ const Feedback = () => {
                     </div>
                   </div>
                   <p>
-                    Проблему решили быстро и не отказали в приезде на дом. все
-                    за час сделали, холодильник не тещит, не шумит. Спасибо
+                    {getText("r11")}
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="cards">
+                  <div className="top">
+                    <h4>{getText("r12")}</h4>
+                    <div className="star">
+                      <span>
+                        <img loading="lazy" src="/images/star.svg" alt="" />
+                      </span>
+                      <span>
+                        <img loading="lazy" src="/images/star.svg" alt="" />
+                      </span>
+                      <span>
+                        <img loading="lazy" src="/images/star.svg" alt="" />
+                      </span>
+                      <span>
+                        <img loading="lazy" src="/images/star.svg" alt="" />
+                      </span>
+                      <span>
+                        <img loading="lazy" src="/images/star.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                  <p>
+                    {getText("r13")}
                   </p>
                 </div>
               </SwiperSlide>

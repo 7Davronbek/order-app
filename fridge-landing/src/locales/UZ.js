@@ -40,4 +40,39 @@ export const uz = {
   r1: "Reyting",
   r2: "11 ta sharh va 11 ta reyting asosida",
   r3: "Mijozlar fikri",
+
+  // *****************************
+
+  f1: "Arizangizni yuboring",
+  f2: "Ismingizni kiriting",
+  f3: "Telefon raqamini kiriting",
+  f4: "Yuborish",
+  f5: "Tez orada siz bilan bog'lanamiz.",
+
+  t2: "Avaz (aka)",
+  t3: "Tajribali mutaxassis",
+  experience: "Ish tajribasi",
+  year: "yil",
+  t4: "Gromov Andrey",
+  t5: "Elektr kompressorlar bo'yicha mutaxassis",
+
+  t6: "Abdullaev Timur",
+  t7: "Muzlatgichlar bo'yicha mutaxassis",
+
+  r4: "Marjona",
+  r5: "Men qo'ng'iroq qildim, muloyim menejer javob berdi va buyurtmani oldi. Ustaning ishi yoqdi.",
+  r6: "Yasina",
+  r7: "Muammo tezda hal qilindi va ular uyga kelishdan bosh tortishmadi. Coldmaker mutaxassislari bir soat ichida hamma narsani qilishdi, muzlatgichimni tuzatib berishdi. Hozirda shovqinsiz, ovoz chiqarmay ishlamoqda. Rahmat",
+  r8: "Farzona",
+  r9: "Ajoyib xizmat ko'rsatish markazi! Har doim sifatli injiqliksiz ishlaydi!",
+  r10: "Ulug'bek",
+  r11: "Rahmat yigitlar. Darhol kelib, muzlatgichni tuzatishdi. Hammasi yaxshi ishlamoqda",
+  r12: "Nuriddin",
+  r13: "Ajoyib xizmat ko'rsatish markazi. So'rovga zudlik bilan javob berdi. Usta qo'ng'iroqqa keldi va juda aniq, muloyim edi, buzilish haqida hamma narsani batafsil tushuntirdi",
+
+  c1: "Ish vaqti",
+  c2: "Du-Ya: : 07:00-22:00",
+  c3: "Telefon raqamlar",
+  c4: "Manzil",
+  c5: "Toshkent, Arnasoy ko'chasi, 27",
 };

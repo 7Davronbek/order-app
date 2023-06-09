@@ -1,4 +1,5 @@
 import Button from "@mui/material/Button";
+import { getText } from "../locales";
 
 const HaveQuestion = () => {
   return (
@@ -6,14 +7,11 @@ const HaveQuestion = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">
-            <h1>
-              Не нашли свой вид техники? Тогда, звоните или оставляйте заявку и
-              оператор проконсультирует вас по всем услугам нашей компании!
-            </h1>
+            <h1>{getText("q1")}</h1>
 
             <a href="tel:+998 98 128 99 95">
               <Button className="myBtn white" variant="contained">
-                Задать вопрос
+                {getText("q2")}
               </Button>
             </a>
           </div>
