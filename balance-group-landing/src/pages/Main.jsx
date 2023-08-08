@@ -4,6 +4,10 @@ const Main = () => {
   return (
     <>
       <Navbar />
+
+      <div className="vh-100"></div>
+      <div className="vh-100"></div>
+      <div className="vh-100"></div>
     </>
   );
 };
