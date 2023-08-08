@@ -7,40 +7,46 @@ const OurWorks = () => {
             <h1>ПРИМЕРЫ НАШИХ РАБОТ:</h1>
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
           </div>
 
-          <div className="col-lg-4">
-            <img src="/images/porfolio.png" alt="" />
+          <div className="col-lg-4 mb-5">
+            <img src="/images/portfolio.png" alt="" />
+          </div>
+
+          <div className="col-12">
+            <div className="down text-center">
+              <img src="/images/down.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>

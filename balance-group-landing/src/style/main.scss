@@ -190,7 +190,7 @@ body {
 
   .WhatWeCanDo {
     position: relative;
-    padding: 70px 0;
+    padding: 70px 0 10px;
 
     h1 {
       color: #fff;
@@ -228,7 +228,6 @@ body {
   }
 
   .OurWorks {
-    padding: 50px 0;
 
     h1 {
       color: #fff;
@@ -238,6 +237,7 @@ body {
       font-weight: 700;
       line-height: 153.9%; /* 92.34px */
       margin-bottom: 38px;
+      text-align: center;
     }
   }
 }
