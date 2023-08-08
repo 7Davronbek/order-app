@@ -3,14 +3,11 @@ const WhatWeCanDo = () => {
     <div className="WhatWeCanDo">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Voluptatibus officiis sit nihil rem culpa suscipit fugit sapiente
-            velit esse, dolorum ratione perspiciatis consequatur, nesciunt aut
-            numquam maxime assumenda eveniet voluptatem?
+          <div className="col-lg-7 leftWrap">
+            <img src="/images/smm.png" alt="" />
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-5 ms-auto">
             <h1>ЧТО МЫ УМЕЕМ:</h1>
             <div className="d-flex align-items-center">
               <img src="/images/star.svg" alt="" />

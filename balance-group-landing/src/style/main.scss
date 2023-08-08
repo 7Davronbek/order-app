@@ -190,6 +190,7 @@ body {
 
   .WhatWeCanDo {
     position: relative;
+    padding: 70px 0;
 
     h1 {
       color: #fff;
@@ -210,6 +211,33 @@ body {
       font-weight: 400;
       line-height: 153.9%; /* 41.553px */
       margin-left: 5px;
+    }
+
+    .leftWrap {
+      width: 58.33333333%;
+      height: 530px;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -240px;
+        left: -70px;
+        z-index: -1;
+      }
+    }
+  }
+
+  .OurWorks {
+    padding: 50px 0;
+
+    h1 {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 153.9%; /* 92.34px */
+      margin-bottom: 38px;
     }
   }
 }
