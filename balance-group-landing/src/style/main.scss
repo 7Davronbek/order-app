@@ -252,6 +252,11 @@ body {
   }
 
   .Feedback {
+    .col-12 {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
     .row {
       border-radius: 17px;
       background: rgba(217, 217, 217, 0.1);
@@ -348,6 +353,17 @@ body {
           line-height: 153.9%; /* 66.177px */
           margin-bottom: 18px;
           text-align: center;
+        }
+
+        .bottomBtn {
+          padding: 16px 62px;
+          border-radius: 15px;
+          border: 1px solid #fff;
+          color: #000 !important;
+          border-color: #fff !important;
+          background-color: #fff;
+          display: block;
+          margin: 35px auto 0;
         }
 
         .bottomWrap {

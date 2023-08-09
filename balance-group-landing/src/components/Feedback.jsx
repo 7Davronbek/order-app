@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 const Feedback = () => {
+  const [activeTab, setActiveTab] = useState("0");
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
   return (
     <div className="Feedback">
       <div className="container">
@@ -45,10 +51,30 @@ const Feedback = () => {
             <div className="bottom">
               <h3>ПЛАНИРУЕМЫЙ БЮДЖЕТ</h3>
               <div className="bottomWrap">
-                <div className="myBtn btn">ДО 3 МЛН.</div>
-                <div className="myBtn btn">ДО 3 МЛН.</div>
-                <div className="myBtn btn">ДО 3 МЛН.</div>
-                <div className="myBtn btn">ДО 3 МЛН.</div>
+                <div
+                  onClick={() => toggle("0")}
+                  className={`myBtn btn ${activeTab == "0" ? "active" : ""} `}
+                >
+                  ДО 3 МЛН.
+                </div>
+                <div
+                  onClick={() => toggle("1")}
+                  className={`myBtn btn ${activeTab == "1" ? "active" : ""} `}
+                >
+                  3-5 МЛН.
+                </div>
+                <div
+                  onClick={() => toggle("2")}
+                  className={`myBtn btn ${activeTab == "2" ? "active" : ""} `}
+                >
+                  5-8 МЛН.
+                </div>
+                <div
+                  onClick={() => toggle("3")}
+                  className={`myBtn btn ${activeTab == "3" ? "active" : ""} `}
+                >
+                  ОТ 8 МЛН.
+                </div>
               </div>
 
               <label htmlFor="placeholder">
@@ -61,7 +87,7 @@ const Feedback = () => {
                 className="form-control"
               />
 
-              <button className="btn myBtn">ОТПРАВИТЬ</button>
+              <button className="btn myBtn bottomBtn">ОТПРАВИТЬ</button>
             </div>
           </div>
         </div>
