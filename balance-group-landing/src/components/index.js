@@ -4,3 +4,4 @@ export { default as WhatWeCanDo } from "./WhatWeCanDo";
 export { default as OurWorks } from "./OurWorks";
 export { default as DigitalMarketing } from "./DigitalMarketing";
 export { default as Feedback } from "./Feedback";
+export { default as Cursor } from "./Cursor";

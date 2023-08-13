@@ -1,4 +1,5 @@
 import {
+  Cursor,
   DigitalMarketing,
   Feedback,
   Header,
@@ -16,6 +17,7 @@ const Main = () => {
       <OurWorks />
       <DigitalMarketing />
       <Feedback />
+      <Cursor />
 
       <div className="vh-100"></div>
       <div className="vh-100"></div>
