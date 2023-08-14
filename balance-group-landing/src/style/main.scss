@@ -4,6 +4,37 @@
   overflow-x: hidden;
 }
 
+html {
+  ::selection {
+    background-color: #fff;
+    color: #000;
+  }
+
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4;
+
+    &:hover {
+      background: #cccccc;
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3c3c3c;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background: #3c3c3caf;
+    }
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #000;
