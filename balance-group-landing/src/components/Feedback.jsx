@@ -1,10 +1,28 @@
+/* eslint-disable no-unused-vars */
+import axios from "axios";
 import { useState } from "react";
+import { CHAT_ID, TOKEN } from "../constants";
 
 const Feedback = () => {
   const [activeTab, setActiveTab] = useState("0");
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [desription, setDescription] = useState("");
+
+  let text = `Name: ${name}.%0AMessage: ${desription}.%0AMy phone number: +${phone}.%0AMy phone number: +${email}`;
+
+  const sendFeedback = (e) => {
+    e.preventDefault();
+    const { data } = axios.post(
+      `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
+    );
+  };
+
   return (
     <div className="Feedback">
       <div className="container">
@@ -87,7 +105,9 @@ const Feedback = () => {
                 className="form-control"
               />
 
-              <button className="btn myBtn bottomBtn">ОТПРАВИТЬ</button>
+              <button onClick={sendFeedback} className="btn myBtn bottomBtn">
+                ОТПРАВИТЬ
+              </button>
             </div>
           </div>
         </div>
