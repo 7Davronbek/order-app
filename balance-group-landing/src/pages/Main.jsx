@@ -5,6 +5,7 @@ import {
   Header,
   Navbar,
   OurWorks,
+  WeAreTrusted,
   WhatWeCanDo,
 } from "../components";
 
@@ -17,11 +18,9 @@ const Main = () => {
       <OurWorks />
       <DigitalMarketing />
       <Feedback />
+      <WeAreTrusted />
       <Cursor />
 
-      <div className="vh-100"></div>
-      <div className="vh-100"></div>
-      <div className="vh-100"></div>
     </>
   );
 };

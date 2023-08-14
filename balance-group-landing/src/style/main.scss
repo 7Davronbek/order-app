@@ -434,4 +434,99 @@ body {
       }
     }
   }
+
+  .WeAreTrusted {
+    padding: 60px 0;
+    
+    h1 {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 43px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 153.9%; /* 66.177px */
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      position: relative;
+
+      .slider {
+        display: flex;
+        height: 100px;
+
+        .slide {
+          display: flex;
+          align-items: center;
+          -webkit-animation: slideshow 16s linear infinite;
+          animation: slideshow 16s linear infinite;
+
+          img {
+            padding: 0 30px;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 10%;
+        height: 60%;
+        background: linear-gradient(275deg, #000, transparent);
+        backdrop-filter: blur(2px);
+        z-index: 11;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 10%;
+        height: 60%;
+        background: linear-gradient(275deg, transparent, #000);
+        backdrop-filter: blur(2px);
+        z-index: 11;
+      }
+    }
+
+    .secondary {
+      .slide {
+        -webkit-animation: slideReversed 16s linear infinite !important;
+        animation: slideReversed 16s linear infinite !important;
+      }
+    }
+
+    @keyframes slideshow {
+      0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes slideReversed {
+      0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+  }
 }
