@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import {
   Cursor,
   DigitalMarketing,
@@ -21,6 +22,7 @@ const Main = () => {
       <WeAreTrusted />
       <Cursor />
 
+      <ToastContainer theme="dark" />
     </>
   );
 };
