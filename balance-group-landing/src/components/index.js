@@ -6,3 +6,4 @@ export { default as DigitalMarketing } from "./DigitalMarketing";
 export { default as Feedback } from "./Feedback";
 export { default as Cursor } from "./Cursor";
 export { default as WeAreTrusted } from "./WeAreTrusted";
+export { default as Loader } from "./Loader";

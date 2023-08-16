@@ -50,6 +50,7 @@ const OurWorks = () => {
           </div>
         </div>
       </div>
+      <div className="light3"><img src="/images/light4.png" alt="" /></div>
     </div>
   );
 };

@@ -12,6 +12,8 @@ const DigitalMarketing = () => {
           </div>
         </div>
       </div>
+      <div className="grid2"><img src="/images/grid2.png" alt="" /></div>
+      <div className="light4"><img src="/images/light4.png" alt="" /></div>
     </div>
   );
 };
