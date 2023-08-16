@@ -23,8 +23,8 @@ const Main = () => {
   return (
     <>
     {isLoading && <Loader />}
-      <Navbar />
-      <Header />
+      {/* <Navbar /> */}
+      {/* <Header /> */}
       <WhatWeCanDo />
       <OurWorks />
       <DigitalMarketing />

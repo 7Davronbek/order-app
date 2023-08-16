@@ -2,7 +2,7 @@ import AnimatedCursor from 'react-animated-cursor'
 
 const Cursor = () => {
   return (
-    <>
+    <div className='Cursor'>
       <AnimatedCursor
         innerSize={8}
         outerSize={40}
@@ -17,7 +17,7 @@ const Cursor = () => {
           border: "3px solid #eee",
         }}
       />
-    </>
+    </div>
   )
 }
 

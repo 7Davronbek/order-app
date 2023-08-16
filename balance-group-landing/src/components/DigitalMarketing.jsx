@@ -7,7 +7,7 @@ const DigitalMarketing = () => {
             <h1>Все услуги цифрового маркетинга для </h1>
             <h1>Вашего бизнеса!</h1>
           </div>
-          <div className="col-lg-5 ms-auto">
+          <div className="col-lg-5 ms-auto right">
             <img src="/images/hardwareWallet.png" alt="" />
           </div>
         </div>
