@@ -12,74 +12,74 @@ const WeAreTrusted = () => {
       <div className="wrapper">
         <div className="slider">
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
         </div>
       </div>
       <div className="wrapper secondary">
         <div className="slider">
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
           <div className="slide">
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
-            <img src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
+            <img loading="lazy"src="/images/logo.svg" alt="" />
           </div>
         </div>
       </div>

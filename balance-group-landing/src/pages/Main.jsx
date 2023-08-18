@@ -13,7 +13,7 @@ import {
 import { useEffect, useState } from "react";
 
 const Main = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {

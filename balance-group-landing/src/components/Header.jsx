@@ -11,12 +11,12 @@ const Header = () => {
             </p>
 
             <div className="image">
-              <img src="/images/companyGroup.svg" alt="" />
+              <img loading="lazy"src="/images/companyGroup.svg" alt="" />
             </div>
 
             <a href="tel:+998943698058" className="btn">
               <div className="circle">
-                <img src="/images/arrowUp.svg" alt="" />
+                <img loading="lazy"src="/images/arrowUp.svg" alt="" />
               </div>
               <h3>Узнать стоимость</h3>
             </a>
@@ -24,15 +24,15 @@ const Header = () => {
 
           <div className="col-lg-4">
             <div className="rightWrap">
-              <img src="/images/headerPhones.png" alt="" />
+              <img loading="lazy"src="/images/headerPhones.png" alt="" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="light1"><img src="/images/light1.png" alt="" /></div>
-      <div className="light2"><img src="/images/light2.png" alt="" /></div>
-      <div className="grid1"><img src="/images/headerGrid.png" alt="" /></div>
+      <div className="light1"><img loading="lazy"src="/images/light1.png" alt="" /></div>
+      <div className="light2"><img loading="lazy"src="/images/light2.png" alt="" /></div>
+      <div className="grid1"><img loading="lazy"src="/images/headerGrid.png" alt="" /></div>
     </div>
   );
 };

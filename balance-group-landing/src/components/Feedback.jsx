@@ -47,7 +47,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="Feedback">
+    <div id="Feedback" className="Feedback">
       <div className="container">
         <div className="row">
           <form onSubmit={sendFeedback} className="col-12">

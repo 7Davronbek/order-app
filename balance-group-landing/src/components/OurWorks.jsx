@@ -8,7 +8,7 @@ const OurWorks = () => {
 
   return (
     <>
-      <div className="OurWorks">
+      <div id="OurWorks" className="OurWorks">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -173,7 +173,7 @@ const OurWorks = () => {
           </div>
         </div>
         <div className="light3">
-          <img src="/images/light4.png" alt="" />
+          <img loading="lazy"src="/images/light4.png" alt="" />
         </div>
       </div>
 
@@ -182,7 +182,7 @@ const OurWorks = () => {
         className={`ProjectsModal ${isActive && "active"}`}
       >
         <div className="cards">
-          <img src={image} alt="" />
+          <img loading="lazy"src={image} alt="" />
           <div className="wrap">
             <h3>{title}</h3>
             <p>{description}</p>
