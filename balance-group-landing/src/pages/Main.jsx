@@ -22,8 +22,8 @@ const Main = () => {
   }, []);
   return (
     <>
-    {isLoading && <Loader />}
-      {/* <Navbar /> */}
+      {isLoading && <Loader />}
+      <Navbar />
       <Header />
       <WhatWeCanDo />
       <OurWorks />
