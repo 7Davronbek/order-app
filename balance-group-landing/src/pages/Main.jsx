@@ -24,7 +24,7 @@ const Main = () => {
     <>
     {isLoading && <Loader />}
       {/* <Navbar /> */}
-      {/* <Header /> */}
+      <Header />
       <WhatWeCanDo />
       <OurWorks />
       <DigitalMarketing />

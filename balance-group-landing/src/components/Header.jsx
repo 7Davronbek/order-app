@@ -14,12 +14,12 @@ const Header = () => {
               <img src="/images/companyGroup.svg" alt="" />
             </div>
 
-            <div className="btn">
+            <a href="tel:+998943698058" className="btn">
               <div className="circle">
                 <img src="/images/arrowUp.svg" alt="" />
               </div>
               <h3>Узнать стоимость</h3>
-            </div>
+            </a>
           </div>
 
           <div className="col-lg-4">

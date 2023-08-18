@@ -229,6 +229,57 @@ body {
       z-index: -1;
       top: 0;
     }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 15px;
+
+      .circle {
+        width: 56px;
+        height: 56px;
+        background: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+          transition: all 0.3s ease-in-out;
+          transform: translate(0, 0);
+        }
+
+        &::after {
+          content: "";
+          width: 56px;
+          height: 56px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: -25px;
+          z-index: -1;
+        }
+      }
+
+      &:hover {
+        .circle {
+          img {
+            transform: translate(7px, -10px);
+          }
+        }
+      }
+    }
+
+    h3 {
+      margin-left: 15px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 153.9%; /* 26.163px */
+    }
   }
 
   .WhatWeCanDo {
@@ -886,6 +937,73 @@ body {
           height: 28px;
         }
       }
+    }
+  }
+
+  .ProjectsModal {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    backdrop-filter: blur(52px);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    .cards {
+      width: 70%;
+      background: rgba(217, 217, 217, 0.1);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 25px;
+
+      .wrap {
+        margin-left: 25px;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 40px;
+
+        @media (max-width: 992px) {
+          font-size: 30px;
+          margin-top: 25px;
+          text-align: center;
+        }
+      }
+      p {
+        font-size: 22px;
+        color: #fff;
+        margin-top: 10px;
+
+        @media (max-width: 992px) {
+          font-size: 18px;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        width: 85%;
+      }
+
+      @media (max-width: 992px) {
+        width: 85%;
+        flex-direction: column;
+        padding: 15px;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
