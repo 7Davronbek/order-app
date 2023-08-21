@@ -11,12 +11,12 @@ const Header = () => {
             </p>
 
             <div className="image">
-              <img loading="lazy"src="/images/companyGroup.svg" alt="" />
+              <img loading="lazy" src="/images/companyGroup.svg" alt="" />
             </div>
 
             <a href="tel:+998943698058" className="btn">
               <div className="circle">
-                <img loading="lazy"src="/images/arrowUp.svg" alt="" />
+                <img loading="lazy" src="/images/arrowUp.svg" alt="" />
               </div>
               <h3>Узнать стоимость</h3>
             </a>
@@ -24,15 +24,24 @@ const Header = () => {
 
           <div className="col-lg-4">
             <div className="rightWrap">
-              <img loading="lazy"src="/images/headerPhones.png" alt="" />
+              <video autoPlay muted loop className="">
+                <source src="/videos/iPhone.webm" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="light1"><img loading="lazy"src="/images/light1.png" alt="" /></div>
-      <div className="light2"><img loading="lazy"src="/images/light2.png" alt="" /></div>
-      <div className="grid1"><img loading="lazy"src="/images/headerGrid.png" alt="" /></div>
+      <div className="light1">
+        <img loading="lazy" src="/images/light1.png" alt="" />
+      </div>
+      <div className="light2">
+        <img loading="lazy" src="/images/light2.png" alt="" />
+      </div>
+      <div className="grid1">
+        <img loading="lazy" src="/images/headerGrid.png" alt="" />
+      </div>
     </div>
   );
 };

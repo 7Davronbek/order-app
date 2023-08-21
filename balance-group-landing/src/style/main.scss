@@ -406,12 +406,21 @@ body {
 
     .rightWrap {
       position: absolute;
-      right: 0;
+      right: -100px;
       z-index: -1;
-      top: 0;
+      top: -20px;
+
+      video {
+        width: 1270px;
+
+        @media(max-width: 1400px) {
+            width: 1270px;
+        }
+    }
 
       @media (max-width: 1400px) {
-        right: -80px;
+        right: -132px;
+        top: 7px;
       }
 
       @media (max-width: 992px) {
