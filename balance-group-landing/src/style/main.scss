@@ -413,10 +413,10 @@ body {
       video {
         width: 1270px;
 
-        @media(max-width: 1400px) {
-            width: 1270px;
+        @media (max-width: 1400px) {
+          width: 1270px;
         }
-    }
+      }
 
       @media (max-width: 1400px) {
         right: -132px;
@@ -594,15 +594,47 @@ body {
       }
     }
 
-    .col-lg-4 {
-      text-align: center;
+    .cards {
+        background: #232323;
+        gap: 15px;
+        display: grid;
+        padding: 21px;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
 
-      img {
-        width: 90%;
-      }
+        .top {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(3px);
+            border-radius: 15px;
 
-      @media (max-width: 992px) {
-      }
+            img {
+                width: 50%;
+            }
+        }
+        
+        .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 30%;
+                border-radius: 15px;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 
     .light3 {

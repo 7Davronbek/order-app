@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 
 const OurWorks = () => {
@@ -16,7 +17,27 @@ const OurWorks = () => {
             </div>
 
             <div className="col-lg-4 mb-5">
-              <img
+              <div onClick={() => setIsActive(!isActive)} className="cards">
+                <div className="top">
+                  <img src="/images/card/0.png" alt="" />
+                </div>
+                <div className="wrap">
+                  <img loading="lazy" src="/images/card/1.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/2.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/3.jpg" alt="" />
+                </div>
+                <div className="wrap">
+                  <img loading="lazy" src="/images/card/4.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/5.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/6.jpg" alt="" />
+                </div>
+                <div className="wrap">
+                  <img loading="lazy" src="/images/card/7.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/8.jpg" alt="" />
+                  <img loading="lazy" src="/images/card/9.jpg" alt="" />
+                </div>
+              </div>
+              {/* <img
                 onClick={() => {
                   setImage("/images/portfolio.png"),
                     setTitle(
@@ -29,151 +50,12 @@ const OurWorks = () => {
                 }}
                 src="/images/portfolio.png"
                 alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing"
-                    );
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img
-                onClick={() => {
-                  setImage("/images/portfolio.png"),
-                    setTitle("Lorem ipsum dolor sit amet");
-                  setDescription(
-                    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                  );
-                  setIsActive(true);
-                }}
-                src="/images/portfolio.png"
-                alt=""
-              />
-            </div>
-
-            <div className="col-12">
-              <div className="down text-center">
-                <img
-                  onClick={() => {
-                    setImage("/images/portfolio.png"),
-                      setTitle("Lorem ipsum dolor sit amet");
-                    setDescription(
-                      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, sapiente non voluptates ipsum, corporis facere suscipit accusantium consequuntur blanditiis tempora totam dolorem. Eveniet laboriosam, omnis velit neque cupiditate recusandae ad."
-                    );
-                    setIsActive(true);
-                  }}
-                  src="/images/down.svg"
-                  alt=""
-                />
-              </div>
+              /> */}
             </div>
           </div>
         </div>
         <div className="light3">
-          <img loading="lazy"src="/images/light4.png" alt="" />
+          <img loading="lazy" src="/images/light4.png" alt="" />
         </div>
       </div>
 
@@ -182,10 +64,20 @@ const OurWorks = () => {
         className={`ProjectsModal ${isActive && "active"}`}
       >
         <div className="cards">
-          <img loading="lazy"src={image} alt="" />
           <div className="wrap">
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <img loading="lazy" src="/images/card/1.jpg" alt="" />
+            <img loading="lazy" src="/images/card/2.jpg" alt="" />
+            <img loading="lazy" src="/images/card/3.jpg" alt="" />
+          </div>
+          <div className="wrap">
+            <img loading="lazy" src="/images/card/4.jpg" alt="" />
+            <img loading="lazy" src="/images/card/5.jpg" alt="" />
+            <img loading="lazy" src="/images/card/6.jpg" alt="" />
+          </div>
+          <div className="wrap">
+            <img loading="lazy" src="/images/card/7.jpg" alt="" />
+            <img loading="lazy" src="/images/card/8.jpg" alt="" />
+            <img loading="lazy" src="/images/card/9.jpg" alt="" />
           </div>
         </div>
       </div>
