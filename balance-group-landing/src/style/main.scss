@@ -619,9 +619,13 @@ body {
         img {
           width: 50%;
           background: #ffffffab;
-          padding: 10px;
           border-radius: 14px;
           backdrop-filter: blur(26px);
+          padding: 40px 10px;
+
+          &.normal {
+            padding: 10px;
+          }
 
           &.bg-dark {
             background-color: #212529c9 !important;
@@ -1193,7 +1197,7 @@ body {
 
   .ProjectsModal {
     position: fixed;
-    z-index: 99;
+    z-index: 999999999;
     top: 0;
     left: 0;
     right: 0;
@@ -1228,6 +1232,15 @@ body {
 
         img {
           width: 32.5%;
+
+          @media(max-width: 992px) {
+            width: 100%;
+          }
+        }
+
+        @media(max-width: 992px) {
+          flex-direction: column;
+          gap: 20px;
         }
       }
 
@@ -1257,7 +1270,7 @@ body {
       }
 
       @media (max-width: 992px) {
-        width: 85%;
+        width: 95%;
         flex-direction: column;
         padding: 15px;
       }

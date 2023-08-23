@@ -190,7 +190,7 @@ const OurWorks = () => {
                 className="cards"
               >
                 <div className="top">
-                  <img src="/images/card/60.png" alt="" />
+                  <img className="normal" src="/images/card/60.png" alt="" />
                 </div>
                 <div className="wrap">
                   <img loading="lazy" src="/images/card/61.jpg" alt="" />
@@ -218,7 +218,7 @@ const OurWorks = () => {
                 className="cards"
               >
                 <div className="top">
-                  <img className="bg-dark" src="/images/card/70.png" alt="" />
+                  <img className="bg-dark normal" src="/images/card/70.png" alt="" />
                 </div>
                 <div className="wrap">
                   <img loading="lazy" src="/images/card/71.jpg" alt="" />
@@ -246,7 +246,7 @@ const OurWorks = () => {
                 className="cards"
               >
                 <div className="top">
-                  <img src="/images/card/30.png" alt="" />
+                  <img className="normal" src="/images/card/30.png" alt="" />
                 </div>
                 <div className="wrap">
                   <img loading="lazy" src="/images/card/31.jpg" alt="" />

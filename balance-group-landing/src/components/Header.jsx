@@ -14,7 +14,7 @@ const Header = () => {
               <img loading="lazy" src="/images/companyGroup.svg" alt="" />
             </div>
 
-            <a href="tel:+998943698058" className="btn">
+            <a href="tel:+998 90 061 00 44" className="btn">
               <div className="circle">
                 <img loading="lazy" src="/images/arrowUp.svg" alt="" />
               </div>
