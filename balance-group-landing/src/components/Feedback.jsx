@@ -17,7 +17,7 @@ const Feedback = () => {
 
   const [email, setEmail] = useState("");
   const [desription, setDescription] = useState("");
-  const [budget, setBudget] = useState("ДО 3 МЛН");
+  const [budget, setBudget] = useState("До 6 млн");
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -103,35 +103,35 @@ const Feedback = () => {
               <div className="bottomWrap">
                 <div
                   onClick={() => {
-                    toggle("0"), setBudget("ДО 3 МЛН");
+                    toggle("0"), setBudget("До 6 млн");
                   }}
                   className={`myBtn btn ${activeTab == "0" ? "active" : ""} `}
                 >
-                  ДО 3 МЛН.
+                  ДО 6 МЛН.
                 </div>
                 <div
                   onClick={() => {
-                    toggle("1"), setBudget("3-5 МЛН");
+                    toggle("1"), setBudget("6-10 млн");
                   }}
                   className={`myBtn btn ${activeTab == "1" ? "active" : ""} `}
                 >
-                  3-5 МЛН.
+                  6-10 МЛН.
                 </div>
                 <div
                   onClick={() => {
-                    toggle("2"), setBudget("5-8 МЛН");
+                    toggle("2"), setBudget("10-15 млн");
                   }}
                   className={`myBtn btn ${activeTab == "2" ? "active" : ""} `}
                 >
-                  5-8 МЛН.
+                  10-15 МЛН.
                 </div>
                 <div
                   onClick={() => {
-                    toggle("3"), setBudget("ОТ 8 МЛН");
+                    toggle("3"), setBudget("15 млн+");
                   }}
                   className={`myBtn btn ${activeTab == "3" ? "active" : ""} `}
                 >
-                  ОТ 8 МЛН.
+                  15 МЛН +
                 </div>
               </div>
 

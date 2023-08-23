@@ -618,10 +618,14 @@ body {
 
         img {
           width: 50%;
-          background: #ffffff;
+          background: #ffffffab;
           padding: 10px;
           border-radius: 14px;
           backdrop-filter: blur(26px);
+
+          &.bg-dark {
+            background-color: #212529c9 !important;
+          }
         }
       }
 
