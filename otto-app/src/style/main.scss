@@ -1,3 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&display=swap");
+
+#root {
+  overflow-x: hidden;
+}
+
+html {
+  ::selection {
+    // background-color: #fff;
+    // color: #000;
+  }
+
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4;
+
+    &:hover {
+      background: #cccccc;
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3c3c3c;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background: #3c3c3caf;
+    }
+  }
+}
+
 body {
-  background-color: red !important;
+  font-family: "Montserrat Alternates", sans-serif;
+  background: linear-gradient(
+      0deg,
+      rgba(194, 199, 201, 0.98) 0%,
+      rgba(194, 199, 201, 0.98) 100%
+    ),
+    url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    outline: none !important;
+
+    &:hover {
+      text-decoration: none !important;
+      color: #666;
+    }
+  }
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .Header {
+    .headerBg {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      margin-top: 36px;
+
+      .logoWrap {
+        display: flex;
+        align-items: center;
+
+        select {
+          margin-left: 5px;
+          background: transparent;
+          border: 0;
+        }
+      }
+    }
+
+    .infoWrap {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      width: 336px;
+      margin-left: 12px;
+      color: rgba(47, 49, 58, 0.7);
+      font-family: Montserrat Alternates;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+  }
+
+  .MenuList {
+    padding: 20px 0 31px;
+
+    .buttons {
+      .btn {
+        border-radius: 38px;
+        margin-right: 8px;
+        gap: 12px;
+        padding: 12px 16px;
+        font-family: Montserrat Alternates;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        color: #4b6462;
+        line-height: normal;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16) inset;
+        transition: all 0.4s ease-in;
+        background-color: #c3b6a3;
+
+        &.active {
+          box-shadow: 0px 4px 8px 0px rgba(6, 91, 85, 0.26);
+          background: #4b6462;
+          color: #c9924c;
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 24px 0 30px;
+
+      input {
+        border-radius: 38px;
+        background: rgba(255, 255, 255, 0.3);
+        font-family: Montserrat Alternates;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 10px 15px;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .cards {
+      position: relative;
+      margin-bottom: 24px;
+      display: block;
+
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-family: Montserrat Alternates;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .Menu {
+    margin-bottom: 45px;
+
+    .cards {
+      margin-bottom: 35px;
+
+      h1 {
+        color: #181c2e;
+        font-family: Montserrat Alternates;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      h2 {
+        color: #2f313a;
+        font-family: Montserrat Alternates;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 120% */
+      }
+
+      h3 {
+        color: #4b6462;
+        font-family: Montserrat Alternates;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
 }
