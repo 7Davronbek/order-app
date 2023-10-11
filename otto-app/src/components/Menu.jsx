@@ -1,16 +1,18 @@
+/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../store/CartSlice";
 import { API_PATH } from "../constants";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { product } from "../db";
+import { cartAction } from "../store/cartSlice";
 
 const Menu = () => {
   const [category, setCategory] = useState([]);
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
-    dispatch(addToCart(item));
+    dispatch(cartAction.addToCart(item));
   };
 
   const getCategoryMenu = async () => {
@@ -21,8 +23,8 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    getCategoryMenu();
-  }, []);
+    // getCategoryMenu();
+  }, [dispatch]);
 
   return (
     <div className="Menu">
@@ -32,10 +34,10 @@ const Menu = () => {
             <Link className="my-3 d-block mb-4" to={"/"}>
               <img src="/images/back.svg" alt="" /> Меню
             </Link>
-            {category &&
-              category.map((item, index) => (
+            {product &&
+              product.map((item, index) => (
                 <div key={index} className="cards">
-                  <img className="w-100" src="/images/burger.png" alt="" />
+                  <img className="w-100" src={item.image} alt="" />
                   <div className="my-4 d-flex align-items-center justify-content-between">
                     <h1>{item.name}</h1>
                     <h2>{item.weight} кг</h2>
@@ -43,7 +45,11 @@ const Menu = () => {
                   <div className="d-flex align-items-center justify-content-between">
                     <h3>{item.price} сум</h3>
                     <h4>
-                      <img onClick={() => handleAddToCart(item)} src="/images/plusOrange.svg" alt="" />
+                      <img
+                        onClick={() => handleAddToCart(item)}
+                        src="/images/plusOrange.svg"
+                        alt=""
+                      />
                     </h4>
                   </div>
                 </div>
