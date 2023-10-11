@@ -13,4 +13,18 @@ export const product = [
     price: "50000",
     image: "/images/burger.png",
   },
+  {
+    id: "3",
+    name: "Ipsim lorem 3",
+    weight: "0.3",
+    price: "37000",
+    image: "/images/soup.png",
+  },
+  {
+    id: "4",
+    name: "Lorem dolor 4",
+    weight: "0.24",
+    price: "40000",
+    image: "/images/burger.png",
+  },
 ];

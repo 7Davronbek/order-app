@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_PATH } from "../constants";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -10,9 +10,14 @@ import { cartAction } from "../store/cartSlice";
 const Menu = () => {
   const [category, setCategory] = useState([]);
   const dispatch = useDispatch();
+  const { cartItems } = useSelector((state) => state.carts);
 
   const handleAddToCart = (item) => {
     dispatch(cartAction.addToCart(item));
+  };
+
+  const handleDeleteFromCart = (item) => {
+    dispatch(cartAction.decreaseFromCart(item));
   };
 
   const getCategoryMenu = async () => {
@@ -24,7 +29,7 @@ const Menu = () => {
 
   useEffect(() => {
     // getCategoryMenu();
-  }, [dispatch]);
+  }, [cartItems]);
 
   return (
     <div className="Menu">
@@ -45,11 +50,25 @@ const Menu = () => {
                   <div className="d-flex align-items-center justify-content-between">
                     <h3>{item.price} сум</h3>
                     <h4>
-                      <img
-                        onClick={() => handleAddToCart(item)}
-                        src="/images/plusOrange.svg"
-                        alt=""
-                      />
+                      {cartItems[index]?.id == item.id ? (
+                        <i>
+                          <span
+                            onClick={() => {
+                              handleDeleteFromCart(item);
+                            }}
+                          >
+                            -
+                          </span>{" "}
+                          {cartItems[index]?.itemQuantity}{" "}
+                          <span onClick={() => handleAddToCart(item)}>+</span>{" "}
+                        </i>
+                      ) : (
+                        <img
+                          onClick={() => handleAddToCart(item)}
+                          src="/images/plusOrange.svg"
+                          alt=""
+                        />
+                      )}
                     </h4>
                   </div>
                 </div>
