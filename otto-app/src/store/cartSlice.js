@@ -56,10 +56,31 @@ const cartSlice = createSlice({
       }
     },
 
-    clearCart(state, action) {
+    clearCart(state) {
       state.cartItems = [];
-      localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems))
-    }
+      localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems));
+    },
+
+    getTotals(state) {
+      let { total, quantity } = state.cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, itemQuantity } = cartItem;
+          const itemTotal = price * itemQuantity;
+
+          cartTotal.total += itemTotal;
+          cartTotal.quantity += itemQuantity;
+
+          return cartTotal;
+        },
+        {
+          total: 0,
+          quantity: 0,
+        }
+      );
+
+      state.cartTotalQuantity = quantity;
+      state.cartTotalAmount = total;
+    },
   },
 });
 

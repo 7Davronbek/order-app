@@ -4,9 +4,11 @@ import { cartAction } from "../store/cartSlice";
 import { CHAT_ID, TOKEN } from "../constants";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 const Cart = () => {
-  const { cartItems } = useSelector((state) => state.carts);
+  const { cartItems, cartTotalQuantity, cartTotalAmount } = useSelector((state) => state.carts);
+  console.log(cartTotalQuantity);
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
@@ -23,13 +25,19 @@ const Cart = () => {
       text += `---------------------------------------%0A%0AProduct: ${cartItems[i].name} %0APrice: ${cartItems[i].price}%0ACount: ${cartItems[i].itemQuantity}%0A%0A`;
     }
 
+    text += '---------------------------------------%0APrice: ' + cartTotalAmount;
+
     e.preventDefault();
     await axios.post(
       `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
     );
     // dispatch(cartAction.clearCart())
-    toast.success("Order sent successfully")
+    toast.success("Order sent successfully");
   };
+
+  useEffect(() => {
+    dispatch(cartAction.getTotals());
+  }, [cartItems, dispatch]);
 
   return (
     <div className="Cart">
