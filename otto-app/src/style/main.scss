@@ -49,6 +49,10 @@ body {
     margin-bottom: 0;
   }
 
+  .cursor {
+    cursor: pointer;
+  }
+
   img {
     user-select: none;
   }
@@ -189,8 +193,9 @@ body {
     }
   }
 
-  .Menu, .Cart {
-    margin-bottom: 45px;
+  .Menu,
+  .Cart {
+    margin-bottom: 85px;
 
     .cards {
       margin-bottom: 35px;
@@ -220,6 +225,49 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+      }
+    }
+
+    .showOrder {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+      border-radius: 40px 40px 0px 0px;
+      background: #c9924c;
+
+      .basket {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: -2px;
+          right: -1px;
+          background: red;
+          border-radius: 50%;
+          width: 17px;
+          height: 17px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 9px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      h5 {
+        color: #fff;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-left: 14px;
       }
     }
   }

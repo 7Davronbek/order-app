@@ -10,7 +10,7 @@ import { cartAction } from "../store/cartSlice";
 const Menu = () => {
   const [category, setCategory] = useState([]);
   const dispatch = useDispatch();
-  const { cartItems } = useSelector((state) => state.carts);
+  const { cartItems, cartTotalQuantity } = useSelector((state) => state.carts);
 
   const handleAddToCart = (item) => {
     dispatch(cartAction.addToCart(item));
@@ -29,7 +29,7 @@ const Menu = () => {
 
   useEffect(() => {
     // getCategoryMenu();
-  }, [cartItems]);
+  }, [cartItems,cartTotalQuantity]);
 
   return (
     <div className="Menu">
@@ -76,6 +76,15 @@ const Menu = () => {
           </div>
         </div>
       </div>
+      {cartItems.length > 0 && (
+        <Link to="/cart" className="showOrder">
+          <span className="basket">
+            <span>{cartItems.length}</span>
+            <img src="/images/basket.svg" alt="" />
+          </span>
+          <h5>Посмотреть заказ</h5>
+        </Link>
+      )}
     </div>
   );
 };

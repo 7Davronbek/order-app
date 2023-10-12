@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { cartAction } from "../store/cartSlice";
 import { CHAT_ID, TOKEN } from "../constants";
 import axios from "axios";
@@ -7,9 +7,9 @@ import { toast } from "react-toastify";
 import { useEffect } from "react";
 
 const Cart = () => {
-  const { cartItems, cartTotalQuantity, cartTotalAmount } = useSelector((state) => state.carts);
-  console.log(cartTotalQuantity);
+  const { cartItems, cartTotalAmount } = useSelector((state) => state.carts);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddToCart = (item) => {
     dispatch(cartAction.addToCart(item));
@@ -44,9 +44,9 @@ const Cart = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-9 mx-auto">
-            <Link className="my-3 d-block mb-4" to={"/"}>
-              <img src="/images/back.svg" alt="" /> Меню
-            </Link>
+            <h6 onClick={() => navigate(-1)} className="my-3 d-block mb-4 cursor d-inline" to={"/"}>
+              <img src="/images/back.svg" alt="" /> Back
+            </h6>
             {cartItems.length === 0 ? (
               <h5 className="text-center py-5">Cart is empty.</h5>
             ) : (

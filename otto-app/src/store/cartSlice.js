@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { OTTO_CART_ITEMS } from "../constants";
+import { OTTO_CART_ITEMS, OTTO_CART_ITEMS_QUANTITY } from "../constants";
 
 const initialState = {
   cartItems: localStorage.getItem(OTTO_CART_ITEMS)
     ? JSON.parse(localStorage.getItem(OTTO_CART_ITEMS))
     : [],
-  cartTotalQuantity: 0,
+  cartTotalQuantity: localStorage.getItem(OTTO_CART_ITEMS_QUANTITY)
+    ? JSON.parse(localStorage.getItem(OTTO_CART_ITEMS_QUANTITY))
+    : 0,
   cartTotalAmount: 0,
 };
 
@@ -28,6 +30,7 @@ const cartSlice = createSlice({
         state.cartItems.push(tempProduct);
       }
       localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems));
+      localStorage.setItem(OTTO_CART_ITEMS_QUANTITY, JSON.stringify(state.cartItems.length));
     },
 
     removeFromCart(state, action) {
@@ -37,6 +40,7 @@ const cartSlice = createSlice({
       state.cartItems = nextCartItem;
       localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems));
       toast.error(action.payload.name + " removed from cart");
+      localStorage.setItem(OTTO_CART_ITEMS_QUANTITY, JSON.stringify(state.cartItems.length));
     },
 
     decreaseFromCart(state, action) {
@@ -52,6 +56,7 @@ const cartSlice = createSlice({
         );
         state.cartItems = nextCartItem;
         localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems));
+        localStorage.setItem(OTTO_CART_ITEMS_QUANTITY, JSON.stringify(state.cartItems.length));
         toast.error(action.payload.name + " removed from cart");
       }
     },
@@ -59,6 +64,7 @@ const cartSlice = createSlice({
     clearCart(state) {
       state.cartItems = [];
       localStorage.setItem(OTTO_CART_ITEMS, JSON.stringify(state.cartItems));
+      localStorage.setItem(OTTO_CART_ITEMS_QUANTITY, JSON.stringify(state.cartItems.length));
     },
 
     getTotals(state) {
