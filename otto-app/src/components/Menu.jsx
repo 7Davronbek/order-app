@@ -50,7 +50,7 @@ const Menu = () => {
                   <div className="d-flex align-items-center justify-content-between">
                     <h3>{item.price} сум</h3>
                     <h4>
-                      {cartItems[index]?.id == item.id ? (
+                      {/* {cartItems[cartItems.length-1]?.id == item.id ? (
                         <i>
                           <span
                             onClick={() => {
@@ -68,7 +68,12 @@ const Menu = () => {
                           src="/images/plusOrange.svg"
                           alt=""
                         />
-                      )}
+                      )} */}
+                      <img
+                          onClick={() => handleAddToCart(item)}
+                          src="/images/plusOrange.svg"
+                          alt=""
+                        />
                     </h4>
                   </div>
                 </div>
