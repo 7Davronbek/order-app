@@ -7,24 +7,42 @@
     <title>SanArt IT Company</title>
   </head>
   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <body class="mt-10">
+  <body>
     <div class="wrapper">
       <div class="content">
+        <div class="myNavbar">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 myCol">
+                <div class="logo"><img src="images/logo.svg" alt="" /></div>
+                <div class="navLink">
+                  <a href="#">О нас</a>
+                  <a href="#">Услуги</a>
+                  <a href="#">Контакты</a>
+                </div>
+                <a class="myBtn" href="#"
+                  >Оставить заявку
+                  <i><img src="images/arrowTop.svg" alt="" /></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="header">
           <div class="container">
             <div class="row myWrap">
-              <div class="col-12">
-                <h1 class="topH1">Агентство веб-дизайна и</h1>
-                <h1>веб-разработки</h1>
-                <h2>
+              <div id="headerCol" class="col-12">
+                <h1 id="headerH1Left" class="topH1">Агентство веб-дизайна и</h1>
+                <h1 id="headerH1Right">веб-разработки</h1>
+                <h2 id="headerP">
                   Мы предоставляем индивидуальные услуги веб-разработки и
                   веб-дизайна каждому бизнесу и стартапу в мире.
                 </h2>
-                <a class="myBtn" href="#">Начать проект</a>
+                <a id="headerBtn" class="myBtn" href="#">Начать проект</a>
 
-                <div class="shape"><img src="images/shape1.png" alt="" /></div>
+                <div id="headerShape" class="shape"><img src="images/shape1.png" alt="" /></div>
 
-                <div class="bottom">
+                <div id="headerBottom" class="bottom">
                   <p>Ташкент - 11:15</p>
                   <div class="d-flex align-items-center bottomWrap">
                     <i><img src="/images/copy.svg" alt="" /></i>
@@ -79,7 +97,7 @@
         <div class="development">
           <div class="container">
             <div class="row myRow">
-              <div class="col-lg-7">
+              <div class="col-lg-7 position-relative">
                 <h1>Разработка</h1>
                 <h2>
                   Благодаря услугам веб-дизайна клиенты получают инновационные и
@@ -94,12 +112,13 @@
                   <p>Ecommerce Website</p>
                   <p>Blog</p>
                 </div>
+                <div class="blur1"></div>
               </div>
               <a href="#">Начать проект</a>
 
               <div class="line"></div>
 
-              <div class="col-lg-7">
+              <div class="col-lg-7 position-relative">
                 <h1>дИЗАЙН</h1>
                 <h2>
                   Благодаря услугам веб-дизайна клиенты получают инновационные и
@@ -114,12 +133,13 @@
                   <p>Ecommerce Website Design</p>
                   <p>Blog</p>
                 </div>
+                <div class="blur2"></div>
               </div>
               <a href="#">Начать проект</a>
 
               <div class="line"></div>
 
-              <div class="col-lg-7">
+              <div class="col-lg-7 position-relative">
                 <h1>seo, CRM</h1>
                 <h2>
                   Благодаря услугам веб-дизайна клиенты получают инновационные и
@@ -133,6 +153,7 @@
                   <p>SEO MARKETING</p>
                   <p>CRM DASHBOARD</p>
                 </div>
+                <div class="blur3"></div>
               </div>
               <a href="#">Начать проект</a>
             </div>
@@ -194,9 +215,9 @@
 
         <div class="lineWrap"></div>
 
-        <div class="footer mb-5">
+        <div class="footer">
           <div class="container">
-            <div class="row mb-5">
+            <div class="row">
               <div
                 class="col-12 d-flex align-items-center justify-content-between"
               >
@@ -211,6 +232,8 @@
         </div>
       </div>
     </div>
+
+    <div class="div"></div>
 
     <script src="./libs/gsap/gsap.min.js"></script>
     <script src="./libs/gsap/ScrollSmoother.min.js"></script>

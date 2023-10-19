@@ -27,7 +27,7 @@ if (ScrollTrigger.isTouch !== 1) {
   itemsL.forEach((item) => {
     gsap.fromTo(
       item,
-      { opacity: 0.3, x: -100,},
+      { opacity: 0.3, x: -100 },
       {
         opacity: 1,
         x: 0,
@@ -57,18 +57,6 @@ if (ScrollTrigger.isTouch !== 1) {
   });
 
   gsap.fromTo(
-    ".myDiv",
-    { x: -100 },
-    {
-      x: 50,
-      scrollTrigger: {
-        trigger: ".myDiv",
-        scrub: true,
-      },
-    }
-  );
-  
-  gsap.fromTo(
     ".mySecondDiv",
     { x: 100 },
     {
@@ -81,18 +69,107 @@ if (ScrollTrigger.isTouch !== 1) {
   );
 }
 
-
-
 gsap.fromTo(
   ".wrap",
-  { background: 'transparent' },
+  { background: "transparent" },
   {
-    background: 'blue',
-    color: 'white',
+    background: "blue",
+    color: "white",
     scrollTrigger: {
       end: "800",
       scrub: true,
       trigger: ".wrap",
+    },
+  }
+);
+
+gsap.fromTo(
+  "#headerShape",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 100,
+    x: -100,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#headerCol",
+      scrub: true,
+      start: "top",
+    },
+  }
+);
+
+
+gsap.fromTo(
+  "#headerBtn",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 90,
+    x: 150,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#headerCol",
+      scrub: true,
+      start: "top",
+    },
+  }
+);
+
+gsap.fromTo(
+  "#headerP",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 50,
+    x: 100,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#headerCol",
+      scrub: true,
+      start: "top",
+    },
+  }
+);
+
+gsap.fromTo(
+  "#headerBottom",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 20,
+    x: 0,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#headerCol",
+      scrub: true,
+      start: "center",
+    },
+  }
+);
+
+gsap.fromTo(
+  "#headerH1Left",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 0,
+    x: 100,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#headerBottom",
+      scrub: true,
+      end: "top",
+    },
+  }
+);
+
+gsap.fromTo(
+  "#headerH1Right",
+  { y: 0, x: 0, opacity: 1 },
+  {
+    y: 0,
+    x: -200,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#headerBottom",
+      scrub: true,
+      end: "top",
     },
   }
 );
