@@ -178,6 +178,9 @@ body .solution .myWrap .logoWrap .shapeRight {
   left: initial;
   right: 120px;
 }
+body .development {
+  margin: 75px 0 45px;
+}
 body .development .myRow {
   background-color: #161616;
   padding: 75px 60px;
@@ -235,4 +238,22 @@ body .development .myRow .line {
   width: 100%;
   height: 0.75px;
   margin: 75px 0;
+}
+body .lineWrap {
+  background-color: #E6E6E6;
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 22px;
+}
+body .footer {
+  margin-bottom: 20px !important;
+}
+body .footer h1 {
+  font-size: 11.25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body .footer h1 span {
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
