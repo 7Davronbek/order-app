@@ -7,6 +7,7 @@ body {
   font-family: "Unbounded", sans-serif !important;
   overflow-x: hidden;
   cursor: none;
+  scroll-behavior: smooth;
 }
 @media (min-width: 1400px) {
   body .container {
@@ -44,6 +45,7 @@ body .myBtn {
   justify-content: center;
   align-items: center;
   gap: 6.816px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 992px) {
   body .myBtn {
@@ -54,6 +56,7 @@ body a {
   text-decoration: none;
   color: #000;
   outline: none !important;
+  transition: all 0.3s ease-in-out;
 }
 body a:hover {
   text-decoration: none !important;
@@ -82,9 +85,14 @@ body .cursor {
   transform-origin: center center;
   z-index: 1111;
 }
+@media (max-width: 992px) {
+  body .cursor {
+    display: none;
+  }
+}
 body .grow,
 body .grow-small {
-  transform: scale(2);
+  transform: scale(2.5);
   background-color: #fff;
   mix-blend-mode: difference;
   border: none;
@@ -94,6 +102,7 @@ body .grow-scale {
 }
 body .myNavbar {
   padding: 25px 0 20px;
+  background-color: #fff;
 }
 body .myNavbar .myCol {
   display: flex;

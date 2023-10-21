@@ -211,3 +211,24 @@ cursorScale.forEach((link) => {
     }
   });
 });
+
+
+
+// const sectionColors = ["white", "black", "white2", "black2"];
+// const navColor = ["#fff", "#000", "#fff", "#000"];
+
+// gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) });
+// const sections = gsap.utils.toArray(".fullscreen");
+
+// sections.forEach(function (section, index) {
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "top 100px",
+//     end: "bottom 100px",
+//     animation: gsap.to(".myNavbar", {
+//       backgroundColor: navColor[index],
+//       immediateRender: false,
+//     }),
+//     toggleActions: "restart none none reverse",
+//   });
+// });
