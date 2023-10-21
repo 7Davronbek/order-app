@@ -6,6 +6,7 @@ html {
 body {
   font-family: "Unbounded", sans-serif !important;
   overflow-x: hidden;
+  cursor: none;
 
   .container {
     @media (min-width: 1400px) {
@@ -61,7 +62,7 @@ body {
 
     &:hover {
       text-decoration: none !important;
-      color: #666;
+      color: #000;
     }
   }
 
@@ -76,6 +77,31 @@ body {
     @media (max-width: 992px) {
       margin: 0 15px;
     }
+  }
+
+  .cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #1aa37a;
+    border-radius: 50%;
+    margin: -20px 0 0 -20px;
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+    transform-origin: center center;
+    z-index: 1111;
+  }
+
+  .grow,
+  .grow-small {
+    transform: scale(2);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border: none;
+  }
+
+  .grow-scale {
+    transform: scale(1.2);
   }
 
   .myNavbar {
