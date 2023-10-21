@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap");
 
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "Unbounded", sans-serif !important;
   overflow-x: hidden;
@@ -45,6 +48,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 6.816px;
+
+    @media (max-width: 992px) {
+      display: flex;
+    }
   }
 
   a {
@@ -63,6 +70,12 @@ body {
     list-style: none;
     margin: 0;
     padding: 0 !important;
+  }
+
+  .content {
+    @media (max-width: 992px) {
+      margin: 0 15px;
+    }
   }
 
   .myNavbar {
@@ -103,7 +116,7 @@ body {
       }
     }
     .myWrap {
-      padding: 140px 80px 40px;
+      padding: 90px 80px 40px;
       background-color: #161616;
       border-radius: 40px;
       position: relative;
@@ -118,9 +131,23 @@ body {
         text-align: right;
         color: #fff;
 
+        &.mobile {
+          display: none;
+
+          @media (max-width: 992px) {
+            display: block;
+            font-size: 27px;
+            text-align: left;
+          }
+        }
+
         &.topH1 {
           margin-bottom: 21px;
           text-align: left;
+        }
+
+        @media (max-width: 992px) {
+          display: none;
         }
       }
 
@@ -132,6 +159,12 @@ body {
         margin: 66px 0;
         color: #fff;
         width: 51%;
+
+        @media (max-width: 992px) {
+          font-size: 12px;
+          margin: 22px 0 50px;
+          width: 100%;
+        }
       }
 
       .shape {
@@ -139,6 +172,16 @@ body {
         bottom: 20px;
         right: 10px;
         z-index: 11;
+
+        @media (max-width: 992px) {
+          position: relative;
+          bottom: initial;
+          right: initial;
+
+          img {
+            width: 100%;
+          }
+        }
       }
 
       .bottom {
@@ -153,7 +196,19 @@ body {
           line-height: normal;
           color: #fff;
           z-index: 11;
+
+          @media (max-width: 992px) {
+            font-size: 12px;
+          }
         }
+
+        @media (max-width: 992px) {
+          margin-top: 96px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        padding: 24px 15px;
       }
     }
     .circleBlur {
@@ -165,6 +220,10 @@ body {
       position: absolute;
       right: -112px;
       bottom: -210px;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
   }
 
@@ -177,11 +236,20 @@ body {
 
       .rightWrap {
         padding-right: 50px;
+
+        @media (max-width: 992px) {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
       }
 
       .shape {
         img {
           width: 123%;
+
+          @media (max-width: 992px) {
+            width: 100%;
+          }
         }
       }
 
@@ -196,6 +264,18 @@ body {
           margin-bottom: 16px;
           transform: translateX(-200px);
         }
+
+        @media (max-width: 992px) {
+          display: none;
+        }
+
+        &.mobile {
+          display: none;
+
+          @media (max-width: 992px) {
+            display: block;
+          }
+        }
       }
 
       h2 {
@@ -204,6 +284,17 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 26px; /* 144.444% */
+
+        @media (max-width: 992px) {
+          font-size: 12px;
+          margin: 20px 0 32px;
+        }
+      }
+
+      .myBtn {
+        @media (max-width: 992px) {
+          margin-bottom: 40px;
+        }
       }
 
       .logoWrap {
@@ -238,6 +329,14 @@ body {
           right: 120px;
         }
       }
+
+      @media (max-width: 992px) {
+        padding: 24px 0 0;
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin: 50px 0;
     }
   }
 
@@ -280,6 +379,10 @@ body {
         line-height: normal;
         text-transform: uppercase;
         color: #fff;
+
+        @media (max-width: 992px) {
+          font-size: 27px;
+        }
       }
 
       h2 {
@@ -289,10 +392,14 @@ body {
         line-height: 19.5px; /* 144.444% */
         margin: 27px 0;
         color: #fff;
+
+        @media (max-width: 992px) {
+          font-size: 12px;
+          margin: 20px 0;
+        }
       }
 
       p {
-        color: #fff;
         color: #fff;
         font-size: 15px;
         font-style: normal;
@@ -305,6 +412,18 @@ body {
         display: inline-flex;
         margin-right: 18px;
         margin-bottom: 18px;
+        cursor: default;
+        transition: all 0.4s ease-in-out;
+
+        @media (max-width: 992px) {
+          font-size: 13px;
+          padding: 12px 14px;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: #111;
+        }
       }
 
       a {
@@ -322,6 +441,16 @@ body {
         box-shadow: 0px 0px 7.66802px 0px rgba(157, 255, 179, 0.3);
         gap: 5.112px;
         margin-top: 30px;
+
+        @media (max-width: 992px) {
+          display: none;
+        }
+
+        &.mobile {
+          @media (max-width: 992px) {
+            display: flex;
+          }
+        }
       }
 
       .line {
@@ -329,7 +458,19 @@ body {
         width: 100%;
         height: 0.75px;
         margin: 75px 0;
+
+        @media (max-width: 992px) {
+          margin: 45px 0;
+        }
       }
+
+      @media (max-width: 992px) {
+        padding: 30px 15px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      margin: 0 0 50px;
     }
   }
 
@@ -353,6 +494,15 @@ body {
         justify-content: space-between;
         input {
           width: 32%;
+
+          @media (max-width: 992px) {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 992px) {
+          flex-direction: column;
+          gap: 12px;
         }
       }
 
@@ -388,6 +538,18 @@ body {
         &.topH1 {
           transform: translateX(-130px);
           margin-bottom: 17px;
+
+          @media (max-width: 992px) {
+            transform: translateX(0);
+          }
+        }
+
+        @media (max-width: 992px) {
+          margin-bottom: 30px;
+        }
+
+        @media (max-width: 992px) {
+          font-size: 31px;
         }
       }
 
@@ -399,6 +561,21 @@ body {
         line-height: 16.5px;
         width: 80%;
         margin: 27px 0 30px;
+
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+      }
+
+      .myBtn {
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 992px) {
+        padding: 20px 17px;
+        margin-top: 50px;
       }
     }
   }

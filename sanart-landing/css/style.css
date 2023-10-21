@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap");
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Unbounded", sans-serif !important;
   overflow-x: hidden;
@@ -40,6 +44,11 @@ body .myBtn {
   align-items: center;
   gap: 6.816px;
 }
+@media (max-width: 992px) {
+  body .myBtn {
+    display: flex;
+  }
+}
 body a {
   text-decoration: none;
   color: #000;
@@ -54,6 +63,11 @@ body li {
   list-style: none;
   margin: 0;
   padding: 0 !important;
+}
+@media (max-width: 992px) {
+  body .content {
+    margin: 0 15px;
+  }
 }
 body .myNavbar {
   padding: 25px 0 20px;
@@ -85,7 +99,7 @@ body .header .bottomWrap p {
   margin-left: 6px;
 }
 body .header .myWrap {
-  padding: 140px 80px 40px;
+  padding: 90px 80px 40px;
   background-color: #161616;
   border-radius: 40px;
   position: relative;
@@ -100,9 +114,24 @@ body .header .myWrap h1 {
   text-align: right;
   color: #fff;
 }
+body .header .myWrap h1.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  body .header .myWrap h1.mobile {
+    display: block;
+    font-size: 27px;
+    text-align: left;
+  }
+}
 body .header .myWrap h1.topH1 {
   margin-bottom: 21px;
   text-align: left;
+}
+@media (max-width: 992px) {
+  body .header .myWrap h1 {
+    display: none;
+  }
 }
 body .header .myWrap h2 {
   font-size: 16.5px;
@@ -113,11 +142,28 @@ body .header .myWrap h2 {
   color: #fff;
   width: 51%;
 }
+@media (max-width: 992px) {
+  body .header .myWrap h2 {
+    font-size: 12px;
+    margin: 22px 0 50px;
+    width: 100%;
+  }
+}
 body .header .myWrap .shape {
   position: absolute;
   bottom: 20px;
   right: 10px;
   z-index: 11;
+}
+@media (max-width: 992px) {
+  body .header .myWrap .shape {
+    position: relative;
+    bottom: initial;
+    right: initial;
+  }
+  body .header .myWrap .shape img {
+    width: 100%;
+  }
 }
 body .header .myWrap .bottom {
   display: flex;
@@ -133,6 +179,21 @@ body .header .myWrap .bottom p {
   color: #fff;
   z-index: 11;
 }
+@media (max-width: 992px) {
+  body .header .myWrap .bottom p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 992px) {
+  body .header .myWrap .bottom {
+    margin-top: 96px;
+  }
+}
+@media (max-width: 992px) {
+  body .header .myWrap {
+    padding: 24px 15px;
+  }
+}
 body .header .circleBlur {
   opacity: 0.5;
   background: #9dffb3;
@@ -142,6 +203,11 @@ body .header .circleBlur {
   position: absolute;
   right: -112px;
   bottom: -210px;
+}
+@media (max-width: 992px) {
+  body .header .circleBlur {
+    display: none;
+  }
 }
 body .solution {
   margin: 100px 0;
@@ -154,8 +220,19 @@ body .solution .myWrap {
 body .solution .myWrap .rightWrap {
   padding-right: 50px;
 }
+@media (max-width: 992px) {
+  body .solution .myWrap .rightWrap {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 body .solution .myWrap .shape img {
   width: 123%;
+}
+@media (max-width: 992px) {
+  body .solution .myWrap .shape img {
+    width: 100%;
+  }
 }
 body .solution .myWrap h1 {
   font-size: 48.001px;
@@ -168,12 +245,36 @@ body .solution .myWrap h1.topH1 {
   margin-bottom: 16px;
   transform: translateX(-200px);
 }
+@media (max-width: 992px) {
+  body .solution .myWrap h1 {
+    display: none;
+  }
+}
+body .solution .myWrap h1.mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  body .solution .myWrap h1.mobile {
+    display: block;
+  }
+}
 body .solution .myWrap h2 {
   margin: 42px 0;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 144.444% */
+}
+@media (max-width: 992px) {
+  body .solution .myWrap h2 {
+    font-size: 12px;
+    margin: 20px 0 32px;
+  }
+}
+@media (max-width: 992px) {
+  body .solution .myWrap .myBtn {
+    margin-bottom: 40px;
+  }
 }
 body .solution .myWrap .logoWrap {
   background-color: #000;
@@ -203,6 +304,16 @@ body .solution .myWrap .logoWrap .shapeRight {
 body .solution .myWrap .logoWrap .shapeRight {
   left: initial;
   right: 120px;
+}
+@media (max-width: 992px) {
+  body .solution .myWrap {
+    padding: 24px 0 0;
+  }
+}
+@media (max-width: 992px) {
+  body .solution {
+    margin: 50px 0;
+  }
 }
 body .development {
   margin: 75px 0 45px;
@@ -243,6 +354,11 @@ body .development .myRow h1 {
   text-transform: uppercase;
   color: #fff;
 }
+@media (max-width: 992px) {
+  body .development .myRow h1 {
+    font-size: 27px;
+  }
+}
 body .development .myRow h2 {
   font-size: 13.5px;
   font-style: normal;
@@ -251,8 +367,13 @@ body .development .myRow h2 {
   margin: 27px 0;
   color: #fff;
 }
+@media (max-width: 992px) {
+  body .development .myRow h2 {
+    font-size: 12px;
+    margin: 20px 0;
+  }
+}
 body .development .myRow p {
-  color: #fff;
   color: #fff;
   font-size: 15px;
   font-style: normal;
@@ -265,6 +386,18 @@ body .development .myRow p {
   display: inline-flex;
   margin-right: 18px;
   margin-bottom: 18px;
+  cursor: default;
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 992px) {
+  body .development .myRow p {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+}
+body .development .myRow p:hover {
+  background-color: #fff;
+  color: #111;
 }
 body .development .myRow a {
   font-size: 19.5px;
@@ -282,11 +415,36 @@ body .development .myRow a {
   gap: 5.112px;
   margin-top: 30px;
 }
+@media (max-width: 992px) {
+  body .development .myRow a {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  body .development .myRow a.mobile {
+    display: flex;
+  }
+}
 body .development .myRow .line {
   background: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 0.75px;
   margin: 75px 0;
+}
+@media (max-width: 992px) {
+  body .development .myRow .line {
+    margin: 45px 0;
+  }
+}
+@media (max-width: 992px) {
+  body .development .myRow {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 992px) {
+  body .development {
+    margin: 0 0 50px;
+  }
 }
 body .lineWrap {
   background-color: #e6e6e6;
@@ -307,6 +465,17 @@ body .feedback .myWrap .inputWrap {
 }
 body .feedback .myWrap .inputWrap input {
   width: 32%;
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap .inputWrap input {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap .inputWrap {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 body .feedback .myWrap input,
 body .feedback .myWrap select {
@@ -336,6 +505,21 @@ body .feedback .myWrap h1.topH1 {
   transform: translateX(-130px);
   margin-bottom: 17px;
 }
+@media (max-width: 992px) {
+  body .feedback .myWrap h1.topH1 {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap h1 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap h1 {
+    font-size: 31px;
+  }
+}
 body .feedback .myWrap p {
   color: #000;
   font-size: 12px;
@@ -344,6 +528,22 @@ body .feedback .myWrap p {
   line-height: 16.5px;
   width: 80%;
   margin: 27px 0 30px;
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap p {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap .myBtn {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  body .feedback .myWrap {
+    padding: 20px 17px;
+    margin-top: 50px;
+  }
 }
 body .footer {
   margin-bottom: 20px !important;

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SanArt IT Company</title>
   </head>
   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
   <body>
     <div class="wrapper">
       <div class="content">
@@ -28,10 +28,16 @@
             </div>
           </div>
         </div>
+
         <div class="header">
           <div class="container">
             <div class="row myWrap">
               <div id="headerCol" class="col-12">
+
+                <div id="headerShape" class="shape">
+                  <img src="images/shape1.png" alt="" />
+                </div>
+                <h1 class="mobile">Агентство <br>веб-дизайна и <br> веб-разработки</h1>
                 <h1 id="headerH1Left" class="topH1">Агентство веб-дизайна и</h1>
                 <h1 id="headerH1Right">веб-разработки</h1>
                 <h2 id="headerP">
@@ -40,10 +46,8 @@
                 </h2>
                 <a id="headerBtn" class="myBtn" href="#">Начать проект</a>
 
-                <div id="headerShape" class="shape"><img src="images/shape1.png" alt="" /></div>
-
                 <div id="headerBottom" class="bottom">
-                  <p>Ташкент - 11:15</p>
+                  <p>Ташкент - <span id="current_time"></span></p>
                   <div class="d-flex align-items-center bottomWrap">
                     <i><img src="/images/copy.svg" alt="" /></i>
                     <p>2023 SanArt IT</p>
@@ -63,6 +67,7 @@
                 <div class="shape"><img src="images/shape2.png" alt="" /></div>
               </div>
               <div class="col-lg-7 rightWrap">
+                <h1 class="mobile">Мы создаем лучшие и смелые решения</h1>
                 <h1 class="topH1">Мы создаем лучшие</h1>
                 <h1>и смелые решения</h1>
                 <h2>
@@ -155,7 +160,7 @@
                 </div>
                 <div class="blur3"></div>
               </div>
-              <a href="#">Начать проект</a>
+              <a class="mobile" href="#">Начать проект</a>
             </div>
           </div>
         </div>
@@ -219,9 +224,9 @@
           <div class="container">
             <div class="row">
               <div
-                class="col-12 d-flex align-items-center justify-content-between"
+                class="col-12 d-flex align-items-center justify-content-between flex-wrap"
               >
-                <div class="logo"><img src="images/logo.svg" alt="" /></div>
+                <div class="logo mb-4 mb-lg-0"><img src="images/logo.svg" alt="" /></div>
                 <h1>
                   <span>SanArt IT company</span> - Цифровая электростанция,
                   ориентированная на электронную коммерцию
