@@ -1,1 +1,3 @@
-export const TOKEN = "";
+const TOKEN = "6782636551:AAEvCMTpSTBayA6YvRKUZLi4xyHhWv2qcVI";
+const CHAT_ID = "1698965313";
+

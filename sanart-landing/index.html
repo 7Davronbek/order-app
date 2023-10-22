@@ -194,16 +194,18 @@
               <div class="col-lg-7 rightWrap">
                 <h1 class="topH1">Есть вопросы?</h1>
                 <h1>Не стесняйтесь!</h1>
-                <form action="GET">
+                <form onsubmit="event.preventDefault(); submitFeedback();">
                   <div class="inputWrap">
                     <input
                       id="name"
+                      required
                       type="text"
                       placeholder="Ваше имя*"
                       class="form-control"
                     />
                     <input
                       id="phoneNumber"
+                      required
                       type="text"
                       placeholder="Ваш телефон*"
                       class="form-control"
@@ -215,7 +217,7 @@
                       class="form-control"
                     />
                   </div>
-                  <select class="form-control" name="" id="">
+                  <select id="selectId" class="form-control" name="" id="">
                     <option value="">Какие виды услуг вас интересуют?*</option>
                     <option value="Website">Website</option>
                     <option value="Web Design">Web Design</option>

@@ -1,5 +1,3 @@
-import { TOKEN } from "./contstants";
-
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
@@ -252,18 +250,21 @@ open.addEventListener("click", () => {
 // FEEDBACK
 function submitFeedback() {
   let name = document.getElementById("name").value;
+  let phoneNumber = document.getElementById("phoneNumber").value;
+  let selectId = document.getElementById("selectId").value;
+  let nameOfComany = document.getElementById("nameOfComany").value;
+  let comment = document.getElementById("comment").value;
 
-  if (name.trim() === "") {
+  if (name.trim() === "" || phoneNumber.trim() === "") {
     alert("Please fill in all fields");
     return;
   }
 
-  // Create a data object to send
   var data = {
-    name: name,
+    name, phoneNumber, selectId, nameOfComany, comment
   };
 
-  let text = `Name: ${name}.`
+  let text = `Name: ${name}.%0APhone number: ${phoneNumber}.%0AComany: ${nameOfComany}.%0AType of project: ${selectId}.%0AComment: ${comment}`;
 
   var url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`; // Replace with your endpoint URL
   var xhr = new XMLHttpRequest();
@@ -274,8 +275,10 @@ function submitFeedback() {
       alert("Feedback submitted successfully");
       // Optionally, you can clear the form inputs after successful submission
       document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("message").value = "";
+      document.getElementById("phoneNumber").value = "";
+      document.getElementById("selectId").value = "";
+      document.getElementById("nameOfComany").value = "";
+      document.getElementById("comment").value = "";
     } else if (xhr.readyState === 4 && xhr.status !== 200) {
       alert("Failed to submit feedback. Please try again later.");
     }
