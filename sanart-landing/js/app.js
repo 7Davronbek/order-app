@@ -264,6 +264,9 @@ function submitFeedback() {
     name, phoneNumber, selectId, nameOfComany, comment
   };
 
+  const TOKEN = "6782636551:AAEvCMTpSTBayA6YvRKUZLi4xyHhWv2qcVI";
+  const CHAT_ID = "1698965313";
+
   let text = `Name: ${name}.%0APhone number: ${phoneNumber}.%0AComany: ${nameOfComany}.%0AType of project: ${selectId}.%0AComment: ${comment}`;
 
   var url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`; // Replace with your endpoint URL
