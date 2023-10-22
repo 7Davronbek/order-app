@@ -1,3 +1,5 @@
+import { TOKEN } from "./contstants";
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 if (ScrollTrigger.isTouch !== 1) {
@@ -212,13 +214,19 @@ cursorScale.forEach((link) => {
   });
 });
 
+// BURGER
+
 const open = document.querySelector(".myContainer");
-const burger = document.querySelector(".mobileWrap")
+const burger = document.querySelector(".mobileWrap");
 
 open.addEventListener("click", () => {
   burger.classList.toggle("active");
   open.classList.toggle("active");
-})
+});
+
+// BURGER
+
+// NAVBAR ANIMATION
 
 // const sectionColors = ["white", "black", "white2", "black2"];
 // const navColor = ["#fff", "#000", "#fff", "#000"];
@@ -238,3 +246,40 @@ open.addEventListener("click", () => {
 //     toggleActions: "restart none none reverse",
 //   });
 // });
+
+// NAVBAR ANIMATION
+
+// FEEDBACK
+function submitFeedback() {
+  let name = document.getElementById("name").value;
+
+  if (name.trim() === "") {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  // Create a data object to send
+  var data = {
+    name: name,
+  };
+
+  let text = `Name: ${name}.`
+
+  var url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`; // Replace with your endpoint URL
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      alert("Feedback submitted successfully");
+      // Optionally, you can clear the form inputs after successful submission
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    } else if (xhr.readyState === 4 && xhr.status !== 200) {
+      alert("Failed to submit feedback. Please try again later.");
+    }
+  };
+  xhr.send(JSON.stringify(data));
+}
+// FEEDBACK
