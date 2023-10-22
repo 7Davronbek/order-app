@@ -50,7 +50,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 6.816px;
-    transition: all 0.3s ease-in-out;
 
     @media (max-width: 992px) {
       display: flex;
@@ -61,7 +60,6 @@ body {
     text-decoration: none;
     color: #000;
     outline: none !important;
-    transition: all 0.3s ease-in-out;
 
     &:hover {
       text-decoration: none !important;
@@ -114,13 +112,17 @@ body {
   .myNavbar {
     padding: 25px 0 20px;
     background-color: #fff;
+    position: relative;
     // position: fixed;
     // z-index: 9999;
     // top: 0;
     // left: 0;
     // width: 100%;
     // box-shadow: 0 0 10px silver;
-    
+
+    .logo {
+        z-index: 9999;
+    }
 
     .myCol {
       display: flex;
@@ -144,6 +146,130 @@ body {
         font-weight: 400;
         line-height: 18px; /* 150% */
       }
+    }
+
+    .myContainer {
+      position: relative;
+      width: 34px;
+      height: 33px;
+      right: 5px;
+      display: none;
+      z-index: 9999;
+
+      .span {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: #171717;
+        border-radius: 50%;
+        transition: all 0.6s ease-in-out;
+      }
+
+      .span1 {
+        right: 23px;
+        top: 7px;
+      }
+
+      .span2 {
+        right: 15px;
+        top: 7px;
+      }
+
+      .span3 {
+        top: 7px;
+        right: 7px;
+      }
+
+      .span4 {
+        right: 23px;
+        top: 15px;
+      }
+
+      .span5 {
+        right: 15px;
+        top: 15px;
+      }
+
+      .span6 {
+        right: 7px;
+        top: 15px;
+      }
+
+      .span7 {
+        right: 23px;
+        top: 23px;
+      }
+
+      .span8 {
+        right: 15px;
+        top: 23px;
+      }
+
+      .span9 {
+        right: 7px;
+        top: 23px;
+      }
+
+      &.active {
+        .span4,
+        .span6,
+        .span2,
+        .span8 {
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+
+    .mobileWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+
+      @media (max-width: 992px) {
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        background: rgb(255, 255, 255);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(150%);
+        transition: all 0.8s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        justify-content: space-between;
+        padding: 140px 0 40px;
+
+        a {
+            margin-right: 0 !important;
+            margin-bottom: 30px;
+        }
+
+        .myBtn {
+            margin-bottom: 0;
+        }
+
+        &.active {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      padding: 15px 0;
     }
   }
 

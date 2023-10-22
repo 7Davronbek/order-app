@@ -212,7 +212,13 @@ cursorScale.forEach((link) => {
   });
 });
 
+const open = document.querySelector(".myContainer");
+const burger = document.querySelector(".mobileWrap")
 
+open.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  open.classList.toggle("active");
+})
 
 // const sectionColors = ["white", "black", "white2", "black2"];
 // const navColor = ["#fff", "#000", "#fff", "#000"];

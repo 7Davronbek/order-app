@@ -8,7 +8,7 @@
   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
   <body>
-    <div class="cursor"></div>
+    <div class="cursor"><div class="inner"></div></div>
     <div class="wrapper">
       <div class="content">
         <div class="myNavbar">
@@ -16,15 +16,28 @@
             <div class="row">
               <div class="col-12 myCol">
                 <div class="logo"><img src="images/logo.svg" alt="" /></div>
-                <div class="navLink">
-                  <a class="cursor-scale" href="#">О нас</a>
-                  <a class="cursor-scale" href="#">Услуги</a>
-                  <a class="cursor-scale" href="#">Контакты</a>
+                <div class="mobileWrap">
+                  <div class="navLink">
+                    <a class="cursor-scale" href="#">О нас</a>
+                    <a class="cursor-scale" href="#">Услуги</a>
+                    <a class="cursor-scale" href="#">Контакты</a>
+                  </div>
+                  <a class="myBtn cursor-scale" href="#"
+                    >Оставить заявку
+                    <i class=""><img src="images/arrowTop.svg" alt="" /></i
+                  ></a>
                 </div>
-                <a class="myBtn cursor-scale" href="#"
-                  >Оставить заявку
-                  <i class=""><img src="images/arrowTop.svg" alt="" /></i
-                ></a>
+                <div class="myContainer">
+                  <div class="span span1"></div>
+                  <div class="span span2"></div>
+                  <div class="span span3"></div>
+                  <div class="span span4"></div>
+                  <div class="span span5"></div>
+                  <div class="span span6"></div>
+                  <div class="span span7"></div>
+                  <div class="span span8"></div>
+                  <div class="span span9"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -34,18 +47,22 @@
           <div class="container">
             <div class="row myWrap">
               <div id="headerCol" class="col-12">
-
                 <div id="headerShape" class="shape">
                   <img class="" src="images/shape1.png" alt="" />
                 </div>
-                <h1 class="mobile">Агентство <br>веб-дизайна и <br> веб-разработки</h1>
+                <h1 class="mobile">
+                  Агентство <br />веб-дизайна и <br />
+                  веб-разработки
+                </h1>
                 <h1 id="headerH1Left" class="topH1">Агентство веб-дизайна и</h1>
                 <h1 id="headerH1Right">веб-разработки</h1>
                 <h2 id="headerP">
                   Мы предоставляем индивидуальные услуги веб-разработки и
                   веб-дизайна каждому бизнесу и стартапу в мире.
                 </h2>
-                <a id="headerBtn" class="myBtn cursor-scale" href="#">Начать проект</a>
+                <a id="headerBtn" class="myBtn cursor-scale" href="#"
+                  >Начать проект</a
+                >
 
                 <div id="headerBottom" class="bottom">
                   <p>Ташкент - <span id="current_time"></span></p>
@@ -210,7 +227,7 @@
                     Нажимая на кнопку «Отправить», Вы соглашаетесь с условиями
                     обработки персональных данных.
                   </p>
-                  <button type="submit" class="myBtn btn " href="#">
+                  <button type="submit" class="myBtn btn" href="#">
                     Отправить
                   </button>
                 </form>
@@ -227,7 +244,9 @@
               <div
                 class="col-12 d-flex align-items-center justify-content-between flex-wrap"
               >
-                <div class="logo mb-4 mb-lg-0"><img src="images/logo.svg" alt="" /></div>
+                <div class="logo mb-4 mb-lg-0">
+                  <img src="images/logo.svg" alt="" />
+                </div>
                 <h1>
                   <span>SanArt IT company</span> - Цифровая электростанция,
                   ориентированная на электронную коммерцию
