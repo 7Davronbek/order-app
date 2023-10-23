@@ -27,10 +27,8 @@ const Card = () => {
   const path = location.pathname.split("/")[2];
 
   const { data, isLoading, error } = useGetAuctionQuery(path);
-  console.log(data);
 
-  const dateString = "2023-10-25T15:57:39+05:00";
-  const givenDate = new Date(dateString);
+  const givenDate = new Date(data?.deadline);
   const currentDate = new Date();
 
   const [timeDifference, setTimeDifference] = useState({
@@ -40,25 +38,26 @@ const Card = () => {
     seconds: 0,
   });
 
-    useEffect(() => {
-      const calculateTimeDifference = () => {
-        const difference = Math.abs(currentDate - givenDate) / 1000; // Difference in seconds
+  useEffect(() => {
+    const calculateTimeDifference = () => {
+      const difference = Math.abs(currentDate - givenDate) / 1000; // Difference in seconds
 
-        const days = Math.floor(difference / (24 * 60 * 60));
-        const hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
-        const minutes = Math.floor((difference % (60 * 60)) / 60);
-        const seconds = Math.floor(difference % 60);
+      const days = Math.floor(difference / (24 * 60 * 60));
+      const hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
+      const minutes = Math.floor((difference % (60 * 60)) / 60);
+      const seconds = Math.floor(difference % 60);
 
-        setTimeDifference({ days, hours, minutes, seconds });
-      };
+      setTimeDifference({ days, hours, minutes, seconds });
+    };
 
-      const timer = setInterval(calculateTimeDifference, 1000);
+    const timer = setInterval(calculateTimeDifference, 1000);
 
-      return () => clearInterval(timer);
-    }, [currentDate, givenDate]);
-
+    return () => clearInterval(timer);
+  }, [currentDate, givenDate]);
+  
   if (isLoading) return <Loader />;
   if (error) return <div className="py-5">Error: {error.message}</div>;
+
   return (
     <>
       <div className="Card">
@@ -91,11 +90,7 @@ const Card = () => {
                     {data.property_images.map((item) => (
                       <SwiperSlide key={item.id}>
                         <div className="swip_img_box">
-                          <img
-                            src={item.image}
-                            alt=""
-                            className="swip_img_1"
-                          />
+                          <img src={item.image} alt="" className="swip_img_1" />
                         </div>
                       </SwiperSlide>
                     ))}
@@ -111,15 +106,11 @@ const Card = () => {
                     className="mySwiper"
                   >
                     {data.property_images.map((item) => (
-                    <SwiperSlide key={item.id}>
-                      <div className="swip_img_box_2">
-                        <img
-                          src={item.image}
-                          alt=""
-                          className="swip_img_2"
-                        />
-                      </div>
-                    </SwiperSlide>
+                      <SwiperSlide key={item.id}>
+                        <div className="swip_img_box_2">
+                          <img src={item.image} alt="" className="swip_img_2" />
+                        </div>
+                      </SwiperSlide>
                     ))}
                   </Swiper>
                 </>

@@ -23,6 +23,52 @@ const Navbar = () => {
                     src="/img/nav_inp_2.png"
                     alt=""
                   />
+                  <div className="filterWrap">
+                    <div className="d-flex align-items-center justify-content-between">
+                      <div className="inputWrap">
+                        <label htmlFor="lot">
+                          Lot raqami yoki mol-mulk nomi
+                        </label>
+                        <input
+                          id="lot"
+                          type="text"
+                          placeholder="Kiriting"
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="inputWrap">
+                        <label htmlFor="date">Savdo kuni</label>
+                        <input
+                          id="date"
+                          type="date"
+                          placeholder="Kiriting"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between mt-3">
+                      <div className="inputWrap">
+                        <label htmlFor="lot">
+                          Lot raqami yoki mol-mulk nomi
+                        </label>
+                        <input
+                          id="lot"
+                          type="text"
+                          placeholder="Kiriting"
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="inputWrap">
+                        <label htmlFor="date">Savdo kuni</label>
+                        <input
+                          id="date"
+                          type="date"
+                          placeholder="Kiriting"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <input placeholder="Izlash" type="text" name="" id="" />
                 </div>
                 <button className="nav_inp_btn">Izlash</button>
