@@ -36,7 +36,7 @@ const HeadMessage = () => {
                 location.pathname === "/news" ? "d-none" : ""
               }`}
             >
-              <Link to="" className="h_mes_btn">
+              <Link to="/news" className="h_mes_btn">
                 Barchasini ko’rish
               </Link>
             </div>

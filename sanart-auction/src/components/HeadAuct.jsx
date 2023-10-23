@@ -1,7 +1,19 @@
 // import required modules
 import { Link } from "react-router-dom";
+import { useGetAuctionsQuery } from "../redux/auctionApi";
+import Loader from "./Loader";
 
 const HeadAuct = () => {
+  const { data, isLoading, error } = useGetAuctionsQuery();
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <div className="py-5">Error: {error.message}</div>;
+  }
+
   return (
     <>
       <div className="HeadAuct">
@@ -23,45 +35,60 @@ const HeadAuct = () => {
                 </button>
               </div>
             </div>
+            {data.length == 0 && (
+              <h5 className="text-center">Auction not found</h5>
+            )}
+            {data &&
+              data.map((item) => (
+                <Link
+                  to={`/auction/${item.id}`}
+                  key={item.id}
+                  className="col-3 h_prod_top"
+                >
+                  <div className="prod_box">
+                    <div className="prod_box_img">
+                      <div className="prod_box_view">
+                        <img src="/img/view.png" alt="" />
+                        <div className="prod_box_num">{item.views}</div>
+                      </div>
+                      <img src={item?.property_images[0]?.image} alt="" />
+                    </div>
+                    <div className="prod_box_main">
+                      <div className="prod_box_main_top">
+                        <div className="prod_box_main_top_num">
+                          № {item.sort_number}
+                        </div>
+                        <div className="prod_box_main_top_clock">
+                          <img src="/img/clock.png" alt="" />
+                          <div className="prod_box_main_top_clock_h">
+                            {item.start_date.substring(11, 16)} {item.start_date.substring(0, 10)}
+                          </div>
+                        </div>
+                      </div>
 
-            <div className="col-3 h_prod_top">
-              <div className="prod_box">
-                <div className="prod_box_img">
-                  <div className="prod_box_view">
-                    <img src="/img/view.png" alt="" />
-                    <div className="prod_box_num">1234</div>
-                  </div>
-                  <img src="/img/prod_1.png" alt="" />
-                </div>
-                <div className="prod_box_main">
-                  <div className="prod_box_main_top">
-                    <div className="prod_box_main_top_num">№ 12310</div>
-                    <div className="prod_box_main_top_clock">
-                      <img src="/img/clock.png" alt="" />
-                      <div className="prod_box_main_top_clock_h">
-                        12:03:36:05
+                      <div className="prod_box_main_name">{item.name}</div>
+                      <div className="prod_box_main_h">Boshlang’ich narxi:</div>
+                      <div className="prod_box_main_p">
+                        {item.start_price} UZS
+                      </div>
+                      <div className="prod_box_main_h">
+                        Zaklat puli miqdori:
+                      </div>
+                      <div className="prod_box_main_p">
+                        {item.back_price} UZS
+                      </div>
+                      <div className="prod_box_main_h">Manzil:</div>
+                      <div className="prod_box_main_p">{item.address}</div>
+                      <div className="prod_box_main_sale">
+                        {item.start_price} UZS
+                      </div>
+                      <div className="prod_box_main_btn">
+                        Batafsil
                       </div>
                     </div>
                   </div>
-
-                  <div className="prod_box_main_name">
-                    ANDY WARHOL (1928-1987)
-                  </div>
-                  <div className="prod_box_main_h">Boshlang’ich narxi:</div>
-                  <div className="prod_box_main_p">5 899 300.00 UZS</div>
-                  <div className="prod_box_main_h">Zaklat puli miqdori:</div>
-                  <div className="prod_box_main_p">54 899 300.00 UZS</div>
-                  <div className="prod_box_main_h">Manzil:</div>
-                  <div className="prod_box_main_p">
-                    Buxoro viloyati, Romitan tumani, Gazli MFY
-                  </div>
-                  <div className="prod_box_main_sale">10 960 000 UZS</div>
-                  <Link to="/card" className="prod_box_main_btn">
-                    Batafsil
-                  </Link>
-                </div>
-              </div>
-            </div>
+                </Link>
+              ))}
           </div>
         </div>
       </div>
