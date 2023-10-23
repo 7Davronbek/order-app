@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -38,22 +40,22 @@ const Card = () => {
     seconds: 0,
   });
 
-  //   useEffect(() => {
-  //     const calculateTimeDifference = () => {
-  //       const difference = Math.abs(currentDate - givenDate) / 1000; // Difference in seconds
+    useEffect(() => {
+      const calculateTimeDifference = () => {
+        const difference = Math.abs(currentDate - givenDate) / 1000; // Difference in seconds
 
-  //       const days = Math.floor(difference / (24 * 60 * 60));
-  //       const hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
-  //       const minutes = Math.floor((difference % (60 * 60)) / 60);
-  //       const seconds = Math.floor(difference % 60);
+        const days = Math.floor(difference / (24 * 60 * 60));
+        const hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
+        const minutes = Math.floor((difference % (60 * 60)) / 60);
+        const seconds = Math.floor(difference % 60);
 
-  //       setTimeDifference({ days, hours, minutes, seconds });
-  //     };
+        setTimeDifference({ days, hours, minutes, seconds });
+      };
 
-  //     const timer = setInterval(calculateTimeDifference, 1000);
+      const timer = setInterval(calculateTimeDifference, 1000);
 
-  //     return () => clearInterval(timer);
-  //   }, [currentDate, givenDate]);
+      return () => clearInterval(timer);
+    }, [currentDate, givenDate]);
 
   if (isLoading) return <Loader />;
   if (error) return <div className="py-5">Error: {error.message}</div>;
@@ -76,54 +78,52 @@ const Card = () => {
         <div className="container">
           <div className="row pt-5">
             <div className="col-5 ">
-              <Swiper
-                loop={true}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2"
-              >
-                <SwiperSlide>
-                  <div className="swip_img_box">
-                    <img
-                      src="/img/head_prod_1.png"
-                      alt=""
-                      className="swip_img_1"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="swip_img_box">
-                    <img src="/img/prod_1.png" alt="" className="swip_img_1" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                loop={true}
-                spaceBetween={10}
-                slidesPerView={4}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper"
-              >
-                <SwiperSlide>
-                  <div className="swip_img_box_2">
-                    <img
-                      src="/img/head_prod_1.png"
-                      alt=""
-                      className="swip_img_2"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="swip_img_box_2">
-                    <img src="/img/prod_1.png" alt="" className="swip_img_2" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
+              {data.property_images.length > 0 && (
+                <>
+                  <Swiper
+                    loop={true}
+                    spaceBetween={10}
+                    navigation={true}
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper2"
+                  >
+                    {data.property_images.map((item) => (
+                      <SwiperSlide key={item.id}>
+                        <div className="swip_img_box">
+                          <img
+                            src={item.image}
+                            alt=""
+                            className="swip_img_1"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <Swiper
+                    onSwiper={setThumbsSwiper}
+                    loop={true}
+                    spaceBetween={10}
+                    slidesPerView={4}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper"
+                  >
+                    {data.property_images.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div className="swip_img_box_2">
+                        <img
+                          src={item.image}
+                          alt=""
+                          className="swip_img_2"
+                        />
+                      </div>
+                    </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </>
+              )}
             </div>
             <div className="col-7 d-flex flex-column justify-content-between">
               <div className="">

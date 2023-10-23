@@ -29,11 +29,11 @@ const Navbar = () => {
               </div>
               <div className="col-3 d-flex align-items-center justify-content-end gap-3">
                 <Link to="/login" className="nav_btn_1">
-                  Ro’yhatdan o’tish
+                  Tizimga kirish
                 </Link>
-                <Link to="/registration" className="nav_btn_2">
+                {/* <Link to="/login" className="nav_btn_2">
                   Kirish
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -58,14 +58,14 @@ const Navbar = () => {
                 >
                   Auksion haqida
                 </Link>
-                <Link
+                {/* <Link
                   to="/Interactive"
                   className={`nav_a ${
                     location.pathname === "/Interactive" ? "active" : ""
                   }`}
                 >
                   Interaktiv xizmatlar
-                </Link>
+                </Link> */}
                 <Link
                   to="/news"
                   className={`nav_a ${

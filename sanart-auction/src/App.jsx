@@ -6,8 +6,8 @@ import Card from "./pages/Card";
 import About from "./pages/About";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
-import Interactive from "./pages/Interactive";
-import Registration from "./pages/Registration";
+// import Interactive from "./pages/Interactive";
+// import Registration from "./pages/Registration";
 import RegistrSign from "./pages/RegistrSign";
 import RegistrSignIn from "./pages/RegistrSignIn";
 import Cabinet from "./pages/Cabinet";
@@ -26,13 +26,13 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/interactive" element={<Interactive />} />
+        {/* <Route path="/interactive"  element={<Interactive />} /> */}
         <Route path="/registration-sign" element={<RegistrSign />} />
         <Route path="/registration-sign-in" element={<RegistrSignIn />} />
         <Route path="/cabinet" element={<Cabinet />} />
 
         <Route path="/login" element={<Login />} />
-        <Route path="/registration" element={<Registration />} />
+        {/* <Route path="/registration" element={<Registration />} /> */}
       </Routes>
       <ScrollToTop />
       <ToastContainer />
