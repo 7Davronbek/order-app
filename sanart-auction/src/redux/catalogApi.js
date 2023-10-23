@@ -1,9 +1,10 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi } from '@reduxjs/toolkit/query/react'
+import { fetchBaseQuery } from '@reduxjs/toolkit/query'
 import { PORT } from "../constants";
 
 export const catalogApi = createApi({
-  reducerPath: "testApi",
-  baseQuery: fetchBaseQuery({ baseUrl: PORT }),
+  reducerPath: "catalogApi",
+  baseQuery: fetchBaseQuery({ baseUrl: PORT }), 
   endpoints: (builder) => ({
     getCatalog: builder.query({
       query: () => `/ru/contents/v1/catalog/`,

@@ -8,6 +8,7 @@ import axios from "axios";
 import { PORT } from "../constants";
 import { toast } from "react-toastify";
 import { ONE_ID_TOKEN } from "../types";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -39,7 +40,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      {isLoading && <h5 className="text-white py-5 text-center">LOADING...</h5>}
+      {isLoading && <Loader />}
       <>
         <Header />
         <HeadAuct />

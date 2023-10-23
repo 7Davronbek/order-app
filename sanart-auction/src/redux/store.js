@@ -1,15 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import newsSlice from "./newsSlice";
-import { testApi } from "./testApi";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { catalogApi } from "./catalogApi";
+import { contactApi } from "./contactApi";
 
 export const store = configureStore({
   reducer: {
     news: newsSlice,
-    [testApi.reducerPath]: testApi.reducer,
+    [catalogApi.reducerPath]: catalogApi.reducer,
+    [contactApi.reducerPath]: contactApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(testApi.middleware),
+    getDefaultMiddleware()
+      .concat(catalogApi.middleware)
+      .concat(contactApi.middleware),
 });
 
-setupListeners(store.dispatch)
+setupListeners(store.dispatch);

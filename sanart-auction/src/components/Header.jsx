@@ -1,28 +1,32 @@
-import React from 'react'
+import { useGetCatalogQuery } from "../redux/catalogApi";
+import Loader from "./Loader";
 
 const Header = () => {
-    return (
-        <>
-            <div className="Header">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-2">
-                            <div className="head_box">
-                                <img src="/img/head_prod_1.png" alt="" />
-                                <div className="head_h">To'plam</div>
-                            </div>
-                        </div>
-                        <div className="col-2">
-                            <div className="head_box">
-                                <img src="/img/head_prod_1.png" alt="" />
-                                <div className="head_h">To'plam</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+  const { data, error, isLoading } = useGetCatalogQuery();
 
-export default Header
+  if (error) {
+    return <div className="py-5">Error: {error.message}</div>;
+  }
+  return (
+    <>
+      <div className="Header">
+        <div className="container">
+          <div className="row justify-content-center">
+            {isLoading && <Loader />}
+            {data &&
+              data.map((item, index) => (
+                <div key={index} className="col-2">
+                  <div className="head_box">
+                    <img src={item.image} alt="" />
+                    <div className="head_h">{item.name}</div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Header;
