@@ -1208,6 +1208,16 @@ html {
       }
     }
   }
+
+  a {
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px #c0c0c066;
+    }
+  }
 }
 
 .Interactive {
