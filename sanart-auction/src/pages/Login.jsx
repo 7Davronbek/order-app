@@ -1,4 +1,4 @@
-import React from "react";
+import { ONE_ID_LINK } from "../constants";
 
 const Login = () => {
   return (
@@ -7,6 +7,19 @@ const Login = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
+              <div className="log_box">
+                <div className="log_name">Ro‘yxatdan o‘tish</div>
+              </div>
+              <div className="imageWrap">
+                <a href={ONE_ID_LINK} className="img">
+                  <img src="/img/oneId.png" alt="" />
+                </a>
+                <div className="img">
+                  <img src="/img/eimzo.png" alt="" />
+                </div>
+              </div>
+            </div>
+            {/* <div className="col-12">
               <div className="log_box">
                 <div className="log_name">Ro‘yxatdan o‘tish</div>
                 <div className="log_box_type">
@@ -110,7 +123,7 @@ const Login = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

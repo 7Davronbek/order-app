@@ -12,6 +12,9 @@ import RegistrSign from "./pages/RegistrSign";
 import RegistrSignIn from "./pages/RegistrSignIn";
 import Cabinet from "./pages/Cabinet";
 import Login from "./pages/Login";
+import ScrollToTop from "./components/ScrollToTop";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -24,12 +27,15 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/interactive" element={<Interactive />} />
-        <Route path="/registration" element={<Registration />} />
         <Route path="/registration-sign" element={<RegistrSign />} />
         <Route path="/registration-sign-in" element={<RegistrSignIn />} />
         <Route path="/cabinet" element={<Cabinet />} />
+
         <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
+      <ScrollToTop />
+      <ToastContainer />
       <Footer />
     </HashRouter>
   );

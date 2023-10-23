@@ -1,0 +1,1 @@
+export const ONE_ID_TOKEN = "ONE_ID_TOKEN/SANART";
