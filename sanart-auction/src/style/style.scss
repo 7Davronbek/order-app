@@ -585,6 +585,7 @@ html {
       padding: 16px 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .h_mes_view {
         padding: 8px 10px;
@@ -603,7 +604,6 @@ html {
       }
 
       .h_mes_info_date {
-        margin-left: 16px;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;

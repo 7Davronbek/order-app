@@ -1,4 +1,3 @@
-import React from 'react'
 import HeadMessage from '../components/HeadMessage'
 
 const News = () => {
