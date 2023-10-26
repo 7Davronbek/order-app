@@ -5,10 +5,12 @@ import { catalogApi } from "./catalogApi";
 import { contactApi } from "./contactApi";
 import { newsApi } from "./newsApi";
 import { auctionApi } from "./auctionApi";
+// import savedSlice from "./savedSlice";
 
 export const store = configureStore({
   reducer: {
     news: newsSlice,
+    // saved: savedSlice,
     [catalogApi.reducerPath]: catalogApi.reducer,
     [contactApi.reducerPath]: contactApi.reducer,
     [newsApi.reducerPath]: newsApi.reducer,

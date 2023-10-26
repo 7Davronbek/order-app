@@ -1,1 +1,2 @@
 export const ONE_ID_TOKEN = "ONE_ID_TOKEN/SANART";
+export const SAVED_AUCTION = "SAVED_AUCTION/SANART";
