@@ -91,6 +91,7 @@ html {
       }
 
       .filterWrap {
+        display: none;
         position: absolute;
         bottom: -148px;
         width: 600px;
@@ -782,6 +783,12 @@ html {
 }
 
 .Card {
+  h5 {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
   .card_head_name {
     display: flex;
     align-items: center;
