@@ -111,14 +111,6 @@ body .myNavbar .myCol {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 992px) {
-  body .myNavbar .myCol .navLink {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
 body .myNavbar .myCol .navLink a {
   font-size: 16px;
   font-style: normal;
@@ -202,14 +194,6 @@ body .myNavbar .mobileWrap {
   justify-content: space-between;
   width: 70%;
 }
-body .myNavbar .mobileWrap .nav_aa {
-  display: none;
-}
-@media (max-width: 576px) {
-  body .myNavbar .mobileWrap .nav_aa {
-    display: flex;
-  }
-}
 @media (max-width: 992px) {
   body .myNavbar .mobileWrap {
     position: absolute;
@@ -220,7 +204,7 @@ body .myNavbar .mobileWrap .nav_aa {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,7 +324,7 @@ body .header .myWrap .bottom p {
 }
 @media (max-width: 992px) {
   body .header .myWrap .bottom p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 992px) {
@@ -367,9 +351,6 @@ body .header .circleBlur {
   body .header .circleBlur {
     display: none;
   }
-}
-body .header #headerCol {
-  padding: 0;
 }
 body .solution {
   margin: 100px 0;
@@ -403,13 +384,6 @@ body .solution .myWrap h1 {
   line-height: normal;
   text-transform: uppercase;
 }
-@media (max-width: 576px) {
-  body .solution .myWrap h1 {
-    font-size: 32.536px;
-    font-weight: 700;
-    line-height: 48.202px;
-  }
-}
 body .solution .myWrap h1.topH1 {
   margin-bottom: 16px;
   transform: translateX(-200px);
@@ -425,8 +399,6 @@ body .solution .myWrap h1.mobile {
 @media (max-width: 992px) {
   body .solution .myWrap h1.mobile {
     display: block;
-    font-size: 24px;
-    line-height: 34px;
   }
 }
 body .solution .myWrap h2 {
@@ -591,9 +563,6 @@ body .development .myRow a {
     display: none;
   }
 }
-body .development .myRow a.mobile {
-  z-index: 2;
-}
 @media (max-width: 992px) {
   body .development .myRow a.mobile {
     display: flex;
@@ -691,7 +660,7 @@ body .feedback .myWrap h1.topH1 {
 }
 @media (max-width: 992px) {
   body .feedback .myWrap h1 {
-    font-size: 27px;
+    font-size: 31px;
   }
 }
 body .feedback .myWrap p {
