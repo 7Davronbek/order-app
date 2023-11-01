@@ -13,7 +13,7 @@ import WhyWe from './Components/WhyWe';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       <Header/>
       <WhyWe/>
       <Primushestva/>
