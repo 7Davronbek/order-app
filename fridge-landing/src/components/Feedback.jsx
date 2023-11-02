@@ -38,7 +38,7 @@ const Feedback = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
-              loop={false}
+              loop={true}
               breakpoints={{
                 0: {
                   slidesPerView: 1,
