@@ -740,3 +740,56 @@ input {
     }
   }
 }
+
+.mySwiperWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #131313e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+
+  .top,
+  .bottom {
+    width: 50%;
+    margin: 5px auto;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .top {
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
+
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
