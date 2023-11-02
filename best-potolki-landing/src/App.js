@@ -1,5 +1,7 @@
 import "./App.scss";
 import "./Adaptive.scss";
+import 'react-toastify/dist/ReactToastify.css';
+
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -9,6 +11,7 @@ import Price from "./Components/Price";
 import Primushestva from "./Components/Primushestva";
 import Reviews from "./Components/Reviews";
 import WhyWe from "./Components/WhyWe";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
       <Reviews />
       <Contact />
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
