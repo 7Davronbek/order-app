@@ -18,7 +18,7 @@ export default function Header() {
       toast.error("Phone number is required. Try again.");
       setIsLoading(false);
     } else {
-      const { data } = axios.post(
+      axios.post(
         `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`
       );
 

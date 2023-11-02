@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Icons/best-potolki-logo.svg";
 import Call from "../Icons/nav-call.svg";
-import { Link } from "react-scroll";
 
 export default function Navbar() {
+  const [burger, setBurger] = useState(false);
   return (
     <nav className="Navbar">
       <div className="container">
@@ -106,11 +106,20 @@ export default function Navbar() {
               </svg>
             </div>
           </div>
+          <div onClick={() => setBurger(true)} className="burger">
+            <div className="b1"></div>
+            <div className="b2"></div>
+            <div className="b3"></div>
+          </div>
         </div>
 
-        <ul className="nav-list">
+        <ul className={`nav-list ${burger && "active"}`}>
+          <div onClick={() => setBurger(false)} className="close">
+            <img src="/burger_menu.svg" alt="" />
+          </div>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#about-us"
               className="nav-link"
               spy={true}
@@ -123,6 +132,7 @@ export default function Navbar() {
           </li>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#benefits"
               className="nav-link"
               spy={true}
@@ -135,6 +145,7 @@ export default function Navbar() {
           </li>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#work"
               className="nav-link"
               spy={true}
@@ -147,6 +158,7 @@ export default function Navbar() {
           </li>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#price"
               className="nav-link"
               spy={true}
@@ -159,6 +171,7 @@ export default function Navbar() {
           </li>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#feedback"
               className="nav-link"
               spy={true}
@@ -171,6 +184,7 @@ export default function Navbar() {
           </li>
           <li className="nav-items">
             <a
+              onClick={() => setBurger(false)}
               href="#contacts"
               className="nav-link"
               spy={true}

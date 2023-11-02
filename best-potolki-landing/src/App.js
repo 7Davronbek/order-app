@@ -12,11 +12,13 @@ import Primushestva from "./Components/Primushestva";
 import Reviews from "./Components/Reviews";
 import WhyWe from "./Components/WhyWe";
 import { ToastContainer } from "react-toastify";
+// import Fancybox2 from "./Components/Fancybox";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      {/* <Fancybox2 /> */}
       <Header />
       <WhyWe />
       <Primushestva />
