@@ -3,7 +3,7 @@ import Icon from "../Icons/primushaestva-icon.svg";
 
 export default function Primushestva() {
   return (
-    <section className="Primushestva">
+    <section id="benefits" className="Primushestva">
       <div className="container">
         <div className="row">
           <h2>ПРЕИМУЩЕСТВА НАТЯЖНЫХ ПОТОЛКОВ</h2>

@@ -886,6 +886,35 @@
       font-size: 16px;
       margin-bottom: 10px !important;
     }
+
+    .contact-form {
+      width: 100%;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      button {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .Footer {
+    .footer-body {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .social-links {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 

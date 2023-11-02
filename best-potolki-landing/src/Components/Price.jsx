@@ -4,7 +4,7 @@ import img2 from "../Images/price2.png";
 
 export default function Price() {
   return (
-    <section className="Price">
+    <section id="price" className="Price">
       <div className="container">
         <div className="row">
           <h3 className="price-tittle">ЦЕНЫ</h3>

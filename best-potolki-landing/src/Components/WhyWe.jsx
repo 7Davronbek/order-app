@@ -6,7 +6,7 @@ import img4 from '../Images/why-we4.png'
 
 export default function WhyWe() {
   return (
-    <section className='WhyWe'>
+    <section id='benefits' className='WhyWe'>
       <div className="container">
         <h2>Почему именно мы?</h2>
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header className='Header'>
+    <header id='about-us' className='Header'>
       <div className="container">
         <div className="row">
           <div className="header-info col-12 col-md-8">

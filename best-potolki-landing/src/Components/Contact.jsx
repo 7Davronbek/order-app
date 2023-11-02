@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <section className='Contact'>
+    <section id='contacts' className='Contact'>
       <div className="container">
 
         <div className="row">

@@ -7,7 +7,7 @@ import img4 from '../Images/reviews4.png'
 
 export default function Reviews() {
   return (
-    <section className='Reviews'>
+    <section id='feedback' className='Reviews'>
       <div className="container">
         <div className="row">
           <h2>ОТЗЫВЫ</h2>

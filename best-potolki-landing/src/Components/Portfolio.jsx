@@ -4,7 +4,7 @@ import img2 from '../Images/portfolio2.png'
 
 export default function Portfolio() {
   return (
-    <section className='Portfolio'>
+    <section id='work' className='Portfolio'>
       <div className="container">
         <h2 className='portfolio-tittle'>НАШИ РАБОТЫ</h2>
         <div className="porfolio-blog">
