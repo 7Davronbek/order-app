@@ -1,6 +1,6 @@
 import "./App.scss";
 import "./Adaptive.scss";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
