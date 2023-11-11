@@ -1,0 +1,12 @@
+export { default as RegistrationPhonePage } from "./register/RegistrationPage";
+export { default as PhoneVerifyPage } from "./phone-verify/PhoneVerifyPage";
+export { default as CreatePasswordPage } from "./create-password/CreatePasswordPage";
+export { default as WelcomeNotePage } from "./welcome-note/WelcomeNotePage";
+export { default as FirstLastNamePage } from "./first-last-name/FirstLastNamePage";
+export { default as AgePage } from "./age/AgePage";
+export { default as PassportPage } from "./passport/PassportPage";
+export { default as LocationPage } from "./location/LocationPage";
+export { default as PhoneNumberPage } from "./phone-number/PhoneNumberPage";
+export { default as EducationPage } from "./education/EducationPage";
+export { default as FamilyStatusPage } from "./family-status/FamilyStatusPage";
+export { default as ChildrenPage } from "./children/ChildrenPage";
