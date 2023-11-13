@@ -22,14 +22,11 @@ const password = createAsyncThunk(`auth/create-user`, async (password) => {
     code: localStorage.getItem(CODE),
     password,
   });
-  localStorage.setItem(TOKEN, data.token)
+  localStorage.setItem(TOKEN, data.token);
 });
 
 const initialState = {
-  phoneNumber: "",
-  code: "",
-  password: "",
-  token: ""
+  token: localStorage.getItem(TOKEN) ? localStorage.getItem(TOKEN) : "",    
 };
 
 export const authSlice = createSlice({
@@ -46,7 +43,7 @@ export const authAction = {
   ...authSlice.actions,
   register,
   phoneVerify,
-  password
+  password,
 };
 
 export default authSlice.reducer;

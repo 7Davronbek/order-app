@@ -13,12 +13,13 @@ const CreatePasswordPage = () => {
   const dispatch = useDispatch();
 
   const createPassword = () => {
-    if(password !== verifyPassword) {
-      toast.error("Password is incorrect")
+    if (password !== verifyPassword) {
+      toast.error("Password is incorrect");
       return;
     }
-    dispatch(authAction.password(password))
-  }
+    dispatch(authAction.password(password));
+    navigate("/welcome-note", { replace: true });
+  };
 
   return (
     <div className="CreatePasswordPage Register">
@@ -44,10 +45,7 @@ const CreatePasswordPage = () => {
                   type="password"
                   className="form-control"
                 />
-                <button
-                  onClick={() => createPassword()}
-                  className="btn myBtn"
-                >
+                <button onClick={() => createPassword()} className="btn myBtn">
                   Yuborish
                 </button>
 
