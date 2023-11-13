@@ -15,6 +15,7 @@ import {
   FirstLastNamePage,
   HusbandProblem,
   LocationPage,
+  MainPage,
   MoralProblem,
   NoMarriageProblem,
   PassportPage,
@@ -36,7 +37,8 @@ const App = () => {
       <HashRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<RegistrationPhonePage />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/register" element={<RegistrationPhonePage />} />
           <Route path="/phone-verify" element={<PhoneVerifyPage />} />
           <Route path="/create-password" element={<CreatePasswordPage />} />
           <Route path="/welcome-note" element={<WelcomeNotePage />} />
@@ -66,7 +68,10 @@ const App = () => {
             <Route path="/work-problem" element={<WorkProblem />} />
           </Route>
           <Route path="/end-questions" element={<EndQuestionsPage />} />
-          <Route path="/start-questions-modal" element={<StartQuestionsModalpage />} />
+          <Route
+            path="/start-questions-modal"
+            element={<StartQuestionsModalpage />}
+          />
         </Routes>
         <ToastContainer />
       </HashRouter>
