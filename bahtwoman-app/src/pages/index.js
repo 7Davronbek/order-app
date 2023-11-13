@@ -21,3 +21,5 @@ export { default as NoMarriageProblem } from "./nomarriage/NoMarriageProblem";
 export { default as SexProblem } from "./sexproblem/SexProblem";
 export { default as ChildProblem } from "./childProblem/ChildProblem";
 export { default as WorkProblem } from "./workProblem/WorkProblem";
+export { default as EndQuestionsPage } from "./end-questions/EndQuestionsPage";
+export { default as StartQuestionsModalpage } from "./start-questions-modal/StartQuestionsModalpage";

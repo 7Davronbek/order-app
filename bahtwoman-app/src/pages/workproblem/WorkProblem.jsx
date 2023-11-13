@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import down from "../../assets/down.svg";
 import {
   Accordion,
@@ -15,6 +15,7 @@ import { getText } from "../../locale";
 import { useState } from "react";
 
 const WorkProblem = () => {
+  const location = useLocation()
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -559,7 +560,7 @@ const WorkProblem = () => {
                 </AccordionDetails>
               </Accordion>
               <button
-                onClick={() => navigate("/register")}
+                onClick={() => navigate("/end-questions")}
                 className="btn myBtn"
               >
                 Tugatish

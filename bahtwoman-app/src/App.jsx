@@ -10,6 +10,7 @@ import {
   CurrentProblem,
   DivorceProblem,
   EducationPage,
+  EndQuestionsPage,
   FamilyStatusPage,
   FirstLastNamePage,
   HusbandProblem,
@@ -23,6 +24,7 @@ import {
   RegistrationPhonePage,
   SexProblem,
   SocialStatus,
+  StartQuestionsModalpage,
   WelcomeNotePage,
   WorkProblem,
 } from "./pages";
@@ -63,6 +65,8 @@ const App = () => {
             <Route path="/child-problem" element={<ChildProblem />} />
             <Route path="/work-problem" element={<WorkProblem />} />
           </Route>
+          <Route path="/end-questions" element={<EndQuestionsPage />} />
+          <Route path="/start-questions-modal" element={<StartQuestionsModalpage />} />
         </Routes>
         <ToastContainer />
       </HashRouter>
