@@ -23,48 +23,47 @@ const FamilyStatusPage = () => {
   const navigate = useNavigate();
   return (
     <div className="FamilyStatusPage ">
-      <NavigationLayout>
-        <div className="center">
-          <div className="cards">
-            <h1>7. Оилавий статусингиз</h1>
+      <div className="center">
+        <div className="cards">
+          <h1>7. Оилавий статусингиз</h1>
 
-            <FormControl>
-              <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
-              <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
-                onChange={handleChange}
-              >
-                <FormControlLabel
-                  value="турмушга чиқмаганман"
-                  control={
-                    <Radio
-                      sx={{
-                        color: "silver",
-                        "&.Mui-checked": {
-                          color: "#FFD0D4",
-                        },
-                      }}
-                    />
-                  }
-                  label="турмушга чиқмаганман"
-                />
-                <FormControlLabel
-                  value="турмушга чиқиш арафасидаман"
-                  control={
-                    <Radio
-                      sx={{
-                        color: "silver",
-                        "&.Mui-checked": {
-                          color: "#FFD0D4",
-                        },
-                      }}
-                    />
-                  }
-                  label="турмушга чиқиш арафасидаман"
-                />
+          <FormControl>
+            <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-controlled-radio-buttons-group"
+              name="controlled-radio-buttons-group"
+              onChange={handleChange}
+            >
+              <FormControlLabel
+                value="турмушга чиқмаганман"
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label="турмушга чиқмаганман"
+              />
+              <FormControlLabel
+                value="турмушга чиқиш арафасидаман"
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label="турмушга чиқиш арафасидаман"
+              />
 
-                <div>
+              {/* <div>
                   <Accordion
                     expanded={expanded === "panel1"}
                     onChange={handleChange("panel1")}
@@ -125,19 +124,18 @@ const FamilyStatusPage = () => {
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
-                </div>
+                </div> */}
 
-                <button
-                  onClick={() => navigate("/children")}
-                  className="btn myBtn"
-                >
-                  Keyingi savol
-                </button>
-              </RadioGroup>
-            </FormControl>
-          </div>
+              <button
+                onClick={() => navigate("/children")}
+                className="btn myBtn"
+              >
+                Keyingi savol
+              </button>
+            </RadioGroup>
+          </FormControl>
         </div>
-      </NavigationLayout>
+      </div>
     </div>
   );
 };

@@ -1,9 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+html {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ffaead12;
+
+    &:hover {
+      background: #ffaead34;
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 60px;
+    background: #ffaead;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background: #ffaeada3;
+    }
+  }
+}
 #root {
   overflow-x: hidden;
 }
-
+.ans_h3 {
+  padding: 16px 0;
+  color: #e40000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 1.2px;
+  // text-transform: uppercase;
+}
+.for_border_10 {
+  border: 1px solid rgb(71, 68, 68) !important;
+  border-radius: 2px;
+  .for_border_inner {
+    padding: 10px 0 !important;
+  }
+}
 body {
   font-family: "Raleway", sans-serif;
 
@@ -47,6 +86,7 @@ body {
   }
 
   .myBtn {
+    margin-top: 24px;
     color: #313131;
     font-size: 24px;
     font-weight: 600;
@@ -215,14 +255,19 @@ body {
     }
 
     .bottom {
+      // height: calc(100vh - 107px);
       height: calc(100vh - 107px);
-      overflow: hidden;
+      // overflow: hidden;
       overflow-y: auto;
+    }
+
+    .css-15v22id-MuiAccordionDetails-root {
+      padding: 0 !important;
     }
 
     .left {
       padding: 32px 26px 32px 32px;
-      padding-bottom: 145px;
+      // padding-bottom: 145px;
       border-right: 1.424px solid var(--black-10, rgba(28, 28, 28, 0.1));
       background: #fff;
       overflow-y: auto;
@@ -234,26 +279,8 @@ body {
       position: sticky;
       top: 0;
 
-      &::-webkit-scrollbar {
-        width: 4px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: #ffaead12;
-
-        &:hover {
-          background: #ffaead34;
-        }
-      }
-
-      &::-webkit-scrollbar-thumb {
-        border-radius: 60px;
-        background: #ffaead;
-        transition: all 0.3s ease-in;
-
-        &:hover {
-          background: #ffaeada3;
-        }
+      .css-pwcg7p-MuiCollapse-root {
+        padding-left: 15px;
       }
 
       h1 {
@@ -287,6 +314,7 @@ body {
         transition: all 0.4s ease-in-out;
         position: relative;
         border-radius: var(--8, 8px);
+        display: block;
 
         &::after {
           content: "";
@@ -318,6 +346,8 @@ body {
     .right {
       position: relative;
       padding: 50px 50px 135px;
+      overflow-y: auto;
+      height: 100vh;
 
       .center {
         display: flex;
@@ -326,7 +356,7 @@ body {
         height: 100%;
 
         .cards {
-          margin-bottom: 200px;
+          margin-bottom: 50px;
           gap: 16px;
           display: grid;
           width: 60%;
@@ -370,4 +400,50 @@ body {
       }
     }
   }
+}
+
+.css-ahj2mt-MuiTypography-root,
+.css-ahj2mt-MuiTypography-root {
+  color: #313131 !important;
+  font-size: 24px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 32px !important; /* 133.333% */
+}
+
+.css-j204z7-MuiFormControlLabel-root {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 0 12px !important;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  min-height: initial !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  box-shadow: none !important;
+  position: initial !important;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  min-height: initial !important;
 }

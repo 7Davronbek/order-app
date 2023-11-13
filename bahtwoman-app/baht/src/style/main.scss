@@ -217,6 +217,7 @@ body {
     .bottom {
       height: calc(100vh - 107px);
       overflow: hidden;
+      overflow-y: auto;
     }
 
     .left {
@@ -229,25 +230,29 @@ body {
       gap: 30px;
       flex-direction: column;
       height: 100vh;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
 
       &::-webkit-scrollbar {
         width: 4px;
       }
 
       &::-webkit-scrollbar-track {
-        background: #f4f4f4;
+        background: #ffaead12;
 
         &:hover {
-          background: #cccccc;
+          background: #ffaead34;
         }
       }
 
       &::-webkit-scrollbar-thumb {
-        background: #3c3c3c27;
+        border-radius: 60px;
+        background: #ffaead;
         transition: all 0.3s ease-in;
 
         &:hover {
-          background: #3c3c3c27;
+          background: #ffaeada3;
         }
       }
 

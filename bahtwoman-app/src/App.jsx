@@ -1,36 +1,45 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-// import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import {
+  AfterDivorce,
   AgePage,
+  ChildProblem,
   ChildrenPage,
   CreatePasswordPage,
+  CurrentProblem,
+  DivorceProblem,
   EducationPage,
   FamilyStatusPage,
   FirstLastNamePage,
+  HusbandProblem,
   LocationPage,
+  MoralProblem,
+  NoMarriageProblem,
   PassportPage,
   PhoneNumberPage,
   PhoneVerifyPage,
+  RalativeProblem,
   RegistrationPhonePage,
+  SexProblem,
+  SocialStatus,
   WelcomeNotePage,
+  WorkProblem,
 } from "./pages";
-import Layout from "./components/Layout";
-import TestComponent from "./components/TestComponent";
+import { NavigationLayout } from "./components";
 
 const App = () => {
   return (
     <>
       <HashRouter>
+        <ScrollToTop />
         <Routes>
-          <Route element={<Layout />}>
-            <Route path="/test" element={<TestComponent />} />
-          </Route>
           <Route path="/" element={<RegistrationPhonePage />} />
           <Route path="/phone-verify" element={<PhoneVerifyPage />} />
           <Route path="/create-password" element={<CreatePasswordPage />} />
           <Route path="/welcome-note" element={<WelcomeNotePage />} />
-          <Route element={<Layout />}>
+
+          <Route element={<NavigationLayout />}>
             <Route path="/first-last-name" element={<FirstLastNamePage />} />
             <Route path="/age" element={<AgePage />} />
             <Route path="/passport" element={<PassportPage />} />
@@ -39,9 +48,22 @@ const App = () => {
             <Route path="/education" element={<EducationPage />} />
             <Route path="/family-status" element={<FamilyStatusPage />} />
             <Route path="/children" element={<ChildrenPage />} />
+            <Route path="/social-status" element={<SocialStatus />} />
+            <Route path="/moral-problem" element={<MoralProblem />} />
+            <Route path="/relative-problem" element={<RalativeProblem />} />
+            <Route path="/current-problem" element={<CurrentProblem />} />
+            <Route path="/husband-problem" element={<HusbandProblem />} />
+            <Route path="/divorce-problem" element={<DivorceProblem />} />
+            <Route path="/after-divorce-problem" element={<AfterDivorce />} />
+            <Route
+              path="/no-marriage-problem"
+              element={<NoMarriageProblem />}
+            />
+            <Route path="/sex-problem" element={<SexProblem />} />
+            <Route path="/child-problem" element={<ChildProblem />} />
+            <Route path="/work-problem" element={<WorkProblem />} />
           </Route>
         </Routes>
-
         <ToastContainer />
       </HashRouter>
     </>

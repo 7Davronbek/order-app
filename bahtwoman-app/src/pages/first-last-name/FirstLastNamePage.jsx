@@ -1,4 +1,3 @@
-// import feather from "../../assets/featherBottom.png";
 import { useNavigate } from "react-router-dom";
 
 const FirstLastNamePage = () => {

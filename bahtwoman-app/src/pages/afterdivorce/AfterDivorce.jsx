@@ -1,20 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
-import { useState } from "react";
 import down from "../../assets/down.svg";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
   RadioGroup,
+  Typography,
 } from "@mui/material";
 import { getText } from "../../locale";
+import { useState } from "react";
 
-const FamilyStatusPage = () => {
+const AfterDivorce = () => {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -22,10 +22,11 @@ const FamilyStatusPage = () => {
   };
   const navigate = useNavigate();
   return (
-    <div className="FamilyStatusPage ">
+    <div className="ChildrenPage ">
       <div className="center">
-        <div className="cards">
-          <h1>7. {getText("ans7_1")}</h1>
+        <div className="cards w-100">
+          <h1>10.6. {getText("ans16_1")}</h1>
+
           <FormControl>
             <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
             <RadioGroup
@@ -34,7 +35,7 @@ const FamilyStatusPage = () => {
               onChange={handleChange}
             >
               <FormControlLabel
-                value={getText("ans7_2")}
+                value={getText("ans16_2")}
                 control={
                   <Radio
                     sx={{
@@ -45,10 +46,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_2")}
+                label={getText("ans16_2")}
               />
               <FormControlLabel
-                value={getText("ans7_3")}
+                value={getText("ans16_3")}
                 control={
                   <Radio
                     sx={{
@@ -59,10 +60,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_3")}
+                label={getText("ans16_3")}
               />
               <FormControlLabel
-                value={getText("ans7_4")}
+                value={getText("ans16_4")}
                 control={
                   <Radio
                     sx={{
@@ -73,10 +74,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_4")}
+                label={getText("ans16_4")}
               />
               <FormControlLabel
-                value={getText("ans7_5")}
+                value={getText("ans16_5")}
                 control={
                   <Radio
                     sx={{
@@ -87,10 +88,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_5")}
+                label={getText("ans16_5")}
               />
               <FormControlLabel
-                value={getText("ans7_6")}
+                value={getText("ans16_6")}
                 control={
                   <Radio
                     sx={{
@@ -101,10 +102,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_6")}
+                label={getText("ans16_6")}
               />
               <FormControlLabel
-                value={getText("ans7_7")}
+                value={getText("ans16_7")}
                 control={
                   <Radio
                     sx={{
@@ -115,10 +116,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_7")}
+                label={getText("ans16_7")}
               />
               <FormControlLabel
-                value={getText("ans7_8")}
+                value={getText("ans16_8")}
                 control={
                   <Radio
                     sx={{
@@ -129,10 +130,10 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_8")}
+                label={getText("ans16_8")}
               />
               <FormControlLabel
-                value={getText("ans7_9")}
+                value={getText("ans16_9")}
                 control={
                   <Radio
                     sx={{
@@ -143,7 +144,21 @@ const FamilyStatusPage = () => {
                     }}
                   />
                 }
-                label={getText("ans7_9")}
+                label={getText("ans16_9")}
+              />
+              <FormControlLabel
+                value={getText("ans16_10")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_10")}
               />
 
               <Accordion
@@ -155,9 +170,9 @@ const FamilyStatusPage = () => {
                   aria-controls="panel2bh-content"
                   id="panel2bh-header"
                 >
-                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <Typography>
                     <FormControlLabel
-                      value={getText("ans7_10")}
+                      value={getText("ans16_11")}
                       control={
                         <Radio
                           sx={{
@@ -168,14 +183,14 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_10")}
+                      label={getText("ans16_11")}
                     />
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
-                      value={getText("ans7_11")}
+                      value={getText("ans16_12")}
                       control={
                         <Radio
                           sx={{
@@ -186,14 +201,14 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_11")}
+                      label={getText("ans16_12")}
                     />
                   </Typography>
                 </AccordionDetails>
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
-                      value={getText("ans7_12")}
+                      value={getText("ans16_13")}
                       control={
                         <Radio
                           sx={{
@@ -204,14 +219,14 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_12")}
+                      label={getText("ans16_13")}
                     />
                   </Typography>
                 </AccordionDetails>
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
-                      value={getText("ans7_13")}
+                      value={getText("ans16_14")}
                       control={
                         <Radio
                           sx={{
@@ -222,14 +237,14 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_13")}
+                      label={getText("ans16_14")}
                     />
                   </Typography>
                 </AccordionDetails>
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
-                      value={getText("ans7_14")}
+                      value={getText("ans16_15")}
                       control={
                         <Radio
                           sx={{
@@ -240,24 +255,24 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_14")}
+                      label={getText("ans16_15")}
                     />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel1"}
-                onChange={handleChange("panel1")}
+                expanded={expanded === "panel3"}
+                onChange={handleChange("panel3")}
               >
                 <AccordionSummary
                   expandIcon={<img src={down} />}
-                  aria-controls="panel1bh-content"
-                  id="panel1bh-header"
+                  aria-controls="panel2bh-content"
+                  id="panel2bh-header"
                 >
                   <Typography>
                     <FormControlLabel
-                      value={getText("ans7_15")}
+                      value={getText("ans16_16")}
                       control={
                         <Radio
                           sx={{
@@ -268,89 +283,190 @@ const FamilyStatusPage = () => {
                           }}
                         />
                       }
-                      label={getText("ans7_15")}
+                      label={getText("ans16_16")}
                     />
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className="ans_h3">Кимнинг қарамоғида?</div>
-                  <FormControlLabel
-                    value={getText("ans7_16")}
-                    control={
-                      <Radio
-                        sx={{
-                          color: "silver",
-                          "&.Mui-checked": {
-                            color: "#FFD0D4",
-                          },
-                        }}
-                      />
-                    }
-                    label={getText("ans7_17")}
-                  />
+                  <Typography>
+                    <FormControlLabel
+                      value={getText("ans16_17")}
+                      control={
+                        <Radio
+                          sx={{
+                            color: "silver",
+                            "&.Mui-checked": {
+                              color: "#FFD0D4",
+                            },
+                          }}
+                        />
+                      }
+                      label={getText("ans16_17")}
+                    />
+                  </Typography>
                 </AccordionDetails>
                 <AccordionDetails>
-                  <FormControlLabel
-                    value={getText("ans7_18")}
-                    control={
-                      <Radio
-                        sx={{
-                          color: "silver",
-                          "&.Mui-checked": {
-                            color: "#FFD0D4",
-                          },
-                        }}
-                      />
-                    }
-                    label={getText("ans7_18")}
-                  />
-                </AccordionDetails>
-                <AccordionDetails>
-                  <FormControlLabel
-                    value={getText("ans7_19")}
-                    control={
-                      <Radio
-                        sx={{
-                          color: "silver",
-                          "&.Mui-checked": {
-                            color: "#FFD0D4",
-                          },
-                        }}
-                      />
-                    }
-                    label={getText("ans7_19")}
-                  />
-                </AccordionDetails>
-                <AccordionDetails>
-                  <FormControlLabel
-                    value={getText("ans7_20")}
-                    control={
-                      <Radio
-                        sx={{
-                          color: "silver",
-                          "&.Mui-checked": {
-                            color: "#FFD0D4",
-                          },
-                        }}
-                      />
-                    }
-                    label={getText("ans7_20")}
-                  />
+                  <Typography>
+                    <FormControlLabel
+                      value={getText("ans16_18")}
+                      control={
+                        <Radio
+                          sx={{
+                            color: "silver",
+                            "&.Mui-checked": {
+                              color: "#FFD0D4",
+                            },
+                          }}
+                        />
+                      }
+                      label={getText("ans16_18")}
+                    />
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
 
+              <FormControlLabel
+                value={getText("ans16_19")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_19")}
+              />
+              <FormControlLabel
+                value={getText("ans16_20")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_20")}
+              />
+              <FormControlLabel
+                value={getText("ans16_21")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_21")}
+              />
+              <FormControlLabel
+                value={getText("ans16_22")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_22")}
+              />
+              <FormControlLabel
+                value={getText("ans16_23")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_23")}
+              />
+              <FormControlLabel
+                value={getText("ans16_24")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_24")}
+              />
+              <FormControlLabel
+                value={getText("ans16_25")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_25")}
+              />
+              <FormControlLabel
+                value={getText("ans16_26")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_26")}
+              />
+              <FormControlLabel
+                value={getText("ans16_27")}
+                control={
+                  <Radio
+                    sx={{
+                      color: "silver",
+                      "&.Mui-checked": {
+                        color: "#FFD0D4",
+                      },
+                    }}
+                  />
+                }
+                label={getText("ans16_27")}
+              />
               <button
-                onClick={() => navigate("/children")}
+                onClick={() => navigate("/no-marriage-problem")}
                 className="btn myBtn"
               >
                 Keyingi savol
               </button>
             </RadioGroup>
           </FormControl>
+
+          {/* <button onClick={() => navigate("/children")} className="btn myBtn">
+              Keyingi savol
+            </button> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default FamilyStatusPage;
+export default AfterDivorce;
