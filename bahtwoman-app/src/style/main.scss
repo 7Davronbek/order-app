@@ -475,6 +475,22 @@ body {
       padding: 0 25px;
     }
 
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0px 8.542317390441895px 8.542317390441895px
+        rgba(0, 0, 0, 0.25);
+
+      &::after {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000;
+      }
+    }
+
     h1 {
       color: #e65d8f;
       text-align: center;
@@ -495,6 +511,26 @@ body {
       font-weight: 400;
       line-height: 32px; /* 133.333% */
     }
+  }
+
+  .WithBg {
+    padding: 100px 0;
+    background-image: url("../assets/headerBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      color: #feb7d1;
+      text-align: center;
+      font-family: Palatino Linotype;
+      font-size: 160px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160px; /* 100% */
+      margin-bottom: 64px;
+    }
+    .swiper-horizontal {
+      padding: 0 25px;
+    }
 
     .swiper-button-prev,
     .swiper-button-next {
@@ -513,21 +549,44 @@ body {
     }
   }
 
-  .Social {
-    padding: 100px 0;
-    background-image: url("../assets/headerBg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  .CourseLinks {
     h1 {
-      color: #feb7d1;
+      font-size: 120px;
+      line-height: 135px;
+    }
+
+    .link {
+      color: #fff;
       text-align: center;
       font-family: Palatino Linotype;
-      font-size: 160px;
+      font-size: 24px;
       font-style: normal;
-      font-weight: 700;
-      line-height: 160px; /* 100% */
-      margin-bottom: 64px;
+      font-weight: 400;
+      line-height: 32px;
+      text-decoration-line: underline;
+      padding: 24px 30px;
+      border-radius: 20px;
+      border: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65%;
+      margin: auto;
+      margin-bottom: 16px;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        border-color: #FEB7D1;
+        color: #FEB7D1;
+      }
+    }
+  }
+
+  .Plans {
+    padding: 118px 0;
+
+    h1 {
+      margin-bottom: 24px;
     }
   }
 
@@ -559,6 +618,11 @@ body {
       font-weight: 400;
       line-height: 32px; /* 133.333% */
     }
+  }
+
+  .Footer {
+    padding: 45px 0;
+    text-align: center;
   }
 }
 

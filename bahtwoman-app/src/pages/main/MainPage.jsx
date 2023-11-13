@@ -3,6 +3,10 @@ import Header from "./components/Header";
 import Galary from "./components/Galary";
 import Social from "./components/Social";
 import BrightFuture from "./components/BrightFuture";
+import CourseLinks from "./components/CourseLinks";
+import Plans from "./components/Plans";
+import Feedback from "./components/Feedback";
+import Footer from "./components/Footer";
 
 const MainPage = () => {
   return (
@@ -11,7 +15,10 @@ const MainPage = () => {
       <Galary />
       <Social />
       <BrightFuture />
-      <div className="vh-100"></div>
+      <CourseLinks />
+      <Plans />
+      <Feedback />
+      <Footer />
     </>
   );
 };

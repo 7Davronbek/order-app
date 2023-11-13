@@ -6,7 +6,7 @@ import social5 from "../../../assets/tiktok.svg";
 
 const Social = () => {
   return (
-    <div className="Social">
+    <div className="Social WithBg">
       <div className="container">
         <div className="row">
           <div className="col-12">
