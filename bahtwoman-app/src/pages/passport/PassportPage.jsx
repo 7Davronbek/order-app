@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { NavigationLayout } from "../../components";
 
 const PassportPage = () => {
   const navigate = useNavigate();
   return (
     <div className="PassportPage ">
-      <NavigationLayout>
         <div className="center">
           <div className="cards">
             <h1>3. Паспорт рақами ва берилган санаси</h1>
@@ -28,7 +26,6 @@ const PassportPage = () => {
             </button>
           </div>
         </div>
-      </NavigationLayout>
     </div>
   );
 };

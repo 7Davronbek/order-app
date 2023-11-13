@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-// import logo from "../assets/logo.svg";
+import { Outlet } from "react-router-dom";
 import russian from "../assets/russian.svg";
 import notification from "../assets/notification.svg";
 import vector1 from "../assets/vector1.png";
@@ -8,7 +7,7 @@ import vector3 from "../assets/vector3.png";
 import profile from "../assets/profile.svg";
 import { Link, useLocation } from "react-router-dom";
 
-const NavigationLayout = (props) => {
+const Layout = () => {
   const location = useLocation();
   return (
     <div className="NavigationLayout">
@@ -72,7 +71,9 @@ const NavigationLayout = (props) => {
             4. Манзилингиз
           </Link>
           <Link
-            className={`${location.pathname === "/phone-number" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/phone-number" ? "active" : ""
+            }`}
             to={"/phone-number"}
           >
             5. Телефон рақамингиз
@@ -84,7 +85,9 @@ const NavigationLayout = (props) => {
             6. Маълумотингиз
           </Link>
           <Link
-            className={`${location.pathname === "/family-status" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/family-status" ? "active" : ""
+            }`}
             to={"/family-status"}
           >
             7. Оилавий статусингиз
@@ -96,13 +99,17 @@ const NavigationLayout = (props) => {
             8. Нечта фарзандингиз бор?
           </Link>
           <Link
-            className={`${location.pathname === "/social-status" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/social-status" ? "active" : ""
+            }`}
             to={"/social-status"}
           >
             9. Ижтимоий статусингиз
           </Link>
           <Link
-            className={`${location.pathname === "/main-problem" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/main-problem" ? "active" : ""
+            }`}
             to={"/main-problem"}
           >
             10. Ҳозирги пайтдаги асосий муаммойингиз?
@@ -140,7 +147,9 @@ const NavigationLayout = (props) => {
             4. Манзилингиз
           </Link>
           <Link
-            className={`${location.pathname === "/phone-number" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/phone-number" ? "active" : ""
+            }`}
             to={"/phone-number"}
           >
             5. Телефон рақамингиз
@@ -152,16 +161,20 @@ const NavigationLayout = (props) => {
             6. Маълумотингиз
           </Link>
           <Link
-            className={`${location.pathname === "/family-status" ? "active" : ""}`}
+            className={`${
+              location.pathname === "/family-status" ? "active" : ""
+            }`}
             to={"/family-status"}
           >
             7. Оилавий статусингиз
           </Link>
         </div>
-        <div className="col-9 right">{props.children}</div>
+        <div className="col-9 right">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
 };
 
-export default NavigationLayout;
+export default Layout;
