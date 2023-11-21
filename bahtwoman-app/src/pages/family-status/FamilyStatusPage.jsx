@@ -5,6 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import down from "../../assets/down.svg";
+import { toast } from "react-toastify";
 import {
   FormControl,
   FormControlLabel,
@@ -13,19 +14,36 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { getText } from "../../locale";
+import { useDispatch } from "react-redux";
+import { setFamilyStatus } from "../../redux/UserSlice";
 
 const FamilyStatusPage = () => {
   const [expanded, setExpanded] = useState(false);
 
+  const [status, setStatus] = useState("");
+
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const changeStatus = (e) => {
+    e.preventDefault();
+    if (status.length === 0) {
+      toast.error("Malumotingizni tanlang.");
+      return;
+    }
+    dispatch(setFamilyStatus({ status }));
+    navigate("/children", { replace: true });
+  };
+
   return (
     <div className="FamilyStatusPage ">
       <div className="center">
-        <div className="cards">
-          <h1>7. {getText("ans7_1")}</h1>
+        <form onSubmit={changeStatus} className="cards">
+          <h1>6. {getText("ans7_1")}</h1>
           <FormControl>
             <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
             <RadioGroup
@@ -34,6 +52,7 @@ const FamilyStatusPage = () => {
               onChange={handleChange}
             >
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_2")}
                 control={
                   <Radio
@@ -62,6 +81,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_3")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_4")}
                 control={
                   <Radio
@@ -76,6 +96,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_4")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_5")}
                 control={
                   <Radio
@@ -90,6 +111,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_5")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_6")}
                 control={
                   <Radio
@@ -104,6 +126,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_6")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_7")}
                 control={
                   <Radio
@@ -118,6 +141,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_7")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_8")}
                 control={
                   <Radio
@@ -132,6 +156,7 @@ const FamilyStatusPage = () => {
                 label={getText("ans7_8")}
               />
               <FormControlLabel
+                onChange={(e) => setStatus(e.target.value)}
                 value={getText("ans7_9")}
                 control={
                   <Radio
@@ -157,6 +182,7 @@ const FamilyStatusPage = () => {
                 >
                   <Typography sx={{ width: "33%", flexShrink: 0 }}>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_10")}
                       control={
                         <Radio
@@ -175,6 +201,7 @@ const FamilyStatusPage = () => {
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_11")}
                       control={
                         <Radio
@@ -193,6 +220,7 @@ const FamilyStatusPage = () => {
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_12")}
                       control={
                         <Radio
@@ -211,6 +239,7 @@ const FamilyStatusPage = () => {
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_13")}
                       control={
                         <Radio
@@ -229,6 +258,7 @@ const FamilyStatusPage = () => {
                 <AccordionDetails>
                   <Typography>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_14")}
                       control={
                         <Radio
@@ -257,6 +287,7 @@ const FamilyStatusPage = () => {
                 >
                   <Typography>
                     <FormControlLabel
+                      onChange={(e) => setStatus(e.target.value)}
                       value={getText("ans7_15")}
                       control={
                         <Radio
@@ -275,6 +306,7 @@ const FamilyStatusPage = () => {
                 <AccordionDetails>
                   <div className="ans_h3">Кимнинг қарамоғида?</div>
                   <FormControlLabel
+                    onChange={(e) => setStatus(e.target.value)}
                     value={getText("ans7_16")}
                     control={
                       <Radio
@@ -291,6 +323,7 @@ const FamilyStatusPage = () => {
                 </AccordionDetails>
                 <AccordionDetails>
                   <FormControlLabel
+                    onChange={(e) => setStatus(e.target.value)}
                     value={getText("ans7_18")}
                     control={
                       <Radio
@@ -307,6 +340,7 @@ const FamilyStatusPage = () => {
                 </AccordionDetails>
                 <AccordionDetails>
                   <FormControlLabel
+                    onChange={(e) => setStatus(e.target.value)}
                     value={getText("ans7_19")}
                     control={
                       <Radio
@@ -323,6 +357,7 @@ const FamilyStatusPage = () => {
                 </AccordionDetails>
                 <AccordionDetails>
                   <FormControlLabel
+                    onChange={(e) => setStatus(e.target.value)}
                     value={getText("ans7_20")}
                     control={
                       <Radio
@@ -339,15 +374,12 @@ const FamilyStatusPage = () => {
                 </AccordionDetails>
               </Accordion>
 
-              <button
-                onClick={() => navigate("/children")}
-                className="btn myBtn"
-              >
+              <button type="submit" className="btn myBtn">
                 Keyingi savol
               </button>
             </RadioGroup>
           </FormControl>
-        </div>
+        </form>
       </div>
     </div>
   );

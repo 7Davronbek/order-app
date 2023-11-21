@@ -1,23 +1,38 @@
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { setPhoneNumber } from "../../redux/UserSlice";
 
 const PhoneNumberPage = () => {
+  const [phone, setPhone] = useState("");
+
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const changePhone = (e) => {
+    e.preventDefault();
+    dispatch(setPhoneNumber({ phone }));
+    navigate("/education", { replace: true });
+  };
   return (
     <div className="PhoneNumberPage ">
       <div className="center">
-        <div className="cards">
-          <h1>5. Телефон рақамингиз</h1>
+        <form onSubmit={changePhone} className="cards">
+          <h1>4. Телефон рақамингиз</h1>
 
           <input
             placeholder="Telefon raqam"
-            type="text"
+            type="number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className="form-control "
+            required
           />
 
-          <button onClick={() => navigate("/education")} className="btn myBtn">
+          <button type="submit" className="btn myBtn">
             Keyingi savol
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );

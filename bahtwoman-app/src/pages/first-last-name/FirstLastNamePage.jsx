@@ -1,33 +1,21 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { userAction } from "../../redux/UserSlice";
+import { setNames, userAction } from "../../redux/UserSlice";
 
 const FirstLastNamePage = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [lastName, setLastName] = useState("");
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const changeFirstLastNameChange = (e) => {
     e.preventDefault();
-    dispatch(userAction.firstLastNameChange({ name, surname, lastName }));
+    dispatch(setNames({ name, surname, lastName }));
+    navigate("/age", { replace: true });
   };
-
-  // const handle = async (e) => {
-  //   e.preventDefault();
-  //   const { data } = await axios.patch(
-  //     API_PATH + "/user/user-rud/",
-  //     {
-  //       name,
-  //       last_name: surname,
-  //       given_name: lastName,
-  //     },
-  //     CONFIG
-  //   );
-  // };
   return (
     <div className="FirstLastNamePage ">
       <div className="center">

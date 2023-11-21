@@ -68,16 +68,10 @@ const NavigationLayout = () => {
             2. Ёшингиз
           </Link>
           <Link
-            className={`${location.pathname === "/passport" ? "active" : ""}`}
-            to={"/passport"}
-          >
-            3. Паспорт рақами ва берилган санаси
-          </Link>
-          <Link
             className={`${location.pathname === "/location" ? "active" : ""}`}
             to={"/location"}
           >
-            4. Манзилингиз
+            3. Манзилингиз
           </Link>
           <Link
             className={`${
@@ -85,13 +79,13 @@ const NavigationLayout = () => {
             }`}
             to={"/phone-number"}
           >
-            5. Телефон рақамингиз
+            4. Телефон рақамингиз
           </Link>
           <Link
             className={`${location.pathname === "/education" ? "active" : ""}`}
             to={"/education"}
           >
-            6. Маълумотингиз
+            5. Маълумотингиз
           </Link>
           <Link
             className={`${
@@ -99,13 +93,13 @@ const NavigationLayout = () => {
             }`}
             to={"/family-status"}
           >
-            7. Оилавий статусингиз
+            6. Оилавий статусингиз
           </Link>
           <Link
             className={`${location.pathname === "/children" ? "active" : ""}`}
             to={"/children"}
           >
-            8. Нечта фарзандингиз бор?
+            7. Нечта фарзандингиз бор?
           </Link>
           <Link
             className={`${
@@ -113,7 +107,7 @@ const NavigationLayout = () => {
             }`}
             to={"/social-status"}
           >
-            9. Ижтимоий статусингиз
+            8. Ижтимоий статусингиз
           </Link>
           {/* <Link
             className={`${
@@ -136,7 +130,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/moral-problem"}
               >
-                10. Ҳозирги пайтдаги асосий муаммойингиз?
+                9. Ҳозирги пайтдаги асосий муаммойингиз?
               </Link>
             </AccordionSummary>
             <AccordionDetails>
@@ -146,7 +140,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/moral-problem"}
               >
-                10.1. Руҳий ва физиологик ҳолатингиздаги муаммоларингиз
+                9.1. Руҳий ва физиологик ҳолатингиздаги муаммоларингиз
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -156,7 +150,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/relative-problem"}
               >
-                10.2. Қариндош-уруғингиз билан бўлган муносабатлардаги
+                9.2. Қариндош-уруғингиз билан бўлган муносабатлардаги
                 муаммоларингиз
               </Link>
             </AccordionDetails>
@@ -167,7 +161,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/current-problem"}
               >
-                10.3. Ҳозирги пайтдаги оғир муаммоларингиз
+                9.3. Ҳозирги пайтдаги оғир муаммоларингиз
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -177,7 +171,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/husband-problem"}
               >
-                10.4. Ҳозирда яшаётган қонуний эрингиз билан бўлган
+                9.4. Ҳозирда яшаётган қонуний эрингиз билан бўлган
                 муаммоларингиз
               </Link>
             </AccordionDetails>
@@ -188,7 +182,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/divorce-problem"}
               >
-                10.5. Ажрашиш билан боғлиқ муаммоларингиз
+                9.5. Ажрашиш билан боғлиқ муаммоларингиз
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -198,7 +192,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/after-divorce-problem"}
               >
-                10.6. Ажрашиб кетганимиздан кейинги муаммолар
+                9.6. Ажрашиб кетганимиздан кейинги муаммолар
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -208,7 +202,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/no-marriage-problem"}
               >
-                10.7. Агар турмушга чиқмаган бўлсангиз ҳозирда мавжуд бўлган
+                9.7. Агар турмушга чиқмаган бўлсангиз ҳозирда мавжуд бўлган
                 муаммоларингиз
               </Link>
             </AccordionDetails>
@@ -219,7 +213,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/sex-problem"}
               >
-                10.8. Ҳозирда жинсий ҳаётингиздаги муаммоларингиз
+                9.8. Ҳозирда жинсий ҳаётингиздаги муаммоларингиз
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -229,7 +223,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/child-problem"}
               >
-                10.9. Фарзандларингиз бўлган билан муаммоларингиз
+                9.9. Фарзандларингиз бўлган билан муаммоларингиз
               </Link>
             </AccordionDetails>
             <AccordionDetails>
@@ -239,7 +233,7 @@ const NavigationLayout = () => {
                 }`}
                 to={"/work-problem"}
               >
-                10.10. Ишга чиқиш \ пул опиш \ ёки ойлик маошингиз билан боғлиқ
+                9.10. Ишга чиқиш \ пул опиш \ ёки ойлик маошингиз билан боғлиқ
                 муаммоларингиз
               </Link>
             </AccordionDetails>

@@ -1,18 +1,36 @@
 import { useNavigate } from "react-router-dom";
+import { setAges } from "../../redux/UserSlice";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 const AgePage = () => {
+  const [age, setAge] = useState("");
+
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const changeAge = (e) => {
+    e.preventDefault();
+    dispatch(setAges({ age }));
+    navigate("/location", { replace: true });
+  };
   return (
     <div className="AgePage ">
       <div className="center">
-        <div className="cards">
+        <form onSubmit={changeAge} className="cards">
           <h1>2. Ёшингиз</h1>
-          <input type="text" placeholder="Yosh" className="form-control" />
+          <input
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            type="text"
+            placeholder="Yosh"
+            className="form-control"
+          />
 
-          <button onClick={() => navigate("/passport")} className="btn myBtn">
+          <button type="submit" className="btn myBtn">
             Keyingi savol
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
