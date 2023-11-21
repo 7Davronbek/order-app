@@ -14,6 +14,16 @@ import { useState } from "react";
 
 const SexProblem = () => {
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
+
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -45,6 +55,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_2")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_3")}
@@ -59,6 +70,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_3")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_4")}
@@ -73,6 +85,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_4")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_5")}
@@ -87,6 +100,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_5")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_6")}
@@ -101,6 +115,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_6")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_7")}
@@ -115,6 +130,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_7")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_8")}
@@ -129,6 +145,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_8")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_9")}
@@ -143,6 +160,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_9")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_10")}
@@ -157,6 +175,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_10")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_11")}
@@ -171,6 +190,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_11")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_12")}
@@ -185,6 +205,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_12")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_13")}
@@ -199,6 +220,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_13")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_14")}
@@ -213,6 +235,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_14")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_15")}
@@ -227,6 +250,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_15")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans18_16")}
@@ -241,6 +265,7 @@ const SexProblem = () => {
                   />
                 }
                 label={getText("ans18_16")}
+                onChange={(e) => collectData("18.1", e.target.value)}
               />
 
               <button

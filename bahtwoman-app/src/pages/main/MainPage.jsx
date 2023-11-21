@@ -1,4 +1,7 @@
+import Feedback from "./components/Feedback";
+import Future from "./components/Future";
 import Header from "./components/Header";
+import Social from "./components/Social";
 import Target from "./components/Target";
 
 const MainPage = () => {
@@ -6,7 +9,9 @@ const MainPage = () => {
     <>
       <Header />
       <Target />
-      <div className="vh-100"></div>
+      <Future />
+      <Social />
+      <Feedback />
     </>
   );
 };

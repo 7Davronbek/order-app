@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { RegistrationLayout } from "../../components";
 
 const StartQuestionsModalpage = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="StartQuestionsModalpage Register">
       <RegistrationLayout />
@@ -24,7 +24,7 @@ const StartQuestionsModalpage = () => {
                 беришингиз лозим.
               </h5>
               <button
-                onClick={() => navigate("/start-question")}
+                onClick={() => navigate("/hundred-questions-start")}
                 className="btn myBtn"
               >
                 Davom etish

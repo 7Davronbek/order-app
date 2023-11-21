@@ -37,6 +37,9 @@ import {
 } from "./components";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import Library from "./components/library";
+import Benef from "./components/Benef";
+import Buy from "./components/Buy";
 
 const App = () => {
   return (
@@ -46,6 +49,9 @@ const App = () => {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/benef" element={<Benef />} />
+            <Route path="/buy" element={<Buy />} />
             <Route path="/register" element={<RegistrationPhonePage />} />
             <Route path="/phone-verify" element={<PhoneVerifyPage />} />
             <Route path="/create-password" element={<CreatePasswordPage />} />

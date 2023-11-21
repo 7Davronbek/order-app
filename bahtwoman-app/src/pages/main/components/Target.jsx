@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Target = () => {
   return (
@@ -12,9 +13,9 @@ const Target = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <h1>БИЗНИНГ МАҚСАДИМИЗ</h1>
-              <p>
+            <div className="col-10 mx-auto">
+              <h1 className="bold">БИЗНИНГ МАҚСАДИМИЗ</h1>
+              <p className="roman">
                 Ўзбекистон Республикасининг шаҳар ва қишлоқларида яшовчи
                 хотин-қизларнинг руҳиятини чуқур ўрганиш орқали уларнинг
                 оилавий, молиявий ва шахслараро низоларини бартараф этиш бўйича
@@ -27,15 +28,25 @@ const Target = () => {
       </div>
       <div className="Links HomeStyle">
         <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <a href="#">Психологик муаммоларингизни аниқлаш бўйича тест саволлари</a>
-                    <a href="#">Бизнинг ўқув платформамиздан оладиган фойда ва натижаларингиз</a>
-                    <a href="#">“Бахтли аёл” курсини ўтиш ва сотиб олиш бўйича Йўриқнома</a>
-                    <a href="#">Ўқув материалларимизни яратишда ишлатилган адабиётлар рўйхати</a>
-                    <a href="#">Лойиҳа муаллифлари ҳақида маълумот</a>
-                </div>
+          <div className="row">
+            <div className="col-lg-9 mx-auto">
+              <Link to="/first-last-name" className="roman" href="#">
+                Психологик муаммоларингизни аниқлаш бўйича тест саволлари
+              </Link>
+              <Link to="/" className="roman" href="#">
+                Бизнинг ўқув платформамиздан оладиган фойда ва натижаларингиз
+              </Link>
+              <Link to="/" className="roman" href="#">
+                “Бахтли аёл” курсини ўтиш ва сотиб олиш бўйича Йўриқнома
+              </Link>
+              <Link to="/" className="roman" href="#">
+                Ўқув материалларимизни яратишда ишлатилган адабиётлар рўйхати
+              </Link>
+              <Link to="/" className="roman" href="#">
+                Лойиҳа муаллифлари ҳақида маълумот
+              </Link>
             </div>
+          </div>
         </div>
       </div>
     </>

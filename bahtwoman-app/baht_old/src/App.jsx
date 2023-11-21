@@ -1,5 +1,4 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import {
   AfterDivorce,
@@ -13,6 +12,8 @@ import {
   EndQuestionsPage,
   FamilyStatusPage,
   FirstLastNamePage,
+  HundredQuestionsStartPage,
+  HundredQuestionsStartPage2,
   HusbandProblem,
   LocationPage,
   MainPage,
@@ -29,7 +30,11 @@ import {
   WelcomeNotePage,
   WorkProblem,
 } from "./pages";
-import { NavigationLayout } from "./components";
+import {
+  HundredQuestionsLayout,
+  NavigationLayout,
+  ScrollToTop,
+} from "./components";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 
@@ -70,11 +75,21 @@ const App = () => {
               <Route path="/child-problem" element={<ChildProblem />} />
               <Route path="/work-problem" element={<WorkProblem />} />
             </Route>
+
             <Route path="/end-questions" element={<EndQuestionsPage />} />
             <Route
               path="/start-questions-modal"
               element={<StartQuestionsModalpage />}
             />
+
+            <Route
+              path="/hundred-questions-start"
+              element={<HundredQuestionsLayout />}
+            />
+            {/* <Route element={<HundredQuestionsLayout />}>
+              <Route path="/hundred-questions-start" element={<HundredQuestionsStartPage />} />
+              <Route path="/hundred-questions-start-2" element={<HundredQuestionsStartPage2 />} />
+            </Route> */}
           </Routes>
           <ToastContainer />
         </Provider>

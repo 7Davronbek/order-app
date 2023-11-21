@@ -16,10 +16,21 @@ import { useState } from "react";
 
 const AfterDivorce = () => {
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
+
   const navigate = useNavigate();
   return (
     <div className="ChildrenPage ">
@@ -47,6 +58,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_2")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_3")}
@@ -61,6 +73,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_3")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_4")}
@@ -75,6 +88,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_4")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_5")}
@@ -89,6 +103,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_5")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_6")}
@@ -103,6 +118,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_6")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_7")}
@@ -117,6 +133,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_7")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_8")}
@@ -131,6 +148,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_8")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_9")}
@@ -145,6 +163,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_9")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_10")}
@@ -159,6 +178,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_10")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
 
               <Accordion
@@ -184,6 +204,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_11")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -202,6 +223,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_12")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -220,6 +242,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_13")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -238,6 +261,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_14")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -256,6 +280,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_15")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -284,6 +309,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_16")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -302,6 +328,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_17")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -320,6 +347,7 @@ const AfterDivorce = () => {
                         />
                       }
                       label={getText("ans16_18")}
+                      onChange={(e) => collectData("16.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -338,6 +366,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_19")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_20")}
@@ -352,6 +381,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_20")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_21")}
@@ -366,6 +396,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_21")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_22")}
@@ -380,6 +411,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_22")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_23")}
@@ -394,6 +426,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_23")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_24")}
@@ -408,6 +441,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_24")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_25")}
@@ -422,6 +456,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_25")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_26")}
@@ -436,6 +471,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_26")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans16_27")}
@@ -450,6 +486,7 @@ const AfterDivorce = () => {
                   />
                 }
                 label={getText("ans16_27")}
+                onChange={(e) => collectData("16.1", e.target.value)}
               />
               <button
                 onClick={() => navigate("/no-marriage-problem")}

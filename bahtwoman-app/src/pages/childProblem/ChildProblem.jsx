@@ -15,6 +15,16 @@ import { useState } from "react";
 
 const ChildProblem = () => {
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
+
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -46,6 +56,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_2")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
 
               <FormControlLabel
@@ -61,6 +72,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_3")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_4")}
@@ -75,6 +87,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_4")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_5")}
@@ -89,6 +102,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_5")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_6")}
@@ -103,6 +117,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_6")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_7")}
@@ -117,6 +132,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_7")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_8")}
@@ -131,6 +147,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_8")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_9")}
@@ -144,6 +161,7 @@ const ChildProblem = () => {
                     }}
                   />
                 }
+                onChange={(e) => collectData("19.1", e.target.value)}
                 label={getText("ans19_9")}
               />
               <FormControlLabel
@@ -159,6 +177,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_10")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_11")}
@@ -173,6 +192,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_11")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_12")}
@@ -187,6 +207,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_12")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_13")}
@@ -201,6 +222,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_13")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_14")}
@@ -215,6 +237,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_14")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_15")}
@@ -229,6 +252,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_15")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_16")}
@@ -243,6 +267,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_16")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_17")}
@@ -257,6 +282,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_17")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_18")}
@@ -271,6 +297,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_18")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_19")}
@@ -285,6 +312,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_19")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_20")}
@@ -299,6 +327,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_20")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_21")}
@@ -313,6 +342,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_21")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_22")}
@@ -327,6 +357,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_22")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_23")}
@@ -341,6 +372,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_23")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_24")}
@@ -355,6 +387,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_24")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_25")}
@@ -369,6 +402,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_25")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_26")}
@@ -383,6 +417,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_26")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_26")}
@@ -397,6 +432,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_26")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_27")}
@@ -411,6 +447,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_27")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_28")}
@@ -425,6 +462,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_28")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_29")}
@@ -439,6 +477,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_29")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_30")}
@@ -453,6 +492,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_30")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_31")}
@@ -467,6 +507,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_31")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_32")}
@@ -481,6 +522,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_32")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_33")}
@@ -495,6 +537,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_33")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_34")}
@@ -509,6 +552,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_34")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_35")}
@@ -523,6 +567,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_35")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_36")}
@@ -537,6 +582,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_36")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_37")}
@@ -551,6 +597,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_37")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_38")}
@@ -565,6 +612,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_38")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_39")}
@@ -579,6 +627,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_39")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_40")}
@@ -593,6 +642,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_40")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans19_42")}
@@ -607,6 +657,7 @@ const ChildProblem = () => {
                   />
                 }
                 label={getText("ans19_42")}
+                onChange={(e) => collectData("19.1", e.target.value)}
               />
               <button
                 onClick={() => navigate("/work-problem")}

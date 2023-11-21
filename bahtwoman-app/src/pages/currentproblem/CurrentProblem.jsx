@@ -16,11 +16,21 @@ import { useState } from "react";
 
 const CurrentProblem = () => {
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-  const navigate = useNavigate();
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
+
   return (
     <div className="ChildrenPage ">
       <div className="center">
@@ -57,6 +67,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_2")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -76,6 +87,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_4")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -94,6 +106,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_5")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -112,6 +125,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_6")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -130,6 +144,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_7")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -148,6 +163,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_8")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -166,6 +182,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_9")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -184,6 +201,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_10")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -202,6 +220,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_11")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -220,6 +239,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_12")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -238,6 +258,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_13")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -256,6 +277,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_14")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -274,6 +296,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_15")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -292,6 +315,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_16")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -310,6 +334,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_17")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -328,6 +353,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_18")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -357,6 +383,7 @@ const CurrentProblem = () => {
                             />
                           }
                           label={getText("ans13_19")}
+                          onChange={(e) => collectData("13.1", e.target.value)}
                         />
                       </Typography>
                     </AccordionSummary>
@@ -389,11 +416,21 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_5")}
+                      onChange={(e) => collectData("13.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
+            </RadioGroup>
+          </FormControl>
 
+          <FormControl>
+            <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-controlled-radio-buttons-group"
+              name="controlled-radio-buttons-group"
+              onChange={handleChange}
+            >
               <Accordion
                 expanded={expanded === "panel4" || expanded === "panel6"}
                 onChange={handleChange("panel4")}
@@ -417,6 +454,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_21")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -436,6 +474,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_23")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -454,6 +493,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_24")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -472,6 +512,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_25")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -490,6 +531,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_26")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -508,6 +550,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_27")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -526,6 +569,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_28")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -544,6 +588,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_29")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -562,6 +607,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_30")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -580,6 +626,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_31")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -598,6 +645,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_32")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -616,6 +664,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_33")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -634,6 +683,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_34")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -652,6 +702,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_35")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -670,6 +721,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_36")}
+                      onChange={(e) => collectData("13.2", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -699,6 +751,7 @@ const CurrentProblem = () => {
                             />
                           }
                           label={getText("ans13_37")}
+                          onChange={(e) => collectData("13.2", e.target.value)}
                         />
                       </Typography>
                     </AccordionSummary>
@@ -717,7 +770,15 @@ const CurrentProblem = () => {
                   </Accordion>
                 </AccordionDetails>
               </Accordion>
-
+            </RadioGroup>
+          </FormControl>
+          <FormControl>
+            <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-controlled-radio-buttons-group"
+              name="controlled-radio-buttons-group"
+              onChange={handleChange}
+            >
               <Accordion
                 expanded={expanded === "panel7" || expanded === "panel8"}
                 onChange={handleChange("panel7")}
@@ -741,6 +802,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_39")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -760,6 +822,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_41")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -778,6 +841,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_42")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -795,6 +859,7 @@ const CurrentProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("13.3", e.target.value)}
                       label={getText("ans13_43")}
                     />
                   </Typography>
@@ -814,6 +879,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_44")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -832,6 +898,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_45")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -850,6 +917,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_46")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -868,6 +936,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_47")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -886,6 +955,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_48")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -903,6 +973,7 @@ const CurrentProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("13.3", e.target.value)}
                       label={getText("ans13_49")}
                     />
                   </Typography>
@@ -922,6 +993,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_50")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -940,6 +1012,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_51")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -958,6 +1031,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_52")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -976,6 +1050,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_53")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -994,6 +1069,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_54")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1012,6 +1088,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_55")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1030,6 +1107,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_56")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1048,6 +1126,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_57")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1066,6 +1145,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_58")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1084,6 +1164,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_59")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1102,6 +1183,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_60")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1120,6 +1202,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_61")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1138,6 +1221,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_62")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1156,6 +1240,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_63")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1174,6 +1259,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_64")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1192,6 +1278,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_65")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1210,6 +1297,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_66")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1228,6 +1316,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_67")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1246,6 +1335,7 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_68")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -1264,22 +1354,20 @@ const CurrentProblem = () => {
                         />
                       }
                       label={getText("ans13_69")}
+                      onChange={(e) => collectData("13.3", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
-              <button
-                onClick={() => navigate("/husband-problem")}
-                className="btn myBtn"
-              >
-                Keyingi savol
-              </button>
             </RadioGroup>
           </FormControl>
 
-          {/* <button onClick={() => navigate("/children")} className="btn myBtn">
-              Keyingi savol
-            </button> */}
+          <button
+            onClick={() => navigate("/husband-problem")}
+            className="btn myBtn"
+          >
+            Keyingi savol
+          </button>
         </div>
       </div>
     </div>

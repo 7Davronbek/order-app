@@ -1,24 +1,17 @@
-import React from "react";
-import Header from "./components/Header";
-import Galary from "./components/Galary";
-import Social from "./components/Social";
-import BrightFuture from "./components/BrightFuture";
-import CourseLinks from "./components/CourseLinks";
-import Plans from "./components/Plans";
 import Feedback from "./components/Feedback";
-import Footer from "./components/Footer";
+import Future from "./components/Future";
+import Header from "./components/Header";
+import Social from "./components/Social";
+import Target from "./components/Target";
 
 const MainPage = () => {
   return (
     <>
       <Header />
-      <Galary />
+      <Target />
+      <Future />
       <Social />
-      <BrightFuture />
-      <CourseLinks />
-      <Plans />
       <Feedback />
-      <Footer />
     </>
   );
 };

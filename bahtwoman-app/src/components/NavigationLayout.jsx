@@ -22,9 +22,9 @@ const NavigationLayout = () => {
     <div className="NavigationLayout">
       <div className="row">
         <div className="col-12 top">
-          <div className="logo">
+          <Link to='/' className="logo">
             <img src={logo} alt="" />
-          </div>
+          </Link>
           <div className="d-flex align-items-center">
             <div className="notification cursor me-3">
               <img src={russian} alt="" />

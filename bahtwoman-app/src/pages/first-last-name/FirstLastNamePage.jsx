@@ -2,20 +2,18 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userAction } from "../../redux/UserSlice";
-import axios from "axios";
-import { API_PATH, CONFIG } from "../../constants";
 
 const FirstLastNamePage = () => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [lastName, setLastName] = useState("");
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const changeFirstLastNameChange = (e) => {
     e.preventDefault();
-    dispatch(userAction.firstLastNameChange({name, surname, lastName}));
+    dispatch(userAction.firstLastNameChange({ name, surname, lastName }));
   };
 
   // const handle = async (e) => {

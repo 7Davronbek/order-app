@@ -15,12 +15,23 @@ import { getText } from "../../locale";
 import { useState } from "react";
 
 const WorkProblem = () => {
-  const location = useLocation()
+  const location = useLocation();
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
+
   const navigate = useNavigate();
   return (
     <div className="ChildrenPage ">
@@ -48,6 +59,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_2")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
 
               <FormControlLabel
@@ -63,6 +75,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_3")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_4")}
@@ -77,6 +90,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_4")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_5")}
@@ -91,6 +105,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_5")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_6")}
@@ -105,6 +120,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_6")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_7")}
@@ -119,6 +135,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_7")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_8")}
@@ -133,6 +150,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_8")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_9")}
@@ -147,6 +165,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_9")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_10")}
@@ -161,6 +180,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_10")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_11")}
@@ -175,6 +195,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_11")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_12")}
@@ -189,6 +210,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_12")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_13")}
@@ -203,6 +225,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_13")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_14")}
@@ -217,6 +240,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_14")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_15")}
@@ -231,6 +255,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_15")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_16")}
@@ -245,6 +270,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_16")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_17")}
@@ -259,6 +285,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_17")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_18")}
@@ -273,6 +300,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_18")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_19")}
@@ -287,6 +315,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_19")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_20")}
@@ -301,6 +330,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_20")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_21")}
@@ -315,6 +345,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_21")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_22")}
@@ -329,6 +360,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_22")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_23")}
@@ -343,6 +375,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_23")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_24")}
@@ -357,6 +390,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_24")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_25")}
@@ -371,6 +405,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_25")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_26")}
@@ -385,6 +420,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_26")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_27")}
@@ -399,6 +435,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_27")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_28")}
@@ -413,6 +450,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_28")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_29")}
@@ -427,6 +465,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_29")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans20_30")}
@@ -441,6 +480,7 @@ const WorkProblem = () => {
                   />
                 }
                 label={getText("ans20_30")}
+                onChange={(e) => collectData("20.1", e.target.value)}
               />
               <Accordion
                 expanded={expanded === "panel2"}
@@ -465,6 +505,7 @@ const WorkProblem = () => {
                         />
                       }
                       label={getText("ans20_31")}
+                      onChange={(e) => collectData("20.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -482,6 +523,7 @@ const WorkProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("20.1", e.target.value)}
                       label={getText("ans20_32")}
                     />
                   </Typography>
@@ -500,6 +542,7 @@ const WorkProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("20.1", e.target.value)}
                       label={getText("ans20_33")}
                     />
                   </Typography>
@@ -518,6 +561,7 @@ const WorkProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("20.1", e.target.value)}
                       label={getText("ans20_34")}
                     />
                   </Typography>
@@ -536,6 +580,7 @@ const WorkProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("20.1", e.target.value)}
                       label={getText("ans20_35")}
                     />
                   </Typography>
@@ -554,6 +599,7 @@ const WorkProblem = () => {
                           }}
                         />
                       }
+                      onChange={(e) => collectData("20.1", e.target.value)}
                       label={getText("ans20_36")}
                     />
                   </Typography>

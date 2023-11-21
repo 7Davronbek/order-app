@@ -16,6 +16,16 @@ import { useState } from "react";
 
 const NoMarriageProblem = () => {
   const [expanded, setExpanded] = useState(false);
+  const [data, setData] = useState({});
+
+  const collectData = (index, value) => {
+    if (data.index) {
+      data.index = value;
+    } else {
+      data[index] = value;
+    }
+    console.log(data);
+  };
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -47,6 +57,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_2")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_3")}
@@ -61,6 +72,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_3")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_4")}
@@ -75,6 +87,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_4")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_5")}
@@ -89,6 +102,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_5")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_6")}
@@ -103,6 +117,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_6")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_7")}
@@ -117,6 +132,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_7")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_8")}
@@ -131,6 +147,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_8")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_9")}
@@ -145,6 +162,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_9")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_10")}
@@ -159,6 +177,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_10")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_11")}
@@ -173,6 +192,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_11")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_12")}
@@ -187,6 +207,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_12")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_13")}
@@ -201,6 +222,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_13")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_14")}
@@ -215,6 +237,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_14")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_15")}
@@ -229,6 +252,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_15")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <Accordion
                 expanded={expanded === "panel3"}
@@ -253,6 +277,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_16")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -271,6 +296,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_17")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -289,6 +315,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_18")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -307,6 +334,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_19")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -325,6 +353,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_20")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -343,6 +372,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_21")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -361,6 +391,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_22")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -379,6 +410,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_23")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -397,6 +429,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_24")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -414,6 +447,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_25")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />{" "}
               <FormControlLabel
                 value={getText("ans17_26")}
@@ -428,6 +462,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_26")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />{" "}
               <FormControlLabel
                 value={getText("ans17_27")}
@@ -442,6 +477,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_27")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />{" "}
               <Accordion
                 expanded={expanded === "panel4"}
@@ -466,6 +502,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_28")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionSummary>
@@ -484,6 +521,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_29")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -502,6 +540,7 @@ const NoMarriageProblem = () => {
                         />
                       }
                       label={getText("ans17_30")}
+                      onChange={(e) => collectData("17.1", e.target.value)}
                     />
                   </Typography>
                 </AccordionDetails>
@@ -519,6 +558,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_31")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_32")}
@@ -533,6 +573,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_32")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_33")}
@@ -547,6 +588,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_33")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_34")}
@@ -561,6 +603,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_34")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_35")}
@@ -575,6 +618,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_35")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_36")}
@@ -589,6 +633,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_36")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_37")}
@@ -603,6 +648,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_37")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_38")}
@@ -617,6 +663,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_38")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_39")}
@@ -631,6 +678,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_39")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_40")}
@@ -645,6 +693,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_40")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_41")}
@@ -659,6 +708,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_41")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_42")}
@@ -673,6 +723,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_42")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_43")}
@@ -687,6 +738,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_43")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_44")}
@@ -701,6 +753,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_44")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_45")}
@@ -715,6 +768,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_45")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_46")}
@@ -729,6 +783,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_46")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_47")}
@@ -743,6 +798,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_47")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_48")}
@@ -757,6 +813,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_48")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_49")}
@@ -771,6 +828,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_49")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <FormControlLabel
                 value={getText("ans17_50")}
@@ -785,6 +843,7 @@ const NoMarriageProblem = () => {
                   />
                 }
                 label={getText("ans17_50")}
+                onChange={(e) => collectData("17.1", e.target.value)}
               />
               <button
                 onClick={() => navigate("/sex-problem")}

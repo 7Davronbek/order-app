@@ -1144,7 +1144,7 @@ const DivorceProblem = () => {
               </Accordion>
 
               <button
-                onClick={() => navigate("/social-status")}
+                onClick={() => navigate("/after-divorce-problem")}
                 className="btn myBtn"
               >
                 Keyingi savol
