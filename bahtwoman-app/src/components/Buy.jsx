@@ -1,9 +1,51 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API_PATH, CONFIG, ORDER_ID, TOKEN } from "../constants";
+import { toast } from "react-toastify";
 
 const Buy = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [content, setContent] = useState("");
+
+  const navigate = useNavigate();
+
+  const handlePost2 = async (e) => {
+    const token = localStorage.getItem(TOKEN);
+    if (!token) {
+      navigate("/login", { replace: true });
+    }
+    const { data } = await axios.post(
+      API_PATH + "order/order-create/",
+      {
+        type_order: content,
+      },
+      CONFIG
+    );
+    if (data) {
+      localStorage.setItem(ORDER_ID, data.order_id);
+      navigate("/pay", { replace: true });
+    } else {
+      toast.error("Invalid order")
+    }
+  };
+
+  const handlePost = () => {};
   return (
     <>
+      <div
+        onClick={() => setIsOpen(false)}
+        className={`myModal ${isOpen && "active"}`}
+      >
+        <div className="cards">
+          <div onClick={() => handlePost("click")} className="pay">
+            <img src="/img/click.svg" alt="" />
+          </div>
+          <div onClick={() => handlePost2("payme")} className="pay">
+            <img src="/img/pay.svg" alt="" />
+          </div>
+        </div>
+      </div>
       <div className="Buy">
         <div className="container">
           <div className="row">
@@ -52,9 +94,15 @@ Yo'riqnoma`}</div>
                   <div className="b_up_h_2">700 ming so'mdan</div>
                   <div className="b_up_h">to'lab o'qish</div>
                 </div>
-                <Link className="b_link" to="">
+                <button
+                  onClick={() => {
+                    setIsOpen(true), setContent("month");
+                  }}
+                  className="b_link btn"
+                  to=""
+                >
                   Sotib olish
-                </Link>
+                </button>
               </div>
             </div>
             <div className="col-4">
@@ -64,9 +112,15 @@ Yo'riqnoma`}</div>
                   <div className="b_up_h_2">700 ming so'mdan</div>
                   <div className="b_up_h">to'lab o'qish</div>
                 </div>
-                <Link className="b_link" to="">
+                <button
+                  onClick={() => {
+                    setIsOpen(true), setContent("week");
+                  }}
+                  className="b_link btn"
+                  to=""
+                >
                   Sotib olish
-                </Link>
+                </button>
               </div>
             </div>
             <div className="col-4">
@@ -80,9 +134,15 @@ Yo'riqnoma`}</div>
                   <div className="b_up_h_3">2 mln 240 ming so'm</div>
                   <div className="b_up_h">to'lab o'qish</div>
                 </div>
-                <Link className="b_link" to="">
+                <button
+                  onClick={() => {
+                    setIsOpen(true), setContent("full");
+                  }}
+                  className="b_link btn"
+                  to=""
+                >
                   Sotib olish
-                </Link>
+                </button>
               </div>
             </div>
             <div className="col-12 mt-5">

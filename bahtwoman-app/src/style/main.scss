@@ -95,6 +95,14 @@ html {
   line-height: 46px; /* 127.778% */
   margin-bottom: 24px;
 }
+.hundered_ques_titlee {
+  color: #313131;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 46px; /* 127.778% */
+  margin-bottom: 24px;
+}
 .for_second_side_hundered {
   display: flex;
   flex-direction: column;
@@ -954,6 +962,12 @@ body {
     z-index: -1;
   }
 
+  p {
+    span {
+      color: #ff0090;
+    }
+  }
+
   .left {
     left: 0;
   }
@@ -1085,6 +1099,12 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
+    a {
+      transition: 0.5s;
+      &:hover {
+        transform: scale(2.1) rotate(360deg);
+      }
+    }
   }
 }
 
@@ -1220,7 +1240,7 @@ body {
     line-height: 33.755px;
     margin-bottom: 80px;
     border-radius: 0px 88.057px;
-
+    transition: 0.8s;
     &:hover {
       background: #ff0090;
       border-radius: 88.057px 0px;
@@ -1289,5 +1309,430 @@ body {
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+  }
+}
+
+.Pay {
+  .pay_click_box {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pay_click {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 420px) {
+        margin-bottom: 30px;
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+
+      .pay_click_h {
+        margin-left: 14px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
+  }
+
+  .pay_box {
+    height: 100vh;
+  }
+
+  .pay_left {
+    // position: relative;
+    // z-index: 2;
+    // background: #032728;
+    // box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.25);
+    // border-radius: 0px 80px 80px 0px;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 992px) {
+      padding: 30px;
+    }
+
+    .pay_left_logo {
+      position: absolute;
+      left: 40px;
+      top: 30px;
+
+      @media (max-width: 576px) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .pay_left_tree_1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .pay_left_tree_2 {
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .pay_card_h {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      margin-bottom: 25px;
+
+      @media (max-width: 576px) {
+        margin-top: 150px;
+        font-size: 30px;
+      }
+
+      @media (max-width: 420px) {
+      }
+    }
+
+    .pay_card {
+      padding: 20px;
+      width: 520px;
+      background-color: white;
+      border: 2px solid #075354;
+      border-radius: 12px;
+
+      @media (max-width: 1100px) {
+        width: 500px;
+      }
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+
+      .pay_card_name {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+
+        @media (max-width: 400px) {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      .pay_card_inp_box {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 25px;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          margin-top: 30px;
+          margin-bottom: 0;
+        }
+
+        .pay_card_inp {
+          height: 50px;
+          padding: 12px;
+
+          @media (max-width: 576px) {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .pay_a {
+        width: 100%;
+        text-decoration: none;
+        padding: 18px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000000;
+        border-radius: 3px;
+        border: none;
+      }
+    }
+  }
+
+  .pay_right {
+    position: relative;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    .pay_right_img {
+      position: absolute;
+      right: 0;
+      width: 120%;
+      height: 100vh;
+    }
+  }
+
+  .pay_left {
+    .logo {
+      margin-bottom: 100px;
+    }
+
+    .pay_card_h {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.Parol {
+  .pay_click_box {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pay_click {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 420px) {
+        margin-bottom: 30px;
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+
+      .pay_click_h {
+        margin-left: 14px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+    }
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+    }
+  }
+
+  .pay_left {
+    // position: relative;
+    // z-index: 2;
+    // background: #032728;
+    // box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.25);
+    // border-radius: 0px 80px 80px 0px;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 992px) {
+      padding: 30px;
+    }
+
+    .pay_left_logo {
+      position: absolute;
+      left: 40px;
+      top: 30px;
+
+      @media (max-width: 576px) {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 60px;
+      }
+    }
+
+    .pay_left_tree_1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .pay_left_tree_2 {
+      position: absolute;
+      bottom: -70px;
+      left: 0;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .pay_card_h {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      margin-bottom: 25px;
+
+      @media (max-width: 576px) {
+        font-size: 30px;
+      }
+
+      @media (max-width: 420px) {
+        margin-top: 100px;
+      }
+    }
+
+    .pay_card {
+      padding: 20px;
+      width: 520px;
+      background-color: white;
+      border: 2px solid #075354;
+      border-radius: 12px;
+      flex-direction: column;
+      gap: 25px;
+
+      @media (max-width: 1100px) {
+        width: 500px;
+      }
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+
+      .pay_card_name {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        color: #000000;
+
+        @media (max-width: 400px) {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+
+      .pay_card_inp_box {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          margin-top: 30px;
+          margin-bottom: 0;
+        }
+
+        .pay_card_inp {
+          width: 100%;
+          height: 50px;
+          padding: 12px;
+
+          @media (max-width: 576px) {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .pay_a {
+        width: 100%;
+        text-decoration: none;
+        padding: 18px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: linear-gradient(105.19deg, #a16dff -18.21%, #6c509a 64.14%);
+        border-radius: 3px;
+        border: none;
+      }
+    }
+  }
+
+  .pay_right {
+    position: relative;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    .pay_right_img {
+      position: absolute;
+      right: 0;
+      width: 120%;
+      height: 100vh;
+    }
+  }
+
+  .pay_box {
+    height: 100vh;
+
+    .logo {
+      margin-bottom: 100px;
+    }
+
+    .pay_card_h {
+      margin-bottom: 50px;
+
+      span {
+        color: #ff0090;
+      }
+    }
+  }
+}
+
+.myModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #ffffffd9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+
+  .pay {
+    border-radius: 5.87px;
+    background: #eff1f4;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    background: #eff1f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }

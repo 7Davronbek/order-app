@@ -30,19 +30,19 @@ const Target = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-9 mx-auto">
-              <Link to="/first-last-name" className="roman" href="#">
+              <Link to="/first-last-name" className="roman">
                 Психологик муаммоларингизни аниқлаш бўйича тест саволлари
               </Link>
-              <Link to="/" className="roman" href="#">
+              <Link to="/benef" className="roman">
                 Бизнинг ўқув платформамиздан оладиган фойда ва натижаларингиз
               </Link>
-              <Link to="/" className="roman" href="#">
+              <Link to="/buy" className="roman">
                 “Бахтли аёл” курсини ўтиш ва сотиб олиш бўйича Йўриқнома
               </Link>
-              <Link to="/" className="roman" href="#">
+              <Link to="/library" className="roman">
                 Ўқув материалларимизни яратишда ишлатилган адабиётлар рўйхати
               </Link>
-              <Link to="/" className="roman" href="#">
+              <Link to="/" className="roman">
                 Лойиҳа муаллифлари ҳақида маълумот
               </Link>
             </div>

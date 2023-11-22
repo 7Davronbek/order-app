@@ -41,6 +41,8 @@ import Library from "./components/library";
 import Benef from "./components/Benef";
 import Buy from "./components/Buy";
 import Login from "./pages/login/Login";
+import Pay from "./pages/payme/Pay";
+import Parol from "./pages/payme/Parol";
 
 const App = () => {
   return (
@@ -69,7 +71,7 @@ const App = () => {
               <Route path="/family-status" element={<FamilyStatusPage />} />
               <Route path="/children" element={<ChildrenPage />} />
               <Route path="/social-status" element={<SocialStatus />} />
-              
+
               <Route path="/moral-problem" element={<MoralProblem />} />
               <Route path="/relative-problem" element={<RalativeProblem />} />
               <Route path="/current-problem" element={<CurrentProblem />} />
@@ -90,7 +92,8 @@ const App = () => {
               path="/start-questions-modal"
               element={<StartQuestionsModalpage />}
             />
-
+            <Route path="/pay" element={<Pay />} />
+            <Route path="/parol" element={<Parol />} />
             <Route
               path="/hundred-questions-start"
               element={<HundredQuestionsLayout />}
