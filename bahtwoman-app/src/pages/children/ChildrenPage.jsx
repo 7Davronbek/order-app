@@ -35,6 +35,7 @@ const ChildrenPage = () => {
       toast.error("Malumotingizni tanlang.");
       return;
     }
+    localStorage.setItem("children", children)
     dispatch(setChild({ children }));
     navigate("/social-status", { replace: true });
   };

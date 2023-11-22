@@ -40,6 +40,7 @@ import { store } from "./redux/store";
 import Library from "./components/library";
 import Benef from "./components/Benef";
 import Buy from "./components/Buy";
+import Login from "./pages/login/Login";
 
 const App = () => {
   return (
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/benef" element={<Benef />} />
             <Route path="/buy" element={<Buy />} />
             <Route path="/register" element={<RegistrationPhonePage />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/phone-verify" element={<PhoneVerifyPage />} />
             <Route path="/create-password" element={<CreatePasswordPage />} />
             <Route path="/welcome-note" element={<WelcomeNotePage />} />
@@ -67,6 +69,7 @@ const App = () => {
               <Route path="/family-status" element={<FamilyStatusPage />} />
               <Route path="/children" element={<ChildrenPage />} />
               <Route path="/social-status" element={<SocialStatus />} />
+              
               <Route path="/moral-problem" element={<MoralProblem />} />
               <Route path="/relative-problem" element={<RalativeProblem />} />
               <Route path="/current-problem" element={<CurrentProblem />} />

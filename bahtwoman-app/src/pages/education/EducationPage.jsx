@@ -29,6 +29,7 @@ const EducationPage = () => {
       return;
     }
     dispatch(setEdu({ education }));
+    localStorage.setItem("education", education);
     navigate("/family-status", { replace: true });
   };
   return (

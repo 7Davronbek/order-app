@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { getText } from "../../locale";
 import { useState } from "react";
+import { USER_INFO } from "../../constants";
 
 const RalativeProblem = () => {
   const [data, setData] = useState({});
@@ -24,7 +25,11 @@ const RalativeProblem = () => {
     } else {
       data[index] = value;
     }
-    console.log(data);
+
+    const existingData = JSON.parse(localStorage.getItem(USER_INFO))
+    const newData = {...existingData, ...data}
+
+    localStorage.setItem(USER_INFO, JSON.stringify(newData));
   };
 
   const handleChange = (panel) => (event, isExpanded) => {

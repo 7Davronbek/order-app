@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { API_PATH } from "../constants";
+import { API_PATH, USER_ID } from "../constants";
 import axios from "axios";
 
 const initialState = {
@@ -14,16 +14,29 @@ const initialState = {
   children: "",
   social_status: "",
   account: "",
+  userInfo: []
 };
 
 const registerQuestions = createAsyncThunk(
   `user/registerQuestions`,
-  async () => {
-    console.log(initialState);
+  async ({user, status}) => {
     const { data } = await axios.post(
       API_PATH + "register-questions/question/",
-      {}
+      {
+        first_name: user.first_name,
+        last_name: user.last_name,
+        given_name: user.given_name,
+        age: user.age,
+        address: user.address,
+        phone: user.phone,
+        eduction: user.eduction,
+        family_status: user.family_status,
+        children: user.children,
+        social_status: status,
+      }
     );
+    
+    localStorage.setItem(USER_ID, data.id)
   }
 );
 
@@ -57,7 +70,16 @@ export const userSlice = createSlice({
     setSocialStatus: (state, action) => {
       state.social_status = action.payload.status;
     },
+    setUserInfo: (state, action) => {
+      console.log(action);
+      state.userInfo.push(action.payload.data) 
+    }
   },
+  extraReducers: (builder) => {
+    // builder.addCase(registerQuestions.fulfilled, (state,action) => {
+    //   console.log(action.payload);
+    // })
+  }
 });
 
 export const userAction = {
@@ -76,6 +98,7 @@ export const {
   setFamilyStatus,
   setChild,
   setSocialStatus,
+  setUserInfo
 } = userSlice.actions;
 
 export default userSlice.reducer;

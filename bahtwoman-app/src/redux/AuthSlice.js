@@ -16,6 +16,22 @@ const phoneVerify = createAsyncThunk(
   }
 );
 
+const login = createAsyncThunk(
+  `auth/login`,
+  async ({ phone, password, navigate }) => {
+    const { data } = await axios.post(API_PATH + "user/login/", {
+      phone,
+      password,
+    });
+    localStorage.setItem(TOKEN, data.token);
+    if (data.is_completed) {
+      navigate("/dashboard", { replace: true });
+    } else {
+      navigate("/start-questions-modal", { replace: true });
+    }
+  }
+);
+
 const password = createAsyncThunk(`auth/create-user`, async (password) => {
   const { data } = await axios.post(API_PATH + "/user/create-user/", {
     phone: localStorage.getItem(PHONE),
@@ -26,7 +42,7 @@ const password = createAsyncThunk(`auth/create-user`, async (password) => {
 });
 
 const initialState = {
-  token: localStorage.getItem(TOKEN) ? localStorage.getItem(TOKEN) : "",    
+  token: localStorage.getItem(TOKEN) ? localStorage.getItem(TOKEN) : "",
 };
 
 export const authSlice = createSlice({
@@ -44,6 +60,7 @@ export const authAction = {
   register,
   phoneVerify,
   password,
+  login,
 };
 
 export default authSlice.reducer;

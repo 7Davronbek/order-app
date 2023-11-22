@@ -14,6 +14,9 @@ const FirstLastNamePage = () => {
   const changeFirstLastNameChange = (e) => {
     e.preventDefault();
     dispatch(setNames({ name, surname, lastName }));
+    localStorage.setItem("name", name);
+    localStorage.setItem("surname", surname);
+    localStorage.setItem("lastname", lastName);
     navigate("/age", { replace: true });
   };
   return (

@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { getText } from "../../locale";
 import { useState } from "react";
+import { USER_INFO } from "../../constants";
 
 const HusbandProblem = () => {
   const [expanded, setExpanded] = useState(false);
@@ -27,7 +28,11 @@ const HusbandProblem = () => {
     } else {
       data[index] = value;
     }
-    console.log(data);
+
+    const existingData = JSON.parse(localStorage.getItem(USER_INFO))
+    const newData = {...existingData, ...data}
+
+    localStorage.setItem(USER_INFO, JSON.stringify(newData));
   };
   const navigate = useNavigate();
   return (

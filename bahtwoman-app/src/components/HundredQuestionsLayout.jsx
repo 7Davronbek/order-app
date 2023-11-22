@@ -20,7 +20,7 @@ import {
 import down from "../assets/down.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { API_PATH } from "../constants";
+import { API_PATH, CONFIG } from "../constants";
 
 const HundredQuestionsLayout = () => {
   const [expanded, setExpanded] = useState(true);
@@ -28,10 +28,13 @@ const HundredQuestionsLayout = () => {
   const location = useLocation();
   const [allQues, setAllQues] = useState([]);
   const [oneQues, setOneQues] = useState([]);
+  const [answer, setAnswer] = useState("");
+  const [yesOrNo, setYesOrNo] = useState("");
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
   const [expanded2, setExpanded2] = useState(false);
 
   const handleChange2 = (pane2) => (event, isExpanded2) => {
@@ -55,13 +58,26 @@ const HundredQuestionsLayout = () => {
     getById();
   }, [pk]);
 
+  const sendAnswer = () => {
+    axios.post(
+      API_PATH + "ru/question/check-test/",
+      {
+        question_id: pk,
+        yes_or_no: yesOrNo,
+        answer,
+      },
+      CONFIG
+    );
+    setPk(pk + 1);
+  };
+
   return (
     <div className="NavigationLayout HundredQuestionsLayout">
       <div className="row">
         <div className="col-12 top">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src={logo} alt="" />
-          </div>
+          </Link>
           <div className="d-flex align-items-center">
             <div className="notification cursor me-3">
               <img src={russian} alt="" />
@@ -151,6 +167,7 @@ const HundredQuestionsLayout = () => {
                         />
                       }
                       label={item.name}
+                      onChange={(e) => setAnswer(e.target.value)}
                     />
                   </>
                 ))}
@@ -234,6 +251,7 @@ const HundredQuestionsLayout = () => {
                           />
                         }
                         label={item.variant_1}
+                        onChange={() => setYesOrNo("true")}
                       />
                       <FormControlLabel
                         value={item.variant_2}
@@ -248,6 +266,7 @@ const HundredQuestionsLayout = () => {
                           />
                         }
                         label={item.variant_2}
+                        onChange={() => setYesOrNo("false")}
                       />
                     </RadioGroup>
                   </FormControl>
@@ -260,7 +279,7 @@ const HundredQuestionsLayout = () => {
               </>
             ) : (
               <>
-                <button onClick={() => setPk(pk + 1)} className="btn myBtn">
+                <button onClick={sendAnswer} className="btn myBtn">
                   Keyingi savol
                 </button>
               </>

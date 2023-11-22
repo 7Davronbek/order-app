@@ -12,14 +12,13 @@ import {
   Typography,
 } from "@mui/material";
 import { getText } from "../../locale";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSocialStatus, userAction } from "../../redux/UserSlice";
 
 const SocialStatus = () => {
   const [expanded, setExpanded] = useState(false);
-  const [date, setData] = useState({});
 
   const [status, setStatus] = useState("");
 
@@ -29,6 +28,7 @@ const SocialStatus = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  
 
   const changeStatus = (e) => {
     e.preventDefault();
@@ -37,10 +37,19 @@ const SocialStatus = () => {
       return;
     }
     dispatch(setSocialStatus({ status }));
-    localStorage.setItem();
-    dispatch(userAction.registerQuestions());
-    // navigate("/social-status", { replace: true });
+
+
+    dispatch(userAction.registerQuestions({user, status}));
+    navigate("/moral-problem", { replace: true });
   };
+
+  const user = useSelector(state => state.user)
+
+  useEffect(() => {
+
+
+  }, [status])
+  
   return (
     <div className="SocialStatus">
       <div className="center">

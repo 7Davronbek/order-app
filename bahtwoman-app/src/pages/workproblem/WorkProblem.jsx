@@ -13,6 +13,9 @@ import {
 } from "@mui/material";
 import { getText } from "../../locale";
 import { useState } from "react";
+import { API_PATH, USER_ID, USER_INFO } from "../../constants";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const WorkProblem = () => {
   const location = useLocation();
@@ -29,10 +32,36 @@ const WorkProblem = () => {
     } else {
       data[index] = value;
     }
-    console.log(data);
+
+    const existingData = JSON.parse(localStorage.getItem(USER_INFO));
+    const newData = { ...existingData, ...data };
+
+    localStorage.setItem(USER_INFO, JSON.stringify(newData));
   };
 
   const navigate = useNavigate();
+
+  const allData = JSON.parse(localStorage.getItem(USER_INFO));
+  const id = localStorage.getItem(USER_ID);
+
+  const finish = async () => {
+    Object.entries(allData).forEach(([key, value]) => {
+      axios
+        .post(API_PATH + "register-questions/question-variant/", {
+          index_question: key,
+          variant_name: value,
+          question: id,
+        })
+        .then((response) => {})
+        .catch((error) => {
+          toast.error(`Error posting ${key}: ${value}`, error);
+        });
+    });
+    toast.success("Malumotingiz muvaffaqiyatli jo'natildi");
+    navigate("/", { replace: true });
+    localStorage.clear()
+  };
+
   return (
     <div className="ChildrenPage ">
       <div className="center">
@@ -606,7 +635,8 @@ const WorkProblem = () => {
                 </AccordionDetails>
               </Accordion>
               <button
-                onClick={() => navigate("/end-questions")}
+                onClick={finish}
+                // onClick={() => navigate("/end-questions")}
                 className="btn myBtn"
               >
                 Tugatish

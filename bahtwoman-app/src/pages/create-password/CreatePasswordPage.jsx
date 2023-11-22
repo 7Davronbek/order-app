@@ -18,7 +18,7 @@ const CreatePasswordPage = () => {
       return;
     }
     dispatch(authAction.password(password));
-    navigate("/welcome-note", { replace: true });
+    navigate("/start-questions-modal", { replace: true });
   };
 
   return (

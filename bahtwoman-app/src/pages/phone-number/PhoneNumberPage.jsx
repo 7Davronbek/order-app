@@ -12,6 +12,7 @@ const PhoneNumberPage = () => {
   const changePhone = (e) => {
     e.preventDefault();
     dispatch(setPhoneNumber({ phone }));
+    localStorage.setItem("phone", phone);
     navigate("/education", { replace: true });
   };
   return (

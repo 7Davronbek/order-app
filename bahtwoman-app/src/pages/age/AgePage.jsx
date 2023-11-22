@@ -10,6 +10,7 @@ const AgePage = () => {
   const dispatch = useDispatch();
 
   const changeAge = (e) => {
+    localStorage.setItem("age", age);
     e.preventDefault();
     dispatch(setAges({ age }));
     navigate("/location", { replace: true });
