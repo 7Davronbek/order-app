@@ -1,0 +1,7 @@
+export {default as Main} from "@/pages/main/Main.tsx"
+export {default as WeddingDress} from "@/pages/wedding-dress/WeddingDress.tsx"
+export {default as IndividualTailoringService} from "@/pages/individual-tailoring-service/IndividualTailoringService.tsx"
+export {default as FabricsForClothing} from "@/pages/fabrics-for-clothing/FabricsForClothing.tsx"
+export {default as AboutUs} from "@/pages/about-us/AboutUs.tsx"
+export {default as Vacancy} from "@/pages/vacancy/Vacancy.tsx"
+export {default as Feedback} from "@/pages/feedback/Feedback.tsx"
