@@ -1,6 +1,7 @@
 import aboutUs from "@/assets/aboutUs.png"
 import circle from "@/assets/circle.png"
 import Statistics from "./Statistics.tsx";
+import {Feedback} from "../../components";
 
 const AboutUs = () => {
     return (
@@ -56,7 +57,8 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <Statistics />
+            <Statistics/>
+            <Feedback/>
         </>
     );
 };

@@ -131,6 +131,7 @@ body {
     line-height: 36px; /* 120% */
     letter-spacing: 6px;
     text-transform: uppercase;
+    border: none !important;
 
     &:active {
       border: none;
@@ -222,6 +223,10 @@ body {
       width: 70%;
       justify-content: space-between;
     }
+  }
+
+  .AboutUsFeedback {
+    padding: 64px 0;
   }
 
   .Footer {
