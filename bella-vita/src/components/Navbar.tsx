@@ -12,10 +12,11 @@ const Navbar = () => {
                     <div className="col-12">
                         <div className="d-flex align-items-center justify-content-between">
                             <Link to='/'>Katalog</Link>
-                            <Link to='/'>Individual tikish xizmati</Link>
-                            <Link to='/'>Biz haqimizda</Link>
-                            <Link to='/'>Vakansiya</Link>
-                            <Link to='/'>Aloqa</Link>
+                            <Link to='/individual-tailoring-service'>Individual tikish xizmati</Link>
+                            <Link to='/fabrics-for-clothing'>Matolar</Link>
+                            <Link to='/about-us'>Biz haqimizda</Link>
+                            <Link to='/vacancy'>Vakansiya</Link>
+                            <Link to='/feedback'>Aloqa</Link>
                             <select>
                                 <option value="uz">Uz</option>
                                 <option value="uz">Ru</option>

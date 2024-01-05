@@ -75,12 +75,153 @@ body {
     }
   }
 
+  .mainText {
+    color: #555;
+    font-family: 'Cormorant', serif;
+    font-size: 95px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .secondaryText {
+    color: #8B8B8B;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+
+    .circle {
+      position: absolute;
+      top: -65px;
+      left: -126px;
+      z-index: -1;
+      animation: rotates 14s linear infinite;
+    }
+
+    @keyframes rotates {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .text {
+    color: #838381;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; /* 180% */
+    letter-spacing: 0.8px;
+  }
+
+  .myBtn {
+    padding-left: 65px;
+    position: relative;
+    color: #555;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 120% */
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    &:active {
+      border: none;
+    }
+
+    a {
+      padding: 5px 0;
+      background-color: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #555;
+      left: 34px;
+      top: 19px;
+      transition: all .5s ease-in-out;
+    }
+
+    .circle {
+      position: absolute;
+      top: -50%;
+      left: -12px;
+      background: transparent;
+      width: 100px;
+      height: 100px;
+      z-index: -1;
+      border: 2px solid #555;
+      border-radius: 50%;
+      transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+
+      &::after {
+        opacity: 0;
+      }
+
+      .circle {
+        width: 100%;
+        border-radius: 80px;
+        left: 20px;
+      }
+    }
+  }
+
   .zed {
     z-index: 99;
   }
 
   .Navbar {
 
+  }
+
+  .AboutUs {
+    padding: 94px 0 110px;
+
+    .text {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 34px 0 32px;
+    }
+
+    .right {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .myBtn {
+      margin-top: 90px;
+    }
+  }
+
+  .Statistics {
+    padding-bottom: 110px;
+
+    .cardsWrap {
+      margin-top: 15px;
+      width: 70%;
+      justify-content: space-between;
+    }
   }
 
   .Footer {

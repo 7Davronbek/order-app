@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row justify-content-between">
                     <div className="col-lg-4 zed">
-                        <h1>Bella Vita</h1>
+                        <Link to={'/'}><h1>Bella Vita</h1></Link>
                         <h2>wedding by Dilbar Zakirova</h2>
                         <h3>Bizning to'y liboslarimiz sizning maxsus kuningizda xizmatdadir.</h3>
                         <h4>&copy; Copyright 2024. All rights reserved.</h4>
@@ -20,12 +20,12 @@ const Footer = () => {
                     <div className="col-lg-4 right zed">
                         <h5>Sayt xaritasi</h5>
                         <div className="d-flex flex-wrap gap-3">
-                            <Link to='/'>Katalog</Link>
-                            <Link to='/'>Individual tikish xizmati</Link>
-                            <Link to='/'>Matolar</Link>
-                            <Link to='/'>Biz haqimizda</Link>
-                            <Link to='/'>Vakansiya</Link>
-                            <Link to='/'>Aloqa</Link>
+                            <Link to='/wedding-dress'>Katalog</Link>
+                            <Link to='/individual-tailoring-service'>Individual tikish xizmati</Link>
+                            <Link to='/fabrics-for-clothing'>Matolar</Link>
+                            <Link to='/about-us'>Biz haqimizda</Link>
+                            <Link to='/vacancy'>Vakansiya</Link>
+                            <Link to='/feedback'>Aloqa</Link>
                         </div>
                         <div className="d-flex align-items-center column-gap-3">
                             <a href=""><img src={fb} alt=""/></a>

@@ -2,7 +2,7 @@
 const WeddingDress = () => {
     return (
         <>
-            WEDDING DRESS
+            <h1>WEDDING DRESS</h1>
         </>
     );
 };
