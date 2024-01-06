@@ -161,7 +161,7 @@ body {
       background: transparent;
       width: 100px;
       height: 100px;
-      z-index: -1;
+      z-index: 0;
       border: 2px solid #555;
       border-radius: 50%;
       transition: all .5s ease-in-out;
@@ -189,7 +189,7 @@ body {
 
   }
 
-  .AboutUs {
+  .AboutUsStyle {
     padding: 94px 0 110px;
 
     .text {
@@ -225,8 +225,62 @@ body {
     }
   }
 
-  .AboutUsFeedback {
+  .Feedback {
     padding: 64px 0;
+    background: #F0F0F0;
+
+    .feedbackMain {
+      font-family: 'Cormorant', serif;
+      color: #555;
+      font-size: 68px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .feedbackSecondary {
+      color: #787878;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px; /* 180% */
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .inputWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 86px;
+    }
+
+    .form-control {
+      background: none !important;
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      width: 49%;
+      box-shadow: none !important;
+      border: none;
+      border-bottom: 1px solid #8B8B8B;
+      border-radius: 0;
+      padding: 10px 10px 10px 0;
+    }
+
+    .myBtn {
+      cursor: none;
+      display: flex;
+      margin: auto;
+    }
+
   }
 
   .Footer {

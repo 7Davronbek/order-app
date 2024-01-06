@@ -1,18 +1,19 @@
-import aboutUs from "@/assets/aboutUs.png"
+import individual from "@/assets/individual.png"
 import circle from "@/assets/circle.png"
 import Statistics from "./Statistics.tsx";
-import {Feedback} from "../../components";
+import {Feedback} from "@/components";
 
 const AboutUs = () => {
     return (
         <>
-            <div className='AboutUs'>
+            <div className='AboutUs AboutUsStyle'>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-9">
                             <h1 className='secondaryText'><img className='circle' src={circle} alt=""/> Biz haqimizda
                             </h1>
                             <h2 className='mainText'>Bella vita jamoasi haqida</h2>
+
                             <p className='text'>
                                 Bella Vita Wedding toʻy modasi bozorida 20 yillik tajribaga ega boʻlgan kompaniya
                                 boʻlib,
@@ -48,17 +49,21 @@ const AboutUs = () => {
                                 Biz esa faqat kelinlarning orzularini ro'yobga chiqaramiz.
                             </p>
 
-                            <button className="btn myBtn"><span className="circle"></span><a href="tel:">Bizga
-                                bog’laning</a></button>
+                            <a href="tel:" className="btn myBtn"><span className="circle"></span>Bizga
+                                bog’laning</a>
                         </div>
                         <div className="col-lg-3 right">
-                            <img src={aboutUs} alt=""/>
+                            <img src={individual} alt=""/>
                         </div>
                     </div>
                 </div>
             </div>
             <Statistics/>
-            <Feedback/>
+            <Feedback
+                type={"To'y liboslari tiktirish"}
+                mainText={"To’y libosi TIKTIRISHNI XOHLAYSIZMI?"}
+                secondaryText={"hAR BIR MIJOZ UCHUN INDIVIDUAL YONDASHUV"}
+            />
         </>
     );
 };
