@@ -9,7 +9,6 @@ html {
   }
 
   scroll-behavior: smooth;
-  overflow-x: hidden;
 
   ::-webkit-scrollbar {
     width: 8px;
@@ -203,10 +202,14 @@ body {
     .right {
       position: relative;
 
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .wrap {
+        position: sticky;
+        top: 5px;
+
+        img {
+          top: 0;
+          left: 0;
+        }
       }
     }
 

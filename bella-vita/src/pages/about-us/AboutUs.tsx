@@ -53,7 +53,7 @@ const AboutUs = () => {
                                 bog’laning</a>
                         </div>
                         <div className="col-lg-3 right">
-                            <img src={individual} alt=""/>
+                            <div className="wrap"><img src={individual} alt=""/></div>
                         </div>
                     </div>
                 </div>
