@@ -454,6 +454,17 @@ body {
     padding: 90px 0;
   }
 
+  .Map {
+
+    .map {
+      margin-top: 20px;
+      iframe {
+        height: 500px;
+        border-radius: 0 200px 0 0;
+      }
+    }
+  }
+
   .Footer {
     background-color: #555;
     padding: 60px 0;
