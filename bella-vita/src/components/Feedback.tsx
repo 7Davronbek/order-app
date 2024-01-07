@@ -58,7 +58,7 @@ const Feedback = (props: { mainText: string, secondaryText: string, type: string
                             />
                         </div>
                         <button disabled={isLoading} type="submit" className="btn myBtn"><span
-                            className="circle"></span>YUBORISH
+                            className="circle"></span><span className='textBg'>YUBORISH</span>
                         </button>
                     </form>
                 </div>

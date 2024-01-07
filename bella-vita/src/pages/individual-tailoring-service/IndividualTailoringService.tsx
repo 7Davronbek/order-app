@@ -59,7 +59,7 @@ const IndividualTailoringService = () => {
 
 
                             <a href="tel:" className="btn myBtn">
-                                Bizga bog’laning
+                                <span className="textBg">Bizga bog’laning</span>
                                 <span className="circle"></span>
                             </a>
                         </div>

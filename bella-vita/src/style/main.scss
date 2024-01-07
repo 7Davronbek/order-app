@@ -165,7 +165,7 @@ body {
       width: 100px;
       height: 100px;
       z-index: 0;
-      border: 2px solid #555;
+      border: 3px solid #555;
       border-radius: 50%;
       transition: all .5s ease-in-out;
     }
@@ -219,6 +219,14 @@ body {
 
     .myBtn {
       margin-top: 90px;
+
+      .textBg {
+        background-color: #fff;
+      }
+
+      .circle {
+        z-index: -1;
+      }
     }
   }
 
@@ -282,7 +290,7 @@ body {
   }
 
   .Vacancy {
-    padding: 150px 0 100px;
+    padding: 150px 0 50px;
 
     .cards {
       display: flex;
@@ -413,8 +421,37 @@ body {
       cursor: none;
       display: flex;
       margin: auto;
+
+      .textBg {
+        background: #F0F0F0;
+        z-index: 1;
+      }
     }
 
+  }
+
+  .miniFeedback {
+
+    .Feedback {
+      background-color: #fff;
+    }
+
+    .feedbackMain, .feedbackSecondary {
+      text-align: left;
+      //text-transform: none;
+    }
+
+    .myBtn {
+      margin: initial;
+
+      .textBg {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .FeedbackPage {
+    padding: 90px 0;
   }
 
   .Footer {

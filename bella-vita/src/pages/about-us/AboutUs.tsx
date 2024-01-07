@@ -49,8 +49,9 @@ const AboutUs = () => {
                                 Biz esa faqat kelinlarning orzularini ro'yobga chiqaramiz.
                             </p>
 
-                            <a href="tel:" className="btn myBtn"><span className="circle"></span>Bizga
-                                bog’laning</a>
+                            <a href="tel:" className="btn myBtn"><span className="circle"></span><span
+                                className="textBg">Bizga
+                                bog’laning</span></a>
                         </div>
                         <div className="col-lg-3 right">
                             <div className="wrap"><img src={individual} alt=""/></div>

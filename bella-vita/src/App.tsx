@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 import {Navbar, Cursor, Footer} from "./components";
-import {AboutUs, FabricsForClothing, Feedback, IndividualTailoringService, Main, Vacancy, WeddingDress} from "./pages";
+import {AboutUs, FabricsForClothing, FeedbackPage, IndividualTailoringService, Main, Vacancy, WeddingDress} from "./pages";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
                 <Route path='/fabrics-for-clothing' element={<FabricsForClothing/>}/>
                 <Route path='/about-us' element={<AboutUs/>}/>
                 <Route path='/vacancy' element={<Vacancy/>}/>
-                <Route path='/feedback' element={<Feedback/>}/>
+                <Route path='/feedback' element={<FeedbackPage/>}/>
             </Routes>
             <Footer/>
             <Cursor/>

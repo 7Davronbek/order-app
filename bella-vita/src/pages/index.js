@@ -4,4 +4,4 @@ export {default as IndividualTailoringService} from "@/pages/individual-tailorin
 export {default as FabricsForClothing} from "@/pages/fabrics-for-clothing/FabricsForClothing.tsx"
 export {default as AboutUs} from "@/pages/about-us/AboutUs.tsx"
 export {default as Vacancy} from "@/pages/vacancy/Vacancy.tsx"
-export {default as Feedback} from "@/pages/feedback/Feedback.tsx"
+export {default as FeedbackPage} from "@/pages/feedback/FeedbackPage.tsx"
