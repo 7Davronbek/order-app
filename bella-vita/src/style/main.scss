@@ -289,6 +289,62 @@ body {
     }
   }
 
+  .Benefits {
+    padding: 200px 0;
+
+    .col-lg-4 {
+      padding: 0 25px;
+    }
+
+    .cards {
+      transition: all .4s ease-in-out;
+      margin-top: 120px;
+
+      .top {
+        background: #8B8B8B;
+        padding: 90px 0;
+        text-align: center;
+        border-radius: 200px 200px 0 0;
+      }
+
+      .bottom {
+        background: #F0F0F0;
+        padding: 47px 30px 67px;
+
+        h3 {
+          color: #8B8B8B;
+          text-align: center;
+          font-family: 'Cormorant', serif;
+          font-size: 55px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        h4 {
+          color: #8B8B8B;
+          text-align: center;
+          margin-top: 15px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px; /* 175% */
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .Center {
+
+    .col-12 {
+      text-align: center;
+    }
+  }
+
   .Vacancy {
     padding: 150px 0 50px;
 
@@ -712,5 +768,4 @@ body {
       background-color: #fff;
     }
   }
-
 }

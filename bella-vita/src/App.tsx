@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom";
-import {Navbar, Cursor, Footer} from "./components";
+import {Navbar, Cursor, Footer, ScrollToTop} from "./components";
 import {
     AboutUs,
     FabricsForClothing,
@@ -26,6 +26,7 @@ const App = () => {
             </Routes>
             <Footer/>
             <Cursor/>
+            <ScrollToTop/>
             <ToastContainer/>
         </>
     );
