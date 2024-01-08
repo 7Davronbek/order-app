@@ -7,7 +7,7 @@ const FeedbackPage = () => {
         <>
             <div className='FeedbackPage miniFeedback'>
                 <div className="container">
-                    <div className="row">
+                    <div className="row flex-column-reverse flex-lg-row">
                         <div className="col-lg-10">
                             <Feedback
                                 type={"Feedback"}
@@ -24,7 +24,7 @@ const FeedbackPage = () => {
             <div className="PhoneNumber mb-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 text-lg-left text-center">
                             <div className='secondaryText'><img className='circle' src={circle}
                                                                 alt=""/> Telefon raqam
                             </div>
