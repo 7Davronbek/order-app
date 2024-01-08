@@ -42,6 +42,10 @@ html {
     }
   }
 
+
+}
+
+#root {
   @media(max-width: 992px) {
     overflow-x: hidden;
   }
@@ -49,7 +53,6 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
 
   h1,
   h2,
@@ -234,8 +237,70 @@ body {
   }
 
   .Navbar {
-    background:  #555555b5;
+    background: #555555b5;
     padding: 30px 0;
+
+    .burger {
+      width: 20px;
+      height: 20px;
+      margin-right: 25px;
+      transition: all .5s ease-in-out;
+      z-index: 999999;
+      display: none;
+      margin-left: auto;
+      padding-right: 40px;
+      position: absolute;
+      top: 34px;
+      right: -11px;
+
+      .burger1,
+      .burger2,
+      .burger3 {
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 20px;
+        transition: all .5s ease-in-out;
+      }
+
+      .burger1 {
+        top: 0;
+      }
+
+      .burger2 {
+        top: 9px;
+        transition: all .3s ease-in-out;
+        width: 20px;
+        right: 5px;
+      }
+
+      .burger3 {
+        top: 18px;
+      }
+
+      &.burgered {
+        position: fixed;
+
+        .burger1 {
+          transform: translateY(10px) rotate(45deg);
+          background: #fff;
+        }
+
+        .burger2 {
+          opacity: 0;
+        }
+
+        .burger3 {
+          transform: translateY(-8px) rotate(-45deg);
+          background: #fff;
+        }
+      }
+
+      @media(max-width: 992px) {
+        display: flex;
+      }
+    }
 
     .bold {
       color: #FFF;
@@ -248,11 +313,23 @@ body {
       &.big {
         font-size: 120px;
         line-height: 136px; /* 113.333% */
+
+        @media(max-width: 992px) {
+          font-size: 36px;
+          line-height: 30px;
+          text-align: left;
+        }
       }
 
       &.small {
         font-size: 32px;
         margin: 6px 0 46px;
+
+        @media(max-width: 992px) {
+          font-size: 15px;
+          line-height: 24px;
+          text-align: left;
+        }
       }
     }
 
@@ -335,6 +412,38 @@ body {
       top: 0;
       right: 0;
 
+      @media(max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .burgerWrap {
+
+      @media(max-width: 992px) {
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #555;
+        width: 100%;
+        height: 100vh;
+        gap: 25px;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+        transition: all .6s linear;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
+      }
     }
 
     &.active {
@@ -342,6 +451,10 @@ body {
       width: 100%;
       top: 0;
       left: 0;
+    }
+
+    @media(max-width: 992px) {
+      padding-bottom: 0;
     }
   }
 
@@ -351,6 +464,10 @@ body {
     img {
       height: 100%;
       object-fit: cover;
+    }
+
+    @media(max-width: 992px) {
+      height: 600px;
     }
   }
 
@@ -424,6 +541,72 @@ body {
     }
   }
 
+  .AboutBellaVita {
+    padding: 170px 0 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 800px 800px;
+
+    .bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .aboutRight {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .aboutLeft {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .myBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .secondaryText, .mainText, .text, .myBtn {
+      color: #fff;
+    }
+
+    .text {
+      color: #FFF;
+      text-align: center;
+      font-size: 20px;
+      margin: 51px 0 160px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 180% */
+    }
+
+    .myBtn {
+
+      &.circle {
+        border-color: #fff;
+        top: -60%;
+      }
+
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+
   .FabricsForClothing {
     padding: 150px 0 80px;
 
@@ -470,6 +653,10 @@ body {
         text-align: center;
         background: #8B8B8B;
       }
+    }
+
+    @media(max-width: 992px) {
+      padding: 50px 0;
     }
   }
 
@@ -910,6 +1097,10 @@ body {
         }
       }
     }
+
+    @media(max-width: 992px) {
+      padding: 50px 0;
+    }
   }
 
   .Gallery {
@@ -942,6 +1133,10 @@ body {
       font-family: 'Cormorant', serif;
       position: absolute;
       top: -50px;
+
+      @media(max-width: 992px) {
+        z-index: 10;
+      }
     }
 
     .image-grid {
@@ -957,6 +1152,10 @@ body {
         grid-row: 1;
         margin-bottom: 25px;
         border-radius: 0 250px 0 0;
+
+        @media(max-width: 992px) {
+          z-index: 9;
+        }
       }
 
       .bottom-images {
@@ -968,7 +1167,25 @@ body {
           width: 100%;
           height: auto;
         }
+
+        @media(max-width: 992px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
+    }
+
+    @media(max-width: 992px) {
+      padding: 80px 0;
+    }
+  }
+
+  .MainStatics {
+    padding-top: 50px;
+    text-align: center;
+
+    .cardsWrap {
+      width: 100%;
+      justify-content: space-around;
     }
   }
 

@@ -1,10 +1,20 @@
-import {Feedback, Map} from "../../components";
+// @ts-ignore
+import {Feedback, Map} from "@/components";
 import circle from "@/assets/circle.png"
 import feedbackBg2 from "@/assets/feedbackBg2.png"
+import {useEffect, useState} from "react";
+import Loader from "../../components/Loader.tsx";
 
 const FeedbackPage = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
+            {isLoading && <Loader/>}
             <div className='FeedbackPage miniFeedback'>
                 <div className="container">
                     <div className="row flex-column-reverse flex-lg-row">

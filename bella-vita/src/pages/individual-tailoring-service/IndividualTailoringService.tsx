@@ -1,10 +1,20 @@
 import aboutUs from "@/assets/aboutUs.png"
 import circle from "@/assets/circle.png"
+// @ts-ignore
 import {Feedback} from "@/components";
+import {useEffect, useState} from "react";
+import Loader from "../../components/Loader.tsx";
 
 const IndividualTailoringService = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
+            {isLoading && <Loader/>}
             <div className='IndividualTailoringService AboutUsStyle'>
                 <div className="container">
                     <div className="row">

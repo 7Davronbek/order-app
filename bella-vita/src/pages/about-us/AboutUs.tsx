@@ -1,11 +1,21 @@
 import individual from "@/assets/individual.png"
 import circle from "@/assets/circle.png"
 import Statistics from "./Statistics.tsx";
+// @ts-ignore
 import {Feedback} from "@/components";
+import {useEffect, useState} from "react";
+import Loader from "../../components/Loader.tsx";
 
 const AboutUs = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
+            {isLoading && <Loader/>}
             <div className='AboutUs AboutUsStyle'>
                 <div className="container">
                     <div className="row">

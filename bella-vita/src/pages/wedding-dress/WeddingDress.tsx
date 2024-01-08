@@ -7,12 +7,21 @@ import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+// @ts-ignore
 import {Feedback} from "@/components";
+import Loader from "../../components/Loader.tsx";
+import {useEffect, useState} from "react";
 
 const WeddingDress = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
-
+            {isLoading && <Loader/>}
             <div className={"WeddingDress"}>
                 <div className="container">
                     <div className="row">

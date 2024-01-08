@@ -1,5 +1,6 @@
 import axios from "axios";
 import IFeedbackType from "../types/IFeedbackType.ts";
+// @ts-ignore
 import {TOKEN, CHAT_ID} from "@/constants"
 
 class FeedbackService {

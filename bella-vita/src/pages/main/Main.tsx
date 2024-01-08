@@ -1,13 +1,15 @@
 import Header from "./Header.tsx";
 import Benefits from "./Benefits.tsx";
-import {Feedback, Map} from "../../components";
+// @ts-ignore
+import {Feedback, Map} from "@/components";
 import Gallery from "./Gallery.tsx";
 import Statistics from "../about-us/Statistics.tsx";
 import {useEffect, useState} from "react";
 import Loader from "../../components/Loader.tsx";
+// import AboutBellaVita from "./AboutBellaVita.tsx";
 
 const Main = () => {
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [isLoading, setIsLoading] = useState<boolean>(true)
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
@@ -19,7 +21,10 @@ const Main = () => {
             <Header/>
             <Benefits/>
             <Gallery/>
-            <Statistics/>
+            <div className="MainStatics">
+                <Statistics/>
+            </div>
+            {/*<AboutBellaVita />*/}
             <div className="Center">
                 <Map/>
             </div>

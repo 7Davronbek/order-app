@@ -1,5 +1,6 @@
 import circle from "@/assets/circle.png"
 import tool from "@/assets/tool.png"
+// @ts-ignore
 import {Feedback} from "@/components";
 
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -8,10 +9,19 @@ import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import {useEffect, useState} from "react";
+import Loader from "../../components/Loader.tsx";
 
 const FabricsForClothing = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
+            {isLoading && <Loader/>}
             <div className='FabricsForClothing'>
                 <div className="container">
                     <div className="row">

@@ -1,4 +1,5 @@
 import {Route, Routes} from "react-router-dom";
+// @ts-ignore
 import {Navbar, Cursor, Footer, ScrollToTop} from "./components";
 import {
     AboutUs,
@@ -8,7 +9,8 @@ import {
     Main,
     Vacancy,
     WeddingDress
-} from "./pages";
+// @ts-ignore
+} from './pages';
 import {ToastContainer} from "react-toastify";
 
 const App = () => {

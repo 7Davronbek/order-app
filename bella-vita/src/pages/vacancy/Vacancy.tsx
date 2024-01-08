@@ -2,11 +2,21 @@ import circle from "@/assets/circle.png"
 import vacancy1 from "@/assets/vacancy1.png"
 import vacancy2 from "@/assets/vacancy2.png"
 import feedbackBg1 from "@/assets/feedbackBg1.png"
+// @ts-ignore
 import {Feedback} from "../../components";
+import {useEffect, useState} from "react";
+import Loader from "../../components/Loader.tsx";
 
 const Vacancy = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
     return (
         <>
+            {isLoading && <Loader/>}
             <div className='Vacancy'>
                 <div className="container">
                     <div className="row">
