@@ -1,7 +1,15 @@
 import {Route, Routes} from "react-router-dom";
 import {Navbar, Cursor, Footer} from "./components";
-import {AboutUs, FabricsForClothing, FeedbackPage, IndividualTailoringService, Main, Vacancy, WeddingDress} from "./pages";
-import { ToastContainer } from "react-toastify";
+import {
+    AboutUs,
+    FabricsForClothing,
+    FeedbackPage,
+    IndividualTailoringService,
+    Main,
+    Vacancy,
+    WeddingDress
+} from "./pages";
+import {ToastContainer} from "react-toastify";
 
 const App = () => {
     return (
@@ -18,7 +26,7 @@ const App = () => {
             </Routes>
             <Footer/>
             <Cursor/>
-            <ToastContainer />
+            <ToastContainer/>
         </>
     );
 };

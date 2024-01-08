@@ -246,7 +246,7 @@ body {
     .cards {
       border-radius: 10px;
       background: #F0F0F0;
-      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.16);
       padding: 16px;
       margin-bottom: 30px;
 
@@ -297,7 +297,7 @@ body {
       align-items: center;
       border-radius: 10px;
       background: #F0F0F0;
-      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.16);
       padding: 12px;
       margin-bottom: 32px;
 
@@ -458,9 +458,107 @@ body {
 
     .map {
       margin-top: 20px;
+
       iframe {
         height: 500px;
         border-radius: 0 200px 0 0;
+      }
+    }
+  }
+
+  .WeddingDress {
+    padding: 150px 0 80px;
+
+    .btnWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0 80px;
+
+      .btn {
+        color: #8B8B8B;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+        background: #F0F0F0;
+        padding: 14px 24px;
+        border: 0;
+        transition: all .3s ease-in-out;
+
+        &:first-child {
+          border-radius: 30px 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 30px 0 0;
+        }
+
+        &:hover, &.active {
+          background: #8B8B8B;
+          color: #fff;
+        }
+      }
+    }
+
+    .cards {
+      border-radius: 10px;
+      background: #F0F0F0;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.16);
+      padding: 12px;
+      margin-bottom: 45px;
+
+      .wrap {
+        margin-top: 30px;
+
+        .flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+
+          h4 {
+            color: #8B8B8B;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 120% */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          }
+
+          h5 {
+            color: #555;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 120% */
+
+            &.bold {
+              font-weight: 900;
+            }
+          }
+        }
+      }
+
+      a {
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 123.077% */
+        text-transform: uppercase;
+        background: #8B8B8B;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
       }
     }
   }
@@ -574,6 +672,44 @@ body {
       color: #fff;
       font-size: 28px;
       font-weight: 900;
+    }
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    background: #ffffffa6;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    &::after {
+      color: #555;
+      font-size: 20px;
+    }
+  }
+
+  .cardsStyle {
+
+    .swiper-button-prev, .swiper-button-next {
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+
+      .swiper-button-prev, .swiper-button-next {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #ffffff80;
+    opacity: initial;
+
+    &.swiper-pagination-bullet-active {
+      background-color: #fff;
     }
   }
 
