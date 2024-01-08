@@ -11,10 +11,10 @@ const Cursor = () => {
                 outerAlpha={0}
                 hasBlendMode={true}
                 innerStyle={{
-                    backgroundColor: "#8B8B8B   ",
+                    backgroundColor: "#a6a6a6",
                 }}
                 outerStyle={{
-                    border: "3px solid #8B8B8B",
+                    border: "3px solid #a6a6a6",
                 }}
             />
         </div>

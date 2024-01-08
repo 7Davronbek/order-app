@@ -2,6 +2,17 @@
 //font-family: 'Cormorant', serif;
 //font-family: 'Raleway', sans-serif;
 
+@font-face {
+  font-family: "Iowan Old Style";
+  src: url("../assets/font/iowanoldstyle_bold.otf") format("truetype");
+}
+
+.bold {
+  // font-weight: 600;
+  font-family: 'Iowan Old Style', serif;
+}
+
+
 html {
   ::selection {
     background-color: #8B8B8B;
@@ -223,7 +234,124 @@ body {
   }
 
   .Navbar {
+    background:  #555555b5;
+    padding: 30px 0;
 
+    .bold {
+      color: #FFF;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+
+      &.big {
+        font-size: 120px;
+        line-height: 136px; /* 113.333% */
+      }
+
+      &.small {
+        font-size: 32px;
+        margin: 6px 0 46px;
+      }
+    }
+
+    a {
+      color: #FFF !important;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 140% */
+
+      &.dropdown {
+        position: relative;
+
+        .wrap {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          background: rgb(79 79 79);
+          padding: 10px;
+          border-radius: 10px;
+          width: 160px;
+          transition: all .2s linear;
+          opacity: 0;
+          visibility: hidden;
+
+          a {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+            color: #FBFAF7;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-size: 20px;
+            display: block;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 140% */
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+
+            &:last-child {
+              border: none !important;
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+
+        &:hover {
+
+          .wrap {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .lang {
+      display: flex;
+      align-items: center;
+
+      select {
+        color: #FFF;
+        font-size: 20px;
+        background-color: transparent !important;
+        border: 0 !important;
+        outline: none !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        margin-left: 5px;
+
+        option {
+          color: #fff;
+          background-color: #555;
+        }
+      }
+    }
+
+    .navbarCircle {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+    }
+
+    &.active {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .Header {
+    height: 1200px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .AboutUsStyle {
@@ -391,6 +519,14 @@ body {
       &:hover {
         transform: scale(1.1);
       }
+
+      @media(max-width: 992px) {
+        margin-top: 50px;
+      }
+    }
+
+    @media(max-width: 992px) {
+      padding: 80px 0 40px;
     }
   }
 
@@ -481,7 +617,6 @@ body {
           font-weight: 500;
           line-height: 32px; /* 123.077% */
           text-transform: uppercase;
-          cursor: none;
           background: #8B8B8B;
           padding: 14px 24px;
           display: flex;
@@ -578,7 +713,6 @@ body {
     }
 
     .myBtn {
-      cursor: none;
       display: flex;
       margin: auto;
 
@@ -949,6 +1083,19 @@ body {
         }
       }
     }
+  }
+
+  .Loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 999;
   }
 
 
