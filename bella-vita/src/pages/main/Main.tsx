@@ -1,6 +1,7 @@
 import Header from "./Header.tsx";
 import Benefits from "./Benefits.tsx";
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Feedback, Map} from "@/components";
 import Gallery from "./Gallery.tsx";
 import Statistics from "../about-us/Statistics.tsx";
