@@ -2,17 +2,33 @@ import circle from "@/assets/circle.png"
 import vacancy1 from "@/assets/vacancy1.png"
 import vacancy2 from "@/assets/vacancy2.png"
 import feedbackBg1 from "@/assets/feedbackBg1.png"
-// @ts-ignore
-import {Feedback} from "../../components";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import {Feedback} from "@/components";
 import {useEffect, useState} from "react";
-import Loader from "../../components/Loader.tsx";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import Loader from "@/components/Loader.tsx";
+import FetchData from "../../service/FetchData.ts";
 
 const Vacancy = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
+
+    const getCareers = async () => {
+        await FetchData.getCareers()
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
+        getCareers()
     }, [])
     return (
         <>
@@ -135,7 +151,7 @@ const Vacancy = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </>
     );
