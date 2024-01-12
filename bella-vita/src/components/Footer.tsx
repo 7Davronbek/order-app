@@ -28,10 +28,10 @@ const Footer = () => {
                             <Link to='/feedback'>Aloqa</Link>
                         </div>
                         <div className="d-flex align-items-center column-gap-3">
-                            <a href=""><img src={fb} alt=""/></a>
+                            <a href="https://www.facebook.com/bellavitaweddingtashkent?mibextid=LQQJ4d"><img src={fb} alt=""/></a>
                             <a href=""><img src={insta} alt=""/></a>
-                            <a href=""><img src={tube} alt=""/></a>
-                            <a href=""><img src={tg} alt=""/></a>
+                            <a href="https://youtube.com/@bellavitawedding?si=jhj3aeRu-vOQDQ2C"><img src={tube} alt=""/></a>
+                            <a href="https://t.me/bellavita_wedding"><img src={tg} alt=""/></a>
                         </div>
                     </div>
 

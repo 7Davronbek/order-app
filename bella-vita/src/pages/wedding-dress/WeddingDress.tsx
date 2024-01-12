@@ -7,17 +7,37 @@ import {Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Feedback} from "@/components";
 import Loader from "../../components/Loader.tsx";
 import {useEffect, useState} from "react";
+import FetchData from "../../service/FetchData.ts";
+import {toast} from "react-toastify";
+import IFabricType from "../../types/IFabricType.ts";
 
 const WeddingDress = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
+    const [items, setItems] = useState<IFabricType[]>([])
+    const [isItem, setIsItem] = useState<boolean>(false)
+
+    const getItems = async () => {
+        setIsItem(true)
+        await FetchData.getAccessory()
+            .then((res) => {
+                setItems(res.data);
+                setIsItem(false)
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+                setIsItem(false)
+            })
+    }
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
+        getItems();
     }, [])
     return (
         <>

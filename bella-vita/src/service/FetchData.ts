@@ -4,6 +4,7 @@ import axios from "@/config";
 import ICareerType from "../types/ICareerType.ts";
 import IFabricType from "../types/IFabricType.ts";
 import IGalleryType from "../types/IGalleryType.ts";
+import IAccessoryType from "../types/IAccessoryType.ts";
 
 class FetchData {
     async getCareers() {
@@ -16,6 +17,10 @@ class FetchData {
 
     async getGallery() {
         return await axios.get<Array<IGalleryType>>("/galery_list/")
+    }
+
+    async getAccessory() {
+        return await axios.get<Array<IAccessoryType>>("/accessories_list/")
     }
 }
 

@@ -1,4 +1,5 @@
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Feedback, Map} from "@/components";
 import circle from "@/assets/circle.png"
 import feedbackBg2 from "@/assets/feedbackBg2.png"
@@ -38,7 +39,7 @@ const FeedbackPage = () => {
                             <div className='secondaryText'><img className='circle' src={circle}
                                                                 alt=""/> Telefon raqam
                             </div>
-                            <a href={"tel:"} className="mainText">+998 90 009 09 09</a>
+                            <a href={"tel:"} className="mainText">+998 90 000 09 87</a>
                         </div>
                     </div>
                 </div>
