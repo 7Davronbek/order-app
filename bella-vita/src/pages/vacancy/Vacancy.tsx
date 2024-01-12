@@ -1,6 +1,4 @@
 import circle from "@/assets/circle.png"
-import vacancy1 from "@/assets/vacancy1.png"
-import vacancy2 from "@/assets/vacancy2.png"
 import feedbackBg1 from "@/assets/feedbackBg1.png"
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
@@ -10,17 +8,26 @@ import {useEffect, useState} from "react";
 // @ts-expect-error
 import Loader from "@/components/Loader.tsx";
 import FetchData from "../../service/FetchData.ts";
+import ICareerType from "../../types/ICareerType.ts";
+import {toast} from "react-toastify";
+import FetchingLoader from "../../components/FetchingLoader.tsx";
 
 const Vacancy = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
-    const getCareers = async () => {
+    const [items, setItems] = useState<ICareerType[]>([])
+    const [isItem, setIsItem] = useState<boolean>(false)
+
+    const getItems = async () => {
+        setIsItem(true)
         await FetchData.getCareers()
             .then((res) => {
-                console.log(res)
+                setItems(res.data);
+                setIsItem(false)
             })
-            .catch((err) => {
-                console.log(err)
+            .catch(() => {
+                toast.error("Internal server error")
+                setIsItem(false)
             })
     }
 
@@ -28,7 +35,7 @@ const Vacancy = () => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
-        getCareers()
+        getItems()
     }, [])
     return (
         <>
@@ -45,99 +52,41 @@ const Vacancy = () => {
                         </div>
                     </div>
                     <div className="row mt-5">
-                        <div className="col-lg-6">
-                            <div className="cards">
-                                <div className="image">
-                                    <img src={vacancy1} alt=""/>
-                                </div>
-                                <div className="wrap">
-                                    <div className="flex">
-                                        <h3>ISH turi:</h3>
-                                        <h4>Kassir</h4>
+                        {isItem ?
+                            <FetchingLoader/> :
+                            <>
+                                {items && items.map((item: ICareerType) => (
+
+                                    <div key={item.id} className="col-lg-6">
+                                        <div className="cards">
+                                            <div className="image">
+                                                <img src={item.image} alt=""/>
+                                            </div>
+                                            <div className="wrap">
+                                                <div className="flex">
+                                                    <h3>ISH turi:</h3>
+                                                    <h4>{item.name}</h4>
+                                                </div>
+                                                <div className="flex">
+                                                    <h3>Ish vaqti:</h3>
+                                                    <h4 className={'end'}>{item.schedule}</h4>
+                                                </div>
+                                                <div className="flex">
+                                                    <h3>Oylik:</h3>
+                                                    <h4 className='bold'>{item.salary} so’m</h4>
+                                                </div>
+                                                <a href="tel:">Bizga bog’laning</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex">
-                                        <h3>Ish vaqti:</h3>
-                                        <h4 className={'end'}>Dushanbadan-shanbagacha 9:00-18:00</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Oylik:</h3>
-                                        <h4 className='bold'>5 000 000 so’m</h4>
-                                    </div>
-                                    <a href="tel:">Bizga bog’laning</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="cards">
-                                <div className="image">
-                                    <img src={vacancy2} alt=""/>
-                                </div>
-                                <div className="wrap">
-                                    <div className="flex">
-                                        <h3>ISH turi:</h3>
-                                        <h4>Kassir</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Ish vaqti:</h3>
-                                        <h4 className={'end'}>Dushanbadan-shanbagacha 9:00-18:00</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Oylik:</h3>
-                                        <h4 className='bold'>5 000 000 so’m</h4>
-                                    </div>
-                                    <a href="tel:">Bizga bog’laning</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="cards">
-                                <div className="image">
-                                    <img src={vacancy2} alt=""/>
-                                </div>
-                                <div className="wrap">
-                                    <div className="flex">
-                                        <h3>ISH turi:</h3>
-                                        <h4>Kassir</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Ish vaqti:</h3>
-                                        <h4 className={'end'}>Dushanbadan-shanbagacha 9:00-18:00</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Oylik:</h3>
-                                        <h4 className='bold'>5 000 000 so’m</h4>
-                                    </div>
-                                    <a href="tel:">Bizga bog’laning</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="cards">
-                                <div className="image">
-                                    <img src={vacancy1} alt=""/>
-                                </div>
-                                <div className="wrap">
-                                    <div className="flex">
-                                        <h3>ISH turi:</h3>
-                                        <h4>Kassir</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Ish vaqti:</h3>
-                                        <h4 className={'end'}>Dushanbadan-shanbagacha 9:00-18:00</h4>
-                                    </div>
-                                    <div className="flex">
-                                        <h3>Oylik:</h3>
-                                        <h4 className='bold'>5 000 000 so’m</h4>
-                                    </div>
-                                    <a href="tel:">Bizga bog’laning</a>
-                                </div>
-                            </div>
-                        </div>
+                                ))}
+                            </>
+                        }
                     </div>
                 </div>
             </div>
 
-            <div className="miniFeedback">
+            <div id="feedback" className="miniFeedback">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-10">

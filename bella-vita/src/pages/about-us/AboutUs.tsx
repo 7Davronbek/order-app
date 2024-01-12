@@ -1,7 +1,8 @@
 import individual from "@/assets/individual.png"
 import circle from "@/assets/circle.png"
 import Statistics from "./Statistics.tsx";
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Feedback} from "@/components";
 import {useEffect, useState} from "react";
 import Loader from "../../components/Loader.tsx";

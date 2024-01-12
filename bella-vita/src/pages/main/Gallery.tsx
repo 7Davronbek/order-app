@@ -1,11 +1,32 @@
 import gallery1 from "@/assets/gallery1.png"
-import gallery2 from "@/assets/gallery2.png"
-import gallery3 from "@/assets/gallery3.png"
-import gallery4 from "@/assets/gallery4.png"
-import gallery5 from "@/assets/gallery5.png"
 import wedding from "@/assets/wedding.png"
+import {useEffect, useState} from "react";
+import FetchData from "../../service/FetchData.ts";
+import {toast} from "react-toastify";
+import IGalleryType from "../../types/IGalleryType.ts";
+import FetchingLoader from "../../components/FetchingLoader.tsx";
 
 const Gallery = () => {
+    const [items, setItems] = useState<IGalleryType[]>([])
+    const [isItem, setIsItem] = useState<boolean>(false)
+
+    const getItems = async () => {
+        setIsItem(true)
+        await FetchData.getGallery()
+            .then((res) => {
+                setItems(res.data);
+                setIsItem(false)
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+                setIsItem(false)
+            })
+    }
+
+    useEffect((): void => {
+        getItems()
+    }, [])
+
     return (
         <div className="Gallery">
             <div className="container">
@@ -13,15 +34,23 @@ const Gallery = () => {
                     <div className="col-12 position-relative">
                         <div className="circle"><img src={wedding} alt=""/></div>
                         <h1>Galereya</h1>
+
                         <div className="image-grid">
-                            <img src={gallery1} className="top-image" alt="Image 1"/>
-                            <div className="bottom-images">
-                                <img src={gallery2} alt="Image 2"/>
-                                <img src={gallery3} alt="Image 3"/>
-                                <img src={gallery4} alt="Image 4"/>
-                                <img src={gallery5} alt="Image 5"/>
-                            </div>
+                            {isItem ?
+                                <FetchingLoader/>
+                                :
+                                <>
+                                    <img src={gallery1} className="top-image" alt="Image 1"/>
+                                    <div className="bottom-images">
+                                        {items && items.map((item: IGalleryType) => (
+                                            <img key={item.id} src={item.image} className="" alt=""/>
+                                        ))}
+                                    </div>
+
+                                </>
+                            }
                         </div>
+
                     </div>
                 </div>
             </div>

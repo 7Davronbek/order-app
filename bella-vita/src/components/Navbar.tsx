@@ -14,8 +14,8 @@ const Navbar = () => {
         <div className={`Navbar ${location.pathname === '/' && 'active'}`}>
             <div className={`navbarCircle ${location.pathname === "/" && "d-none"}`}><img src={navbarCircle} alt=""/></div>
             <div className="container">
-                <div className="row">
-                    <Link to='/' className="col-12">
+                <div className="row zed">
+                    <Link to='/' className="col-12 zed">
                         <span className='logo big bold'>Bella Vita</span>
                         <span className="logo small bold">wedding by Dilbar Zakirova</span>
                     </Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
                         <div className="burger3"></div>
                     </div>
 
-                    <div className="col-12">
+                    <div className="col-12 zed">
                         <div className={`d-flex align-items-center justify-content-between burgerWrap ${burger ? "active" : ""}`}>
                             <a className="dropdown">Katalog <span><img src={dropdown} alt=""/></span>
                                 <span className="wrap">

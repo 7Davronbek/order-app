@@ -1,6 +1,6 @@
 import circle from "@/assets/circle.png"
-import tool from "@/assets/tool.png"
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {Feedback} from "@/components";
 
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -11,13 +11,33 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {useEffect, useState} from "react";
 import Loader from "../../components/Loader.tsx";
+import FetchData from "../../service/FetchData.ts";
+import {toast} from "react-toastify";
+import FetchingLoader from "../../components/FetchingLoader.tsx";
+import IFabricType from "../../types/IFabricType.ts";
 
 const FabricsForClothing = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
+    const [items, setItems] = useState<IFabricType[]>([])
+    const [isItem, setIsItem] = useState<boolean>(false)
+
+    const getItems = async () => {
+        setIsItem(true)
+        await FetchData.getFabrics()
+            .then((res) => {
+                setItems(res.data);
+                setIsItem(false)
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+                setIsItem(false)
+            })
+    }
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
+        getItems()
     }, [])
     return (
         <>
@@ -34,198 +54,34 @@ const FabricsForClothing = () => {
                         </div>
                     </div>
                     <div className="row mt-5">
-                        <div className="col-lg-4">
+                        {isItem ?
+                            <FetchingLoader />
+                            :
+                            <>
+                            {items && items.map((item: IFabricType) => (
+                                <div key={item.id} className="col-lg-4">
 
-                            <div className="cards cardsStyle">
+                                    <div className="cards cardsStyle">
 
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-
-                            <div className="cards cardsStyle">
-
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-
-                            <div className="cards cardsStyle">
-
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-
-                            <div className="cards cardsStyle">
-
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-
-                            <div className="cards cardsStyle">
-
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-
-                            <div className="cards cardsStyle">
-
-                                <Swiper
-                                    pagination={true}
-                                    navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                    className="mySwiper"
-                                >
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="images">
-                                            <img src={tool} className='w-100' alt=""/>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                                <h1>Atlas</h1>
-                                <h2>Shaxsiy tikuvchilik - bu ko'plab muhim bosqichlardan iborat bo'lgan to'laqonli
-                                    tasvir ustidagi mashaqqatli ish bo'lib, ulardan biri mos materiallarni tanlash bilan
-                                    bog'liq.</h2>
-                                <h3>20 000 000 сум</h3>
-                            </div>
-                        </div>
+                                        <Swiper
+                                            pagination={true}
+                                            navigation={true} loop={true} modules={[Navigation, Pagination]}
+                                            className="mySwiper"
+                                        >
+                                            <SwiperSlide>
+                                                <div className="images">
+                                                    <img src={item.image} className='w-100' alt=""/>
+                                                </div>
+                                            </SwiperSlide>
+                                        </Swiper>
+                                        <h1>{item.name}</h1>
+                                        <h2>{item.desription}</h2>
+                                        <h3>{item.price} сум</h3>
+                                    </div>
+                                </div>
+                            ))}
+                            </>
+                        }
                     </div>
                 </div>
             </div>
