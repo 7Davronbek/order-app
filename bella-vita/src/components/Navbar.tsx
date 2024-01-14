@@ -6,6 +6,10 @@ import {useEffect, useState} from "react";
 import FetchData from "../service/FetchData.ts";
 import {toast} from "react-toastify";
 import IAccessoryCategoryType from "../types/IAccessoryCategoryType.ts";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import {LANGUAGE} from "@/constants"
+import {getLanguage, getText} from "../locales";
 
 const Navbar = () => {
     const closeBurger = (): void => {
@@ -23,6 +27,11 @@ const Navbar = () => {
             .catch(() => {
                 toast.error("Internal server error")
             })
+    }
+
+    const changeLanguage = (e:React.SelectHTMLAttributes<AddEventListenerOptions>) => {
+        localStorage.setItem(LANGUAGE, e.target.value)
+        document.location.reload()
     }
 
     useEffect(() => {
@@ -60,15 +69,17 @@ const Navbar = () => {
                             </a>
                             <Link onClick={closeBurger} to='/individual-tailoring-service'>Individual tikish
                                 xizmati</Link>
-                            <Link onClick={closeBurger} to='/fabrics-for-clothing'>Matolar</Link>
+                            <Link onClick={closeBurger} to='/fabrics-for-clothing'>{getText("navbar2")}</Link>
                             <Link onClick={closeBurger} to='/about-us'>Biz haqimizda</Link>
                             <Link onClick={closeBurger} to='/vacancy'>Vakansiya</Link>
                             <Link onClick={closeBurger} to='/feedback'>Aloqa</Link>
                             <div className="lang">
                                 <img src={language} alt=""/>
-                                <select>
-                                    <option value="uz">Uz</option>
-                                    <option value="uz">Ru</option>
+                                <select onChange={changeLanguage}>
+                                    <option selected={getLanguage() === "ru"} value="ru">Ru</option>
+                                    <option selected={getLanguage() === "uz"} value="uz">Uz</option>
+                                    <option selected={getLanguage() === "en"} value="en">En</option>
+                                    <option selected={getLanguage() === "tr"} value="tr">Tr</option>
                                 </select>
                             </div>
                         </div>

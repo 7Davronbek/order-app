@@ -23,11 +23,11 @@ import IAccessoryType from "../../types/IAccessoryType.ts";
 const WeddingDress = () => {
     const {id} = useParams();
     const [isLoading, setIsLoading] = useState<boolean>(true)
+    const [isItem, setIsItem] = useState<boolean>(false)
     const [items, setItems] = useState<IFabricType[]>([])
     const [types, setTypes] = useState<IAccessoryTypesType[]>([])
-    const [isItem, setIsItem] = useState<boolean>(false)
 
-    const getAccesoryTypes = async () => {
+    const getAccessoryTypes = async () => {
         setIsItem(true)
         await FetchData.getAccessoryType()
             .then((res) => {
@@ -68,7 +68,7 @@ const WeddingDress = () => {
             setIsLoading(false)
         }, 1000)
         getItems();
-        getAccesoryTypes()
+        getAccessoryTypes()
     }, [id])
     return (
         <>
@@ -88,12 +88,9 @@ const WeddingDress = () => {
                         <div className="col-12">
                             <div className="btnWrap">
                                 <button className="btn active button">Barchasi</button>
-                                <button className="btn button">Burmalar</button>
-                                <button className="btn button">Eksklyuziv</button>
-                                <button className="btn button">Yopish uchun abayalar</button>
-                                <button className="btn button">Atlas</button>
-                                <button className="btn button">Klassik</button>
-                                <button className="btn button">Minimalizm</button>
+                                {types && types.map((item:IAccessoryTypesType) => (
+                                    <button key={item.id} className="btn button">{item.name}</button>
+                                ))}
                             </div>
                         </div>
                     </div>
