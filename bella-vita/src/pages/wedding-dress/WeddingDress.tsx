@@ -60,6 +60,10 @@ const WeddingDress = () => {
     }
 
     useEffect(() => {
+        setBtn(0)
+    }, [id]);
+
+    useEffect(() => {
         const getItem = (): void => {
             const filteredItem: IAccessoryType[] = items.filter((i: IAccessoryType) => i.type === btn);
             setNewItems(filteredItem);
