@@ -5,6 +5,8 @@ import ICareerType from "../types/ICareerType.ts";
 import IFabricType from "../types/IFabricType.ts";
 import IGalleryType from "../types/IGalleryType.ts";
 import IAccessoryType from "../types/IAccessoryType.ts";
+import IAccessoryCategoryType from "../types/IAccessoryCategoryType.ts";
+import IAccessoryTypesType from "../types/IAccessoryTypesType.ts";
 
 class FetchData {
     async getCareers() {
@@ -22,6 +24,15 @@ class FetchData {
     async getAccessory() {
         return await axios.get<Array<IAccessoryType>>("/accessories_list/")
     }
+
+    async getAccessoryCategory() {
+        return await axios.get<Array<IAccessoryCategoryType>>("/accessories_categories/")
+    }
+
+    async getAccessoryType() {
+        return await axios.get<Array<IAccessoryTypesType>>("/accessories_types/")
+    }
+
 }
 
 export default new FetchData();

@@ -3,5 +3,8 @@ export default interface IFabricType {
     name: string,
     desription: string,
     price: number,
-    image: string
+    image: string,
+    image2: string,
+    image3: string,
+    size: string,
 }

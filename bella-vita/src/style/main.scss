@@ -973,6 +973,14 @@ body {
   .WeddingDress {
     padding: 150px 0 80px;
 
+    .images {
+      height: 300px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
     .btnWrap {
       display: flex;
       align-items: center;

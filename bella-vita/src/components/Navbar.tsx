@@ -2,7 +2,10 @@ import {Link, useLocation} from "react-router-dom";
 import dropdown from "@/assets/dropdown.svg"
 import language from "@/assets/language.svg"
 import navbarCircle from "@/assets/navbarCircle.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import FetchData from "../service/FetchData.ts";
+import {toast} from "react-toastify";
+import IAccessoryCategoryType from "../types/IAccessoryCategoryType.ts";
 
 const Navbar = () => {
     const closeBurger = (): void => {
@@ -10,9 +13,25 @@ const Navbar = () => {
     }
     const location = useLocation();
     const [burger, setBurger] = useState<boolean>(false)
+    const [items, setItems] = useState<IAccessoryCategoryType[]>([])
+
+    const getItems = async () => {
+        await FetchData.getAccessoryCategory()
+            .then((res) => {
+                setItems(res.data);
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+            })
+    }
+
+    useEffect(() => {
+        getItems();
+    }, []);
     return (
         <div className={`Navbar ${location.pathname === '/' && 'active'}`}>
-            <div className={`navbarCircle ${location.pathname === "/" && "d-none"}`}><img src={navbarCircle} alt=""/></div>
+            <div className={`navbarCircle ${location.pathname === "/" && "d-none"}`}><img src={navbarCircle} alt=""/>
+            </div>
             <div className="container">
                 <div className="row zed">
                     <Link to='/' className="col-12 zed">
@@ -29,14 +48,18 @@ const Navbar = () => {
                     </div>
 
                     <div className="col-12 zed">
-                        <div className={`d-flex align-items-center justify-content-between burgerWrap ${burger ? "active" : ""}`}>
+                        <div
+                            className={`d-flex align-items-center justify-content-between burgerWrap ${burger ? "active" : ""}`}>
                             <a className="dropdown">Katalog <span><img src={dropdown} alt=""/></span>
                                 <span className="wrap">
-                                    <Link onClick={closeBurger} to="/wedding-dress">To’y liboslari</Link>
-                                <Link onClick={closeBurger} to="/wedding-dress">To’y liboslari</Link>
+                                    {items && items.map((item: IAccessoryCategoryType) => (
+                                        <Link key={item.id} onClick={closeBurger}
+                                              to={`/wedding-dress/${item.id}`}>{item.name}</Link>
+                                    ))}
                                 </span>
                             </a>
-                            <Link onClick={closeBurger} to='/individual-tailoring-service'>Individual tikish xizmati</Link>
+                            <Link onClick={closeBurger} to='/individual-tailoring-service'>Individual tikish
+                                xizmati</Link>
                             <Link onClick={closeBurger} to='/fabrics-for-clothing'>Matolar</Link>
                             <Link onClick={closeBurger} to='/about-us'>Biz haqimizda</Link>
                             <Link onClick={closeBurger} to='/vacancy'>Vakansiya</Link>
