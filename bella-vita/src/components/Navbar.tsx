@@ -2,7 +2,7 @@ import {Link, useLocation} from "react-router-dom";
 import dropdown from "@/assets/dropdown.svg"
 import language from "@/assets/language.svg"
 import navbarCircle from "@/assets/navbarCircle.png"
-import {useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import FetchData from "../service/FetchData.ts";
 import {toast} from "react-toastify";
 import IAccessoryCategoryType from "../types/IAccessoryCategoryType.ts";
@@ -29,7 +29,7 @@ const Navbar = () => {
             })
     }
 
-    const changeLanguage = (e:React.SelectHTMLAttributes<AddEventListenerOptions>) => {
+    const changeLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
         localStorage.setItem(LANGUAGE, e.target.value)
         document.location.reload()
     }
