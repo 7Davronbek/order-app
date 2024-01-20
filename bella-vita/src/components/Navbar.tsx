@@ -29,6 +29,16 @@ const Navbar = () => {
             })
     }
 
+    const getDressCategory = async () => {
+        await FetchData.getDressCategory()
+            .then(() => {
+                // setItems(res.data);
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+            })
+    }
+
     const changeLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
         localStorage.setItem(LANGUAGE, e.target.value)
         document.location.reload()
@@ -36,6 +46,7 @@ const Navbar = () => {
 
     useEffect(() => {
         getItems();
+        getDressCategory()
     }, []);
     return (
         <div className={`Navbar ${location.pathname === '/' && 'active'}`}>

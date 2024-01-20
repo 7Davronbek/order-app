@@ -59,6 +59,22 @@ const WeddingDress = () => {
             })
     }
 
+    const getDress = async () => {
+        setIsItem(true)
+        await FetchData.getDress()
+            .then((res) => {
+                let category: IAccessoryType[] = res.data;
+                category = category.filter(i => i.category === Number(id))
+
+                setItems(category);
+                setIsItem(false)
+            })
+            .catch(() => {
+                toast.error("Internal server error")
+                setIsItem(false)
+            })
+    }
+
     useEffect(() => {
         setBtn(0)
     }, [id]);
@@ -76,6 +92,7 @@ const WeddingDress = () => {
             setIsLoading(false)
         }, 1000)
         getItems();
+        getDress()
         getAccessoryTypes()
     }, [id])
     return (

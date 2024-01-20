@@ -29,6 +29,18 @@ class FetchData {
         return await axios.get<Array<IAccessoryCategoryType>>("/accessories_categories/")
     }
 
+    async getDressType() {
+        return await axios.get<Array<IAccessoryTypesType>>("/dress_types/")
+    }
+
+    async getDress() {
+        return await axios.get<Array<IAccessoryType>>("/dress_list/")
+    }
+
+    async getDressCategory() {
+        return await axios.get<Array<IAccessoryCategoryType>>("/dress_category/")
+    }
+
     async getAccessoryType() {
         return await axios.get<Array<IAccessoryTypesType>>("/accessories_types/")
     }
