@@ -14,7 +14,7 @@ import Loader from "../../components/Loader.tsx";
 import FetchData from "../../service/FetchData.ts";
 import {toast} from "react-toastify";
 import FetchingLoader from "../../components/FetchingLoader.tsx";
-import IFabricType from "../../types/IFabricType.ts";
+import IFabricType, {IForDressImageType} from "../../types/IFabricType.ts";
 
 const FabricsForClothing = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -55,31 +55,34 @@ const FabricsForClothing = () => {
                     </div>
                     <div className="row mt-5">
                         {isItem ?
-                            <FetchingLoader />
+                            <FetchingLoader/>
                             :
                             <>
-                            {items && items.map((item: IFabricType) => (
-                                <div key={item.id} className="col-lg-4">
+                                {items && items.map((item: IFabricType) => (
+                                    <div key={item.id} className="col-lg-4">
 
-                                    <div className="cards cardsStyle">
+                                        <div className="cards cardsStyle">
 
-                                        <Swiper
-                                            pagination={true}
-                                            navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                            className="mySwiper"
-                                        >
-                                            <SwiperSlide>
-                                                <div className="images">
-                                                    <img src={item.image} className='w-100' alt=""/>
-                                                </div>
-                                            </SwiperSlide>
-                                        </Swiper>
-                                        <h1>{item.name}</h1>
-                                        <h2>{item.desription}</h2>
-                                        <h3>{item.price} сум</h3>
+                                            <Swiper
+                                                pagination={true}
+                                                navigation={true} loop={true} modules={[Navigation, Pagination]}
+                                                className="mySwiper"
+                                            >
+                                                {item.for_dress_images && item.for_dress_images.map((item2: IForDressImageType) => (
+                                                    <SwiperSlide key={item2.id}>
+                                                        <div className="images">
+
+                                                            <img src={item2.image} className='w-100' alt=""/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
+                                            <h1>{item.name}</h1>
+                                            <h2>{item.description}</h2>
+                                            <h3>{item.price} сум</h3>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
                             </>
                         }
                     </div>

@@ -1,6 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-// @ts-ignore
-import {Navbar, Cursor, Footer, ScrollToTop} from "./components";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import {Navbar, Cursor, Footer, ScrollToTop} from "@/components/index.js";
 import {
     AboutUs,
     FabricsForClothing,
@@ -9,7 +10,6 @@ import {
     Main,
     Vacancy,
     WeddingDress
-// @ts-ignore
 } from './pages';
 import {ToastContainer} from "react-toastify";
 

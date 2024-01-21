@@ -1,10 +1,12 @@
 export default interface IFabricType {
     id: number,
     name: string,
-    desription: string,
+    description: string,
     price: number,
-    image: string,
-    image2: string,
-    image3: string,
-    size: string,
+    for_dress_images: IForDressImageType[]
+}
+
+export interface IForDressImageType {
+    id: number,
+    image: string
 }

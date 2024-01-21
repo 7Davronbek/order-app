@@ -2,7 +2,7 @@ import axios from "axios";
 import {getLanguage} from "../locales";
 
 export default axios.create({
-    baseURL: `https://bellavitawedding.uz/api/${getLanguage() === null ? "ru" : getLanguage()}/main/`,
+    baseURL: `https://back.bellavitawedding.uz/${getLanguage() === null ? "ru" : getLanguage()}/api/`,
     headers: {
         "Content-type": "application/json",
     }

@@ -10,39 +10,27 @@ import IAccessoryTypesType from "../types/IAccessoryTypesType.ts";
 
 class FetchData {
     async getCareers() {
-        return await axios.get<Array<ICareerType>>("/careers_list/");
+        return await axios.get<Array<ICareerType>>("/vacancy/");
     }
 
     async getFabrics() {
-        return await axios.get<Array<IFabricType>>("/fabrics_list/")
+        return await axios.get<Array<IFabricType>>("/for-dress/")
     }
 
     async getGallery() {
-        return await axios.get<Array<IGalleryType>>("/galery_list/")
+        return await axios.get<Array<IGalleryType>>("/gallery/")
     }
 
-    async getAccessory() {
-        return await axios.get<Array<IAccessoryType>>("/accessories_list/")
+    async getAccessory(categoryId: string, subcategoryId: string) {
+        return await axios.get<Array<IAccessoryType>>(`/product/?category=${categoryId}&?subcategory=${subcategoryId}`)
     }
 
     async getAccessoryCategory() {
-        return await axios.get<Array<IAccessoryCategoryType>>("/accessories_categories/")
-    }
-
-    async getDressType() {
-        return await axios.get<Array<IAccessoryTypesType>>("/dress_types/")
-    }
-
-    async getDress() {
-        return await axios.get<Array<IAccessoryType>>("/dress_list/")
-    }
-
-    async getDressCategory() {
-        return await axios.get<Array<IAccessoryCategoryType>>("/dress_category/")
+        return await axios.get<Array<IAccessoryCategoryType>>("/category/")
     }
 
     async getAccessoryType() {
-        return await axios.get<Array<IAccessoryTypesType>>("/accessories_types/")
+        return await axios.get<Array<IAccessoryTypesType>>("/subcategory/")
     }
 
 }

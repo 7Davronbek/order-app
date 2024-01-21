@@ -65,11 +65,11 @@ const Vacancy = () => {
                                             <div className="wrap">
                                                 <div className="flex">
                                                     <h3>ISH turi:</h3>
-                                                    <h4>{item.name}</h4>
+                                                    <h4>{item.work_type}</h4>
                                                 </div>
                                                 <div className="flex">
                                                     <h3>Ish vaqti:</h3>
-                                                    <h4 className={'end'}>{item.schedule}</h4>
+                                                    <h4 className={'end'}>{item.work_type}</h4>
                                                 </div>
                                                 <div className="flex">
                                                     <h3>Oylik:</h3>

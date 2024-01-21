@@ -1,8 +1,7 @@
 export default interface ICareerType {
     id: number,
-    name: string,
-    schedule: string,
+    work_type: string,
+    work_time: string,
     salary: number,
-    desription: string,
     image: string
 }

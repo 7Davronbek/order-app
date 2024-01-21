@@ -1,12 +1,12 @@
 export default interface IAccessoryType {
     id: number,
-    name: string,
+    dress_type: string,
+    dress_size: string,
     price: number,
-    image: string,
-    image2: string,
-    image3: string,
-    description: string,
-    size: string,
-    category: number,
-    type: number
+    product_images: IProductImageType[]
+}
+
+export interface IProductImageType {
+    id: number,
+    image: string
 }
