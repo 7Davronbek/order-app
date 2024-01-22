@@ -3,7 +3,8 @@ export default interface IAccessoryType {
     dress_type: string,
     dress_size: string,
     price: number,
-    product_images: IProductImageType[]
+    product_images: IProductImageType[],
+    sub_category: number
 }
 
 export interface IProductImageType {

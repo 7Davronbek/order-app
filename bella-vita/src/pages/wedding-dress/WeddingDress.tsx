@@ -24,15 +24,17 @@ const WeddingDress = () => {
     const [headerName, setHeaderName] = useState<string>("")
     const [filterBtn, setFilterBtn] = useState<string>("")
     const [items, setItems] = useState<IAccessoryType[]>([])
+    const [filteredItems, setFilteredItems] = useState<IAccessoryType[]>([])
     const [subCategory, setSubCategory] = useState<IAccessoryCategoryType[]>([])
     const [isItem, setIsItem] = useState<boolean>(false)
 
     const getItems = async () => {
         setIsItem(true)
         if (id != null) {
-            await FetchData.getAccessory(id, filterBtn)
+            await FetchData.getAccessory(id)
                 .then((res) => {
                     setItems(res.data);
+                    setFilteredItems(res.data)
                     setIsItem(false)
                 })
                 .catch(() => {
@@ -68,7 +70,12 @@ const WeddingDress = () => {
     }, []);
 
     useEffect(() => {
-        getItems()
+        if (filterBtn === "") {
+            setFilteredItems(items)
+        } else {
+            const filter = items.filter(i => i.sub_category === Number(filterBtn))
+            setFilteredItems(filter)
+        }
     }, [filterBtn]);
 
     useEffect(() => {
@@ -114,43 +121,46 @@ const WeddingDress = () => {
 
                         <div className="row">
 
-                            {items && items.map((item: IAccessoryType) => (
-                                <div key={item.id} className="col-lg-4">
-                                    <div className="cards cardsStyle">
+                            {filteredItems.length === 0 ?
+                                <h5 className={"text-center"}> Is empty</h5>
+                                :
+                                filteredItems.map((item: IAccessoryType) => (
+                                    <div key={item.id} className="col-lg-4">
+                                        <div className="cards cardsStyle">
 
-                                        <Swiper
-                                            pagination={true}
-                                            navigation={true} loop={true} modules={[Navigation, Pagination]}
-                                            className="mySwiper"
-                                        >
-                                            {item.product_images && item.product_images.map((item2: IProductImageType) => (
-                                                <SwiperSlide key={item2.id}>
-                                                    <div className="images">
-                                                        <img src={item2.image} className='w-100' alt=""/>
-                                                    </div>
-                                                </SwiperSlide>
-                                            ))}
-                                        </Swiper>
+                                            <Swiper
+                                                pagination={true}
+                                                navigation={true} loop={true} modules={[Navigation, Pagination]}
+                                                className="mySwiper"
+                                            >
+                                                {item.product_images && item.product_images.map((item2: IProductImageType) => (
+                                                    <SwiperSlide key={item2.id}>
+                                                        <div className="images">
+                                                            <img src={item2.image} className='w-100' alt=""/>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
 
-                                        <div className="wrap">
-                                            <div className="flex">
-                                                <h4>Ko’ylak turi:</h4>
-                                                <h5>{item.dress_type}</h5>
-                                            </div>
-                                            <div className="flex">
-                                                <h4>O’lacham:</h4>
-                                                <h5>{item.dress_size}</h5>
-                                            </div>
-                                            <div className="flex">
-                                                <h4>nARXI:</h4>
-                                                <h5 className={'bold'}>{item.price} so’m</h5>
-                                            </div>
+                                            <div className="wrap">
+                                                <div className="flex">
+                                                    <h4>Ko’ylak turi:</h4>
+                                                    <h5>{item.dress_type}</h5>
+                                                </div>
+                                                <div className="flex">
+                                                    <h4>O’lacham:</h4>
+                                                    <h5>{item.dress_size}</h5>
+                                                </div>
+                                                <div className="flex">
+                                                    <h4>nARXI:</h4>
+                                                    <h5 className={'bold'}>{item.price} so’m</h5>
+                                                </div>
 
-                                            <a href="tel:+998 90 000 09 87">Bizga bog’laning</a>
+                                                <a href="tel:+998 90 000 09 87">Bizga bog’laning</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
 
                         </div>
                     </div>

@@ -21,8 +21,8 @@ class FetchData {
         return await axios.get<Array<IGalleryType>>("/gallery/")
     }
 
-    async getAccessory(categoryId: string, subcategoryId: string) {
-        return await axios.get<Array<IAccessoryType>>(`/product/?category=${categoryId}&?subcategory=${subcategoryId}`)
+    async getAccessory(categoryId: string) {
+        return await axios.get<Array<IAccessoryType>>(`/product/?category=${categoryId}`)
     }
 
     async getAccessoryCategory() {
