@@ -1,0 +1,10 @@
+services:
+  one-fit-postgres:
+    image: postgres:16
+    container_name: mattress_db
+    ports:
+      - "9000:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: mattress

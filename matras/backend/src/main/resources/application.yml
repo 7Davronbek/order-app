@@ -1,0 +1,32 @@
+spring:
+#  docker:
+#    compose:
+#      lifecycle-management: start_only
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 215MB
+      max-file-size: 200MB
+      file-size-threshold: 2KB
+  datasource:
+    url: jdbc:postgresql://localhost:9000/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 604800000 # 7 days
+      refresh-token:
+        expiration: 604800000 # 7 days
