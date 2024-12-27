@@ -3,6 +3,24 @@
 
 $blue : #014085;
 
+.myNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: red;
+  z-index: 999;
+  width: 100%;
+
+  &.active {
+    translate: 0 0;
+    transition: all .4s ease-in-out;
+  }
+  &.nonActive{ 
+    translate: 0 -100%;
+    transition: all .5s ease-in-out .5s;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;

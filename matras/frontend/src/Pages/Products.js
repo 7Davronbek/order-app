@@ -1,37 +1,34 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 
-export default function Products() {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [mattressType, setMattressType] = useState("");
+const Products = () => {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [mattressType, setMattressType] = useState('');
   const [file, setFile] = useState(null);
-  const [sizes, setSizes] = useState([]);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [sizes, setSizes] = useState([{ width: '', length: '' }]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("name", name);
-    formData.append("description", description);
-    formData.append("mattressType", mattressType);
-    formData.append("file", file);
+    formData.append('name', name);
+    formData.append('description', description);
+    formData.append('mattressType', mattressType);
+    formData.append('file', file);
 
     sizes.forEach((size, index) => {
-      formData.append(`sizes[${index}].size`, size.width);
-      formData.append(`sizes[${index}].price`, size.length);
+      formData.append(`sizes[${index}].width`, size.width);
+      formData.append(`sizes[${index}].length`, size.length);
     });
 
     try {
-      await axios.post(
-        "http://localhost:8080/api/v1/admin/mattress",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      await axios.post('/api/mattresses', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       // Handle success, e.g., show a success message
     } catch (error) {
       // Handle error, e.g., show an error message
@@ -39,8 +36,20 @@ export default function Products() {
     }
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFile(file);
+    setImagePreview(URL.createObjectURL(file));
+  };
+
   const handleSizeAdd = () => {
-    setSizes([...sizes, { width: "", length: "" }]);
+    setSizes([...sizes, { width: '', length: '' }]);
+  };
+
+  const handleSizeRemove = (index) => {
+    const newSizes = [...sizes];
+    newSizes.splice(index, 1);
+    setSizes(newSizes);
   };
 
   const handleSizeChange = (index, field, value) => {
@@ -48,6 +57,7 @@ export default function Products() {
     newSizes[index][field] = value;
     setSizes(newSizes);
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -75,8 +85,17 @@ export default function Products() {
       </label>
       <label>
         File:
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+        <input
+          type="file"
+          onChange={handleFileChange}
+        />
       </label>
+      {imagePreview && (
+        <div>
+          <h3>Image Preview:</h3>
+          <img src={imagePreview} alt="Preview" style={{ maxWidth: '300px' }} />
+        </div>
+      )}
       <h3>Sizes</h3>
       {sizes.map((size, index) => (
         <div key={index}>
@@ -85,7 +104,7 @@ export default function Products() {
             <input
               type="text"
               value={size.width}
-              onChange={(e) => handleSizeChange(index, "width", e.target.value)}
+              onChange={(e) => handleSizeChange(index, 'width', e.target.value)}
             />
           </label>
           <label>
@@ -93,11 +112,12 @@ export default function Products() {
             <input
               type="text"
               value={size.length}
-              onChange={(e) =>
-                handleSizeChange(index, "length", e.target.value)
-              }
+              onChange={(e) => handleSizeChange(index, 'length', e.target.value)}
             />
           </label>
+          <button type="button" onClick={() => handleSizeRemove(index)}>
+            Remove
+          </button>
         </div>
       ))}
       <button type="button" onClick={handleSizeAdd}>
@@ -106,4 +126,6 @@ export default function Products() {
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
+
+export default Products;
