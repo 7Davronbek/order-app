@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import logo from '../Images/Logo.svg'
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
 import { NavLink } from 'react-router-dom';
@@ -11,7 +11,7 @@ import { LANGUAGE } from '../shared/axios';
 
 const Navbar = ({ changeLang }) => {
   const [modalShow, setModalShow] = React.useState(false);
-  const { changeLanguage, language } = useLanguage();
+  const { changeLanguage } = useLanguage();
 
   const { t } = useTranslation();
   const changeLocale = (e) => {
@@ -19,9 +19,6 @@ const Navbar = ({ changeLang }) => {
     changeLanguage(e.target.value)
     localStorage.setItem("LANGUAGE", e.target.value)
   }
-
-  // useEffect(() => {
-  // }, [language])
 
   return (
     <header>
@@ -68,10 +65,10 @@ const Navbar = ({ changeLang }) => {
 
             <ul>
               <li><NavLink to="/">{t('home')}</NavLink></li>
-              <li><NavLink to="/онас">{t("about")}</NavLink></li>
-              <li><NavLink to="/продукция">{t("products")}</NavLink></li>
-              <li><NavLink to="/новости">{t("news")}</NavLink></li>
-              <li><NavLink to="/контакты">{t("contact")}</NavLink></li>
+              <li><NavLink to="/about-us">{t("about")}</NavLink></li>
+              <li><NavLink to="/products">{t("products")}</NavLink></li>
+              <li><NavLink to="/news">{t("news")}</NavLink></li>
+              <li><NavLink to="/contacts">{t("contact")}</NavLink></li>
             </ul>
 
           </div>

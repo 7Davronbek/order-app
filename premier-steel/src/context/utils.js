@@ -16,3 +16,10 @@ export const formatDate = (dateString) => {
 export const numberFormat = (x) => {
   return `${x.toLocaleString()}`;
 };
+
+export const getTrimmedDescription = (description) => {
+  if (!description) return "";
+  return description.length > 200
+    ? `${description.slice(0, 200)}...`
+    : description;
+};

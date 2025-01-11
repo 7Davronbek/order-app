@@ -18,7 +18,7 @@ export default function HomeAbout(changeLang) {
 
         <div className='about-body'>
           <h2>{t("headerAbout")}</h2>
-          <Link to="/онас">{t("moreAbout")}</Link>
+          <Link to="/about-us">{t("moreAbout")}</Link>
 
         </div>
       </div>

@@ -23,10 +23,10 @@ export default function Footer(changeLang) {
             <ul>
               {/* <h5>{t("company")}</h5> */}
               <li><NavLink to="/">{t('home')}</NavLink></li>
-              <li><NavLink to="/онас">{t("about")}</NavLink></li>
-              <li><NavLink to="/продукция">{t("products")}</NavLink></li>
-              <li><NavLink to="/новости">{t("news")}</NavLink></li>
-              <li><NavLink to="/контакты">{t("contact")}</NavLink></li>
+              <li><NavLink to="/about-us">{t("about")}</NavLink></li>
+              <li><NavLink to="/products">{t("products")}</NavLink></li>
+              <li><NavLink to="/news">{t("news")}</NavLink></li>
+              <li><NavLink to="/contacts">{t("contact")}</NavLink></li>
             </ul>
           </div>
           <div className="col-md-3">

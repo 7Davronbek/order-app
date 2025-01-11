@@ -21,6 +21,8 @@ import translationRu from "./Locale/Ru";
 import translationEn from "./Locale/En";
 import { LanguageProvider } from "./context/languageContext";
 import ProductDetail from "./Pages/ProductDetail";
+import { LANGUAGE } from "./shared/axios";
+import NewsDetail from "./Pages/NewsDetail";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -28,7 +30,7 @@ i18n.use(initReactI18next).init({
     uz: { translation: translationUz },
     en: { translation: translationEn },
   },
-  lng: "uz",
+  lng: LANGUAGE,
   fallbackLng: "uz",
 });
 
@@ -46,11 +48,13 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/онас" element={<About />} />
-          <Route path="/detail/:id" element={<ProductDetail />} />
-          <Route path="/продукция" element={<Products />} />
-          <Route path="/новости" element={<News />} />
-          <Route path="/контакты" element={<Contact />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products-category/:categoryId" element={<Products />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/contacts" element={<Contact />} />
         </Routes>
         <Footer />
         <ToastContainer />

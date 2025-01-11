@@ -21,7 +21,7 @@ export default function Header(changeLang) {
       <div className="header-info">
         <img className='header-logo' src={logo} alt="logo-text" />
         <p>{t("headerAbout")}</p>
-        <Link to="/онас">{t("moreAbout")}</Link>
+        <Link to="/about-us">{t("moreAbout")}</Link>
 
       </div>
       <Carousel className='carusel' slide={false}>
